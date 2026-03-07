@@ -46,12 +46,15 @@ Version Control
 
 ## Repository Structure
 
+## Repository Structure
+
+```
 utrgv-degree-roadmap
 ├── frontend    # Next.js application
 ├── backend     # FastAPI backend
 ├── docs        # planning documents
 └── README.md
-
+```
 ---
 
 ## Agile Planning
