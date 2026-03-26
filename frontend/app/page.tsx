@@ -1,6 +1,6 @@
 "use client";
 
-import {useState} from "react";
+import React, {useState} from "react";
 
 /*main function */
 export default function LoginPage() {
@@ -8,7 +8,7 @@ export default function LoginPage() {
     const [password, setPassword] = useState(""); /* stores password */
 
     /* function when login button is clicked */
-    const handleLogin = (e: React.FormEvent) => {
+    const handleLogin = (e: React.SyntheticEvent<HTMLFormElement>) => {
         e.preventDefault(); 
         alert(`Email: ${email}\nPassword: ${password}`);
     };
