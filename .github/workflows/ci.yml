@@ -27,7 +27,7 @@ jobs:
       - name: Check FastAPI starts
         run: |
           cd backend
-          python -c "from main import app; print('FastAPI OK')"
+          python -c "from app.main import app; print('FastAPI OK')"
 
   frontend:
     name: Frontend checks
