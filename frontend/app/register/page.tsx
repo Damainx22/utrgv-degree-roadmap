@@ -1,28 +1,29 @@
 "use client";
 
-// Login page - the entry point of the app
+// Register page - allows new students to create an account
 // On success saves the JWT token and redirects to dashboard
 
 import { useState } from "react";
 import { useRouter } from "next/navigation";
-import { login } from "@/lib/api";
+import { register } from "@/lib/api";
 import { saveToken } from "@/lib/auth";
 
-export default function LoginPage() {
+export default function RegisterPage() {
   const router = useRouter();
+  const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
 
-  async function handleLogin(e: React.FormEvent) {
+  async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
     setError("");
     setLoading(true);
 
     try {
-      // Call the FastAPI login endpoint
-      const data = await login(email, password);
+      // Call the FastAPI register endpoint
+      const data = await register(email, password, name);
       // Save the JWT token to localStorage
       saveToken(data.access_token);
       // Redirect to dashboard
@@ -38,7 +39,7 @@ export default function LoginPage() {
     <div className="min-h-screen bg-black flex items-center justify-center">
       <div className="bg-[#111] p-8 rounded-xl w-full max-w-md">
         <h1 className="text-white text-2xl font-bold text-center mb-6">
-          DegreePath Login
+          Create your account
         </h1>
 
         {error && (
@@ -47,7 +48,19 @@ export default function LoginPage() {
           </div>
         )}
 
-        <form onSubmit={handleLogin} className="flex flex-col gap-4">
+        <form onSubmit={handleSubmit} className="flex flex-col gap-4">
+          <div>
+            <label className="text-gray-400 text-sm mb-1 block">Name</label>
+            <input
+              type="text"
+              placeholder="Enter your name"
+              value={name}
+              onChange={(e) => setName(e.target.value)}
+              required
+              className="w-full bg-black border border-gray-700 text-white rounded-lg p-3 text-lg focus:outline-none focus:border-blue-500"
+            />
+          </div>
+
           <div>
             <label className="text-gray-400 text-sm mb-1 block">Email</label>
             <input
@@ -77,14 +90,14 @@ export default function LoginPage() {
             disabled={loading}
             className="w-full bg-blue-600 hover:bg-blue-700 text-white rounded-lg p-3 text-lg font-medium mt-2 disabled:opacity-50"
           >
-            {loading ? "Logging in..." : "Login"}
+            {loading ? "Creating account..." : "Sign up"}
           </button>
         </form>
 
         <p className="text-gray-400 text-center mt-4 text-sm">
-          Don't have an account?{" "}
-          <a href="/register" className="text-blue-500 hover:underline">
-            Sign up
+          Already have an account?{" "}
+          <a href="/" className="text-blue-500 hover:underline">
+            Log in
           </a>
         </p>
       </div>
