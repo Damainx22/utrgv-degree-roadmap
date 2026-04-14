@@ -68,3 +68,32 @@ utrgv-degree-roadmap
 ### Sprint 1 Goal
 
 Set up the repository, development environments, and initial project documentation.
+
+## Sprint 2 Progress
+
+The team has progressed from initial setup to early development of core application features.
+
+- Set up and validated frontend development environment (Next.js)
+- Set up and confirmed backend API (FastAPI) is running successfully
+- Verified full-stack local development environment
+- Fixed development issues related to Next.js build system (Turbopack/cache errors)
+- Confirmed backend API accessibility through `/docs` endpoint
+- Continued development of project structure and UI foundation
+
+---
+
+## Current Prototype Status
+
+- Home page structure has been initialized
+- Backend API is running locally and responding successfully
+- Development environment for both frontend and backend is functional
+- Project is ready for feature implementation and integration
+
+---
+
+
+## Testing Notes
+
+- Backend API confirmed running at: `http://127.0.0.1:8000`
+- API documentation available at: `http://127.0.0.1:8000/docs`
+- Frontend development server runs successfully on local environment after dependency and cache reset
