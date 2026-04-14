@@ -36,71 +36,81 @@ export default function RegisterPage() {
   }
 
   return (
-    <div className="min-h-screen bg-black flex items-center justify-center">
-      <div className="bg-[#111] p-8 rounded-xl w-full max-w-md">
-        <h1 className="text-white text-2xl font-bold text-center mb-6">
-          Create your account
-        </h1>
+  <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-sky-200 to-cyan-300 p-4">
+    <div className="w-full max-w-md bg-white/70 backdrop-blur-md border border-white/30 rounded-2xl p-8 shadow-xl">
+      <h1 className="text-3xl font-bold text-teal-800 text-center mb-2">
+        DegreePath
+      </h1>
 
-        {error && (
-          <div className="bg-red-500/10 border border-red-500 text-red-500 rounded-lg p-3 mb-4 text-sm">
-            {error}
-          </div>
-        )}
+      <p className="text-center text-gray-800 mb-6 font-['Georgia','Times_New_Roman',serif] italic">
+        Create your account
+      </p>
 
-        <form onSubmit={handleSubmit} className="flex flex-col gap-4">
-          <div>
-            <label className="text-gray-400 text-sm mb-1 block">Name</label>
-            <input
-              type="text"
-              placeholder="Enter your name"
-              value={name}
-              onChange={(e) => setName(e.target.value)}
-              required
-              className="w-full bg-black border border-gray-700 text-white rounded-lg p-3 text-lg focus:outline-none focus:border-blue-500"
-            />
-          </div>
+      {error && (
+        <div className="bg-red-500/20 border border-red-400 text-red-900 rounded-xl p-3 mb-4 text-sm">
+          {error}
+        </div>
+      )}
 
-          <div>
-            <label className="text-gray-400 text-sm mb-1 block">Email</label>
-            <input
-              type="email"
-              placeholder="Enter your email"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              required
-              className="w-full bg-black border border-gray-700 text-white rounded-lg p-3 text-lg focus:outline-none focus:border-blue-500"
-            />
-          </div>
+      <form onSubmit={handleSubmit} className="space-y-4">
+        <div>
+          <label className="text-gray-800 text-sm mb-1 block font-['Georgia','Times_New_Roman',serif]">
+            Name
+          </label>
+          <input
+            type="text"
+            placeholder="Enter your name"
+            value={name}
+            onChange={(e) => setName(e.target.value)}
+            required
+            className="w-full border border-white/40 bg-white/50 text-gray-900 placeholder-gray-600 px-4 py-3 rounded-xl hover:bg-white/70 focus:bg-white/70 focus:outline-none focus:ring-2 focus:ring-teal-500 transition"
+          />
+        </div>
 
-          <div>
-            <label className="text-gray-400 text-sm mb-1 block">Password</label>
-            <input
-              type="password"
-              placeholder="Enter your password"
-              value={password}
-              onChange={(e) => setPassword(e.target.value)}
-              required
-              className="w-full bg-black border border-gray-700 text-white rounded-lg p-3 text-lg focus:outline-none focus:border-blue-500"
-            />
-          </div>
+        <div>
+          <label className="text-gray-800 text-sm mb-1 block font-['Georgia','Times_New_Roman',serif]">
+            Email
+          </label>
+          <input
+            type="email"
+            placeholder="Enter your email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            required
+            className="w-full border border-white/40 bg-white/50 text-gray-900 placeholder-gray-600 px-4 py-3 rounded-xl hover:bg-white/70 focus:bg-white/70 focus:outline-none focus:ring-2 focus:ring-teal-500 transition"
+          />
+        </div>
 
-          <button
-            type="submit"
-            disabled={loading}
-            className="w-full bg-blue-600 hover:bg-blue-700 text-white rounded-lg p-3 text-lg font-medium mt-2 disabled:opacity-50"
-          >
-            {loading ? "Creating account..." : "Sign up"}
-          </button>
-        </form>
+        <div>
+          <label className="text-gray-800 text-sm mb-1 block font-['Georgia','Times_New_Roman',serif]">
+            Password
+          </label>
+          <input
+            type="password"
+            placeholder="Enter your password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+            required
+            className="w-full border border-white/40 bg-white/50 text-gray-900 placeholder-gray-600 px-4 py-3 rounded-xl hover:bg-white/70 focus:bg-white/70 focus:outline-none focus:ring-2 focus:ring-teal-500 transition"
+          />
+        </div>
 
-        <p className="text-gray-400 text-center mt-4 text-sm">
-          Already have an account?{" "}
-          <a href="/" className="text-blue-500 hover:underline">
-            Log in
-          </a>
-        </p>
-      </div>
+        <button
+          type="submit"
+          disabled={loading}
+          className="w-full bg-teal-600 text-white py-3 rounded-xl hover:bg-teal-700 transition disabled:opacity-50"
+        >
+          {loading ? "Creating account..." : "Sign up"}
+        </button>
+      </form>
+
+      <p className="text-gray-800 text-center mt-4 text-sm font-['Georgia','Times_New_Roman',serif]">
+        Already have an account?{" "}
+        <a href="/" className="text-teal-700 font-semibold hover:underline">
+          Log in
+        </a>
+      </p>
     </div>
-  );
+  </div>
+);
 }
