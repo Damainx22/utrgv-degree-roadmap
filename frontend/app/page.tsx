@@ -1,101 +1,93 @@
 "use client";
 
-import { useState } from "react";
+// Login page - the entry point of the app
+// On success saves the JWT token and redirects to dashboard
 
-export default function Home() {
-  const [message, setMessage] = useState("");
+import { useState } from "react";
+import { useRouter } from "next/navigation";
+import { login } from "@/lib/api";
+import { saveToken } from "@/lib/auth";
+
+export default function LoginPage() {
+  const router = useRouter();
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [error, setError] = useState("");
+  const [loading, setLoading] = useState(false);
+
+  async function handleLogin(e: React.FormEvent) {
+    e.preventDefault();
+    setError("");
+    setLoading(true);
+
+    try {
+      // Call the FastAPI login endpoint
+      const data = await login(email, password);
+      // Save the JWT token to localStorage
+      saveToken(data.access_token);
+      // Redirect to dashboard
+      router.push("/dashboard");
+    } catch (err: any) {
+      setError(err.message);
+    } finally {
+      setLoading(false);
+    }
+  }
 
   return (
-    <main className="min-h-screen bg-orange-500 flex flex-col items-center px-6 py-12">
-
-      {/* HERO SECTION */}
-      <div className="text-center max-w-3xl">
-
-        <h1 className="text-5xl font-bold text-white mb-4">
-          UTRGV Degree Roadmap
+    <div className="min-h-screen bg-black flex items-center justify-center">
+      <div className="bg-[#111] p-8 rounded-xl w-full max-w-md">
+        <h1 className="text-white text-2xl font-bold text-center mb-6">
+          DegreePath Login
         </h1>
 
-        <p className="text-white/90 text-lg mb-8">
-          Plan your graduation journey by tracking courses, viewing requirements,
-          and exploring professor reviews — all in one place.
-        </p>
-
-        {/* CTA BUTTONS */}
-        <div className="flex justify-center gap-4 mb-10">
-          <a
-            href="/login"
-            className="bg-white text-orange-600 font-semibold px-6 py-3 rounded-xl hover:bg-gray-100 active:scale-95 transition"
-          >
-            Login
-          </a>
-
-          <a
-            href="/register"
-            className="bg-orange-700 text-white px-6 py-3 rounded-xl hover:bg-orange-800 active:scale-95 transition"
-          >
-            Register
-          </a>
-        </div>
-      </div>
-
-      {/* INTERACTIVE SECTION */}
-      <div className="bg-white w-full max-w-4xl rounded-2xl shadow-xl p-8 text-center">
-
-        <h2 className="text-2xl font-bold text-orange-600 mb-6">
-          Quick Actions
-        </h2>
-
-        <div className="flex flex-wrap justify-center gap-4 mb-6">
-
-          <button
-            onClick={() => setMessage("Tracking completed courses")}
-            className="bg-orange-500 text-white px-5 py-2 rounded-lg hover:bg-orange-600 transition"
-          >
-            Track Courses
-          </button>
-
-          <button
-            onClick={() => setMessage("Viewing degree roadmap")}
-            className="bg-orange-400 text-white px-5 py-2 rounded-lg hover:bg-orange-500 transition"
-          >
-            View Roadmap
-          </button>
-
-        </div>
-
-        {message && (
-          <p className="text-gray-700 font-medium">
-            {message}
-          </p>
+        {error && (
+          <div className="bg-red-500/10 border border-red-500 text-red-500 rounded-lg p-3 mb-4 text-sm">
+            {error}
+          </div>
         )}
+
+        <form onSubmit={handleLogin} className="flex flex-col gap-4">
+          <div>
+            <label className="text-gray-400 text-sm mb-1 block">Email</label>
+            <input
+              type="email"
+              placeholder="Enter your email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              required
+              className="w-full bg-black border border-gray-700 text-white rounded-lg p-3 text-lg focus:outline-none focus:border-blue-500"
+            />
+          </div>
+
+          <div>
+            <label className="text-gray-400 text-sm mb-1 block">Password</label>
+            <input
+              type="password"
+              placeholder="Enter your password"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+              required
+              className="w-full bg-black border border-gray-700 text-white rounded-lg p-3 text-lg focus:outline-none focus:border-blue-500"
+            />
+          </div>
+
+          <button
+            type="submit"
+            disabled={loading}
+            className="w-full bg-blue-600 hover:bg-blue-700 text-white rounded-lg p-3 text-lg font-medium mt-2 disabled:opacity-50"
+          >
+            {loading ? "Logging in..." : "Login"}
+          </button>
+        </form>
+
+        <p className="text-gray-400 text-center mt-4 text-sm">
+          Don't have an account?{" "}
+          <a href="/register" className="text-blue-500 hover:underline">
+            Sign up
+          </a>
+        </p>
       </div>
-
-      {/* FEATURES SECTION */}
-      <div className="w-full max-w-5xl mt-12">
-
-        <h2 className="text-center text-2xl font-bold text-white mb-6">
-          Features
-        </h2>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-
-          {[
-            "Track completed courses",
-            "View remaining degree requirements",
-            "Generate personalized roadmap",
-            "Read and post professor reviews"
-          ].map((feature, i) => (
-            <div
-              key={i}
-              className="bg-white rounded-xl p-6 shadow-lg hover:shadow-2xl hover:-translate-y-1 transition text-gray-800 font-medium"
-            >
-              {feature}
-            </div>
-          ))}
-
-        </div>
-      </div>
-
-    </main>
+    </div>
   );
 }
