@@ -34,7 +34,7 @@ export default function LoginPage() {
     setError("");
     setLoading(true);
     try {
-      const data = await login(formData.email, formData.password);
+       const data = await login(formData.email, formData.password);
       saveToken(data.access_token);
       router.push("/dashboard");
       router.refresh();
