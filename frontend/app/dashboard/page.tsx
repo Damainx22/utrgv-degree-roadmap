@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
+import Link from "next/link";
 import { isLoggedIn, removeToken } from "@/lib/auth";
 
 // --- UI Sub-components ---
@@ -55,31 +56,7 @@ export default function DashboardPage() {
 
   return (
     <div className="flex min-h-screen bg-[#B5D1CC] text-slate-900 font-sans">
-      {/* Sidebar */}
-      <aside className="w-72 bg-gradient-to-b from-[#D7EAE6] to-[#C8E0DC] border-r border-[#BFD7D2] p-8 hidden lg:flex flex-col">
-        <div className="flex items-center gap-2 mb-12">
-          <div className="w-8 h-8 bg-[#00937C] rounded-lg flex items-center justify-center text-white font-bold">D</div>
-          <h1 className="text-xl font-bold tracking-tight text-slate-800">DegreePath</h1>
-        </div>
-        
-        <nav className="space-y-2 flex-1">
-          <SidebarLink label="Overview" active />
-          <SidebarLink label="Degree Roadmap" />
-          <SidebarLink label="Schedule Builder" />
-          <SidebarLink label="Professor Reviews" />
-          <SidebarLink label="Messages" />
-        </nav>
-
-        <div className="mt-auto pt-6 border-t border-[#BFD7D2]">
-          <button 
-            onClick={handleLogout}
-            className="flex items-center gap-2 text-slate-400 hover:text-red-500 text-sm font-medium transition-colors"
-          >
-            Sign out
-          </button>
-        </div>
-      </aside>
-
+      
       {/* Main Content */}
       <main className="flex-1 p-8 lg:p-14 overflow-y-auto">
         <header className="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-start md:items-center mb-10 gap-6">
