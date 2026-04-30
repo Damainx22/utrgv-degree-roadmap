@@ -1,10 +1,11 @@
-import requests  # lets us call URLs and get data back
-import json      # lets us read and write JSON files
-import re        # lets us find patterns in text
-import time      # used to add a small delay between API calls
-from pathlib import Path  # used to work with file paths
+import requests
+import json
+import re
+import time
+from pathlib import Path
+from bs4 import BeautifulSoup
 
-# ── URLs ─────────────────────────────────────────────────────────────────────
+# ── URLs ──────────────────────────────────────────────────────────────────────
 
 # Navigation tree — gives us the structure (colleges, departments, programs)
 NAV_URL = (
@@ -13,7 +14,7 @@ NAV_URL = (
     "/json/2025-2026/Undergraduate-Catalog-local.json"
 )
 
-# Full catalog — gives us course details, descriptions, and prereqs
+# Full catalog — gives us course codes and names
 FULL_URL = (
     "https://utrgv.smartcatalogiq.com/Institutions"
     "/University-of-Texas-Rio-Grande-Valley"
@@ -25,8 +26,6 @@ HEADERS = {"User-Agent": "UTRGV-Degree-Planner/1.0 (student project)"}
 
 # Path to the folder where we save output files (backend/data/)
 DATA_DIR = Path(__file__).parent.parent / "data"
-
-# Create the folder if it doesn't exist
 DATA_DIR.mkdir(exist_ok=True)
 
 
@@ -51,6 +50,16 @@ def save_json(filename: str, data):
     with open(path, "w") as f:
         json.dump(data, f, indent=2)
     print(f"  Saved {filename} ({len(str(data)) // 1024}KB)")
+
+
+def path_to_url(sitecore_path: str) -> str:
+    """
+    Convert a Sitecore JSON path to a SmartCatalogIQ HTML URL.
+    Example:
+      Input:  /2025-2026/Undergraduate-Catalog/Courses/ACCT-Accounting/2000/ACCT-2301
+      Output: https://utrgv.smartcatalogiq.com/en/2025-2026/undergraduate-catalog/courses/acct-accounting/2000/acct-2301
+    """
+    return "https://utrgv.smartcatalogiq.com/en" + sitecore_path.lower()
 
 
 # ── Step 1: Parse colleges, departments, programs ─────────────────────────────
@@ -113,8 +122,8 @@ def parse_nav_tree(tree: dict) -> tuple[list, list]:
 
 def parse_all_courses(tree: dict) -> dict:
     """
-    Walk the Courses UG section of the catalog and extract every course.
-    Structure is: Courses UG > Subject > Number Group (1000/2000/3000/4000) > Course
+    Walk the Courses UG section and extract every course code, name, and path.
+    Structure: Courses UG > Subject > Number Group (1000/2000/3000/4000) > Course
     Returns a dictionary keyed by course code e.g. {"CSCI 1470": {...}}
     """
     courses = {}
@@ -131,22 +140,22 @@ def parse_all_courses(tree: dict) -> dict:
         print("Could not find Courses UG node")
         return courses
 
-    # Loop through subjects (ACCT, CSCI, MATH...)
+    # Loop through subjects > number groups > individual courses
     for subject_node in courses_node.get("Children", []):
-        # Loop through number groups (1000, 2000, 3000, 4000...)
         for group_node in subject_node.get("Children", []):
-            # Loop through individual courses
             for course_node in group_node.get("Children", []):
+
                 code_match = re.match(r"^([A-Z]{2,4}\s\d{4})", course_node.get("Name", ""))
                 if not code_match:
                     continue
 
-                code = code_match.group(1)                        # "CSCI 1470"
-                name = course_node.get("Name", "")[len(code):].strip()  # "Computer Science I"
+                code = code_match.group(1)
+                name = course_node.get("Name", "")[len(code):].strip()
 
                 courses[code] = {
                     "code": code,
                     "name": name,
+                    "path": course_node.get("Path", ""),  # used to build HTML URL
                     "credits": None,
                     "description": "",
                     "prereq_raw": None,
@@ -156,11 +165,79 @@ def parse_all_courses(tree: dict) -> dict:
 
     return courses
 
-# ── Step 3: Extract course details from text ──────────────────────────────────
+
+# ── Step 3: Enrich courses with details from HTML pages ───────────────────────
+
+def enrich_courses(courses: dict) -> dict:
+    """
+    For each course fetch its HTML page and extract:
+    - credits
+    - description
+    - prereq_raw (raw prerequisite text)
+    - prereqs (parsed AND/OR tree)
+    - coreq_raw
+
+    Adds a 0.3s delay between requests to be polite to the server.
+    Takes about 15-20 minutes for all 2385 courses.
+    """
+    total = len(courses)
+    enriched = 0
+
+    for i, (code, course) in enumerate(courses.items()):
+        path = course.get("path", "")
+        if not path:
+            continue
+
+        url = path_to_url(path)
+
+        try:
+            r = requests.get(url, headers=HEADERS, timeout=20)
+            if r.status_code != 200:
+                continue
+
+            # Parse HTML and find main content area
+            soup = BeautifulSoup(r.text, "html.parser")
+            content = (
+                soup.find("div", {"id": "main"}) or
+                soup.find("main") or
+                soup.find("article") or
+                soup.find("div", {"class": "page-content"})
+            )
+
+            if not content:
+                continue
+
+            # Get plain text from the HTML
+            text = content.get_text(separator=" ", strip=True)
+
+            # Extract course details
+            course["credits"]     = extract_credits(text)
+            # Keep full description text. Truncation breaks downstream parsing/debugging.
+            course["description"] = text
+            course["prereq_raw"]  = extract_prereq_string(text)
+            course["prereqs"]     = parse_prereq_string(course["prereq_raw"])
+            course["coreq_raw"]   = extract_coreq_string(text)
+
+            enriched += 1
+
+            # Progress update every 50 courses
+            if enriched % 50 == 0:
+                print(f"  {enriched}/{total} courses enriched...")
+
+            time.sleep(0.3)  # polite delay — don't hammer the server
+
+        except Exception as e:
+            print(f"  Failed {code}: {e}")
+            continue
+
+    print(f"  Done — {enriched}/{total} courses enriched")
+    return courses
+
+
+# ── Step 4: Extract course details from text ──────────────────────────────────
 
 def extract_credits(text: str) -> int | None:
     """Pull the credit hour count out of course description text."""
-    # Matches patterns like "3 Credit Hours" or "(3-0)"
     m = re.search(r"(\d)\s*[Cc]redit\s*[Hh]ours?", text)
     if m:
         return int(m.group(1))
@@ -174,9 +251,8 @@ def extract_prereq_string(text: str) -> str | None:
     """Pull the raw prerequisite text out of a course description."""
     if not text:
         return None
-    # Matches "Prerequisite: ..." or "Prerequisites: ..."
     m = re.search(
-        r"[Pp]re-?requisites?\s*:\s*(.+?)(?:\.|[Cc]o-?[Rr]eq|[Cc]redit|[Nn]ote|$)",
+        r"\b[Pp]re-?requisites?(?:\s*\([sS]\))?\s*:?\s*(.+?)(?:\.|[Cc]o-?[Rr]eq(?:uisites?)?|[Cc]redits?|[Nn]ote|[Ss]chedule [Tt]ype|$)",
         text, re.IGNORECASE | re.DOTALL
     )
     return m.group(1).strip() if m else None
@@ -187,13 +263,13 @@ def extract_coreq_string(text: str) -> str | None:
     if not text:
         return None
     m = re.search(
-        r"[Cc]o-?[Rr]equisites?\s*:\s*(.+?)(?:\.|[Pp]re|[Cc]redit|[Nn]ote|$)",
+        r"\b[Cc]o-?[Rr]equisites?(?:\s*\([sS]\))?\s*:?\s*(.+?)(?:\.|[Pp]re-?[Rr]eq(?:uisites?)?|[Cc]redits?|[Nn]ote|[Ss]chedule [Tt]ype|$)",
         text, re.IGNORECASE | re.DOTALL
     )
     return m.group(1).strip() if m else None
 
 
-# ── Step 4: Parse prerequisite strings into AND/OR trees ─────────────────────
+# ── Step 5: Parse prerequisite strings into AND/OR trees ─────────────────────
 
 def parse_prereq_string(text: str) -> dict | None:
     """
@@ -212,10 +288,14 @@ def parse_prereq_string(text: str) -> dict | None:
     if not text:
         return None
 
-    # Clean up the string — remove grade requirements like "with a grade of C or better"
+    # Clean up grade requirement noise
     s = re.sub(r"\s+", " ", text).strip()
     s = re.sub(
-        r"with\s+a?\s*(minimum\s+)?grade\s+of\s+[A-C][+-]?\s*(or\s+better)?",
+        r"with\s+a?\s*(minimum\s+)?grade\s+of\s+\"?[A-C][+-]?\"?\s*(or\s+better)?",
+        "", s, flags=re.IGNORECASE
+    )
+    s = re.sub(
+        r"with\s+a?\s*\"?[A-C][+-]?\"?\s*or\s+better",
         "", s, flags=re.IGNORECASE
     )
     s = s.strip().rstrip(".,")
@@ -227,7 +307,7 @@ def parse_expr(text: str) -> dict:
     """Recursively parse a prereq expression into a tree."""
     text = text.strip()
 
-    # Check for AND first (highest priority)
+    # Check for AND first
     and_parts = split_on(text, "and")
     if len(and_parts) > 1:
         return {"type": "and", "operands": [parse_expr(p) for p in and_parts]}
@@ -235,10 +315,14 @@ def parse_expr(text: str) -> dict:
     # Check for OR
     or_parts = split_on(text, "or")
     if len(or_parts) > 1:
-        codes = [re.match(r"[A-Z]{2,4}\s\d{4}", p.strip()) for p in or_parts]
-        codes = [m.group(0) for m in codes if m]
+        codes = []
+        for p in or_parts:
+            codes.extend(re.findall(r"[A-Z]{2,4}\s\d{4}", p.strip()))
         if codes:
-            return {"type": "or", "courses": codes}
+            unique_codes = list(dict.fromkeys(codes))
+            if len(unique_codes) == 1:
+                return {"type": "course", "code": unique_codes[0]}
+            return {"type": "or", "courses": unique_codes}
 
     # Single course
     m = re.match(r"^([A-Z]{2,4}\s\d{4})", text)
@@ -250,10 +334,7 @@ def parse_expr(text: str) -> dict:
 
 
 def split_on(text: str, word: str) -> list:
-    """
-    Split text on ' and ' or ' or ' but only outside parentheses.
-    This handles cases like "(CSCI 1370 or CSCI 1380) and MATH 2413"
-    """
+    """Split text on ' and ' or ' or ' only outside parentheses."""
     parts, depth, cur, pat = [], 0, "", f" {word} "
     i = 0
     while i < len(text):
@@ -284,15 +365,15 @@ def main():
     print("="*50)
 
     # Step 1 — Download navigation tree
-    print("\n[1/3] Downloading navigation tree...")
+    print("\n[1/4] Downloading navigation tree...")
     nav = get_json(NAV_URL)
     if not nav:
         print("FAILED: Could not fetch navigation JSON")
         return
     print(f"  OK — top level: {nav.get('Name')}")
 
-    # Step 2 — Parse colleges and programs from nav tree
-    print("\n[2/3] Parsing colleges and programs...")
+    # Step 2 — Parse colleges and programs
+    print("\n[2/4] Parsing colleges and programs...")
     colleges, programs = parse_nav_tree(nav)
     total_programs = sum(
         len(dept["programs"])
@@ -301,12 +382,9 @@ def main():
     )
     print(f"  {len(colleges)} colleges found")
     print(f"  {total_programs} programs found")
-    for c in colleges:
-        prog_count = sum(len(d["programs"]) for d in c["departments"])
-        print(f"    - {c['name']} ({prog_count} programs)")
 
-    # Step 3 — Download full catalog and parse courses
-    print("\n[3/3] Downloading full catalog and parsing courses...")
+    # Step 3 — Download full catalog and parse course codes
+    print("\n[3/4] Downloading full catalog and parsing courses...")
     full = get_json(FULL_URL)
     courses = {}
     if full:
@@ -314,6 +392,12 @@ def main():
         print(f"  {len(courses)} courses parsed")
     else:
         print("  Could not load full catalog")
+        return
+
+    # Step 4 — Enrich courses with details from HTML pages
+    print(f"\n[4/4] Enriching {len(courses)} courses with details...")
+    print("  This will take 15-20 minutes...")
+    courses = enrich_courses(courses)
 
     # Save all output files
     print("\nSaving files to backend/data/...")
@@ -321,7 +405,6 @@ def main():
     save_json("programs.json", programs)
     save_json("courses.json", courses)
 
-    # Save raw prereq strings separately for debugging
     prereqs_raw = {
         code: c["prereq_raw"]
         for code, c in courses.items()
