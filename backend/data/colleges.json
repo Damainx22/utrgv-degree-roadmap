@@ -1,0 +1,1875 @@
+[
+  {
+    "name": "Robert C. Vackar College of Business and Entrepreneurship",
+    "path": "/sitecore/content/Catalogs/University-of-Texas-Rio-Grande-Valley/2025-2026/Undergraduate-Catalog/Undergraduate-Programs-by-College/Robert-C-Vackar-College-of-Business-and-Entrepreneurship",
+    "departments": [
+      {
+        "name": "Department of Economics",
+        "path": "/sitecore/content/Catalogs/University-of-Texas-Rio-Grande-Valley/2025-2026/Undergraduate-Catalog/Undergraduate-Programs-by-College/Robert-C-Vackar-College-of-Business-and-Entrepreneurship/Department-of-Economics",
+        "programs": [
+          {
+            "name": "Economics (Minor Required), Bachelor of Arts",
+            "path": "/sitecore/content/Catalogs/University-of-Texas-Rio-Grande-Valley/2025-2026/Undergraduate-Catalog/Undergraduate-Programs-by-College/Robert-C-Vackar-College-of-Business-and-Entrepreneurship/Department-of-Economics/Economics-Minor-Required-Bachelor-of-Arts",
+            "college": "Robert C. Vackar College of Business and Entrepreneurship",
+            "department": "Department of Economics"
+          },
+          {
+            "name": "Economics, Bachelor of Business Administration",
+            "path": "/sitecore/content/Catalogs/University-of-Texas-Rio-Grande-Valley/2025-2026/Undergraduate-Catalog/Undergraduate-Programs-by-College/Robert-C-Vackar-College-of-Business-and-Entrepreneurship/Department-of-Economics/Economics-Bachelor-of-Business-Administration",
+            "college": "Robert C. Vackar College of Business and Entrepreneurship",
+            "department": "Department of Economics"
+          },
+          {
+            "name": "Economics and Finance (Double Major), Bachelor of Business Administration",
+            "path": "/sitecore/content/Catalogs/University-of-Texas-Rio-Grande-Valley/2025-2026/Undergraduate-Catalog/Undergraduate-Programs-by-College/Robert-C-Vackar-College-of-Business-and-Entrepreneurship/Department-of-Economics/Economics-and-Finance-Double-Major-Bachelor-of-Business-Administration",
+            "college": "Robert C. Vackar College of Business and Entrepreneurship",
+            "department": "Department of Economics"
+          },
+          {
+            "name": "Economics, Minor",
+            "path": "/sitecore/content/Catalogs/University-of-Texas-Rio-Grande-Valley/2025-2026/Undergraduate-Catalog/Undergraduate-Programs-by-College/Robert-C-Vackar-College-of-Business-and-Entrepreneurship/Department-of-Economics/Economics-Minor",
+            "college": "Robert C. Vackar College of Business and Entrepreneurship",
+            "department": "Department of Economics"
+          }
+        ]
+      },
+      {
+        "name": "Department of Finance",
+        "path": "/sitecore/content/Catalogs/University-of-Texas-Rio-Grande-Valley/2025-2026/Undergraduate-Catalog/Undergraduate-Programs-by-College/Robert-C-Vackar-College-of-Business-and-Entrepreneurship/Department-of-Finance",
+        "programs": [
+          {
+            "name": "Finance, Bachelor of Business Administration",
+            "path": "/sitecore/content/Catalogs/University-of-Texas-Rio-Grande-Valley/2025-2026/Undergraduate-Catalog/Undergraduate-Programs-by-College/Robert-C-Vackar-College-of-Business-and-Entrepreneurship/Department-of-Finance/Finance-Bachelor-of-Business-Administration",
+            "college": "Robert C. Vackar College of Business and Entrepreneurship",
+            "department": "Department of Finance"
+          }
+        ]
+      },
+      {
+        "name": "Department of Information Systems",
+        "path": "/sitecore/content/Catalogs/University-of-Texas-Rio-Grande-Valley/2025-2026/Undergraduate-Catalog/Undergraduate-Programs-by-College/Robert-C-Vackar-College-of-Business-and-Entrepreneurship/Department-of-Information-Systems",
+        "programs": [
+          {
+            "name": "Business Analytics, Bachelor of Business Administration",
+            "path": "/sitecore/content/Catalogs/University-of-Texas-Rio-Grande-Valley/2025-2026/Undergraduate-Catalog/Undergraduate-Programs-by-College/Robert-C-Vackar-College-of-Business-and-Entrepreneurship/Department-of-Information-Systems/Business-Analytics-Bachelor-of-Business-Administration",
+            "college": "Robert C. Vackar College of Business and Entrepreneurship",
+            "department": "Department of Information Systems"
+          },
+          {
+            "name": "Information Systems, Bachelor of Business Administration",
+            "path": "/sitecore/content/Catalogs/University-of-Texas-Rio-Grande-Valley/2025-2026/Undergraduate-Catalog/Undergraduate-Programs-by-College/Robert-C-Vackar-College-of-Business-and-Entrepreneurship/Department-of-Information-Systems/Information-Systems-Bachelor-of-Business-Administration",
+            "college": "Robert C. Vackar College of Business and Entrepreneurship",
+            "department": "Department of Information Systems"
+          },
+          {
+            "name": "Business Analytics, Minor",
+            "path": "/sitecore/content/Catalogs/University-of-Texas-Rio-Grande-Valley/2025-2026/Undergraduate-Catalog/Undergraduate-Programs-by-College/Robert-C-Vackar-College-of-Business-and-Entrepreneurship/Department-of-Information-Systems/Business-Analytics-Minor",
+            "college": "Robert C. Vackar College of Business and Entrepreneurship",
+            "department": "Department of Information Systems"
+          },
+          {
+            "name": "Information Systems, Minor",
+            "path": "/sitecore/content/Catalogs/University-of-Texas-Rio-Grande-Valley/2025-2026/Undergraduate-Catalog/Undergraduate-Programs-by-College/Robert-C-Vackar-College-of-Business-and-Entrepreneurship/Department-of-Information-Systems/Information-Systems-Minor",
+            "college": "Robert C. Vackar College of Business and Entrepreneurship",
+            "department": "Department of Information Systems"
+          }
+        ]
+      },
+      {
+        "name": "Department of International Business and Entrepreneurship",
+        "path": "/sitecore/content/Catalogs/University-of-Texas-Rio-Grande-Valley/2025-2026/Undergraduate-Catalog/Undergraduate-Programs-by-College/Robert-C-Vackar-College-of-Business-and-Entrepreneurship/Department-of-International-Business-and-Entrepreneurship",
+        "programs": [
+          {
+            "name": "Entrepreneurship and Innovation, Bachelor of Business Administration",
+            "path": "/sitecore/content/Catalogs/University-of-Texas-Rio-Grande-Valley/2025-2026/Undergraduate-Catalog/Undergraduate-Programs-by-College/Robert-C-Vackar-College-of-Business-and-Entrepreneurship/Department-of-International-Business-and-Entrepreneurship/Entrepreneurship-and-Innovation-Bachelor-of-Business-Administration",
+            "college": "Robert C. Vackar College of Business and Entrepreneurship",
+            "department": "Department of International Business and Entrepreneurship"
+          },
+          {
+            "name": "Global Supply Chain Management, Bachelor of Business Administration",
+            "path": "/sitecore/content/Catalogs/University-of-Texas-Rio-Grande-Valley/2025-2026/Undergraduate-Catalog/Undergraduate-Programs-by-College/Robert-C-Vackar-College-of-Business-and-Entrepreneurship/Department-of-International-Business-and-Entrepreneurship/Global-Supply-Chain-Management-Bachelor-of-Business-Administration",
+            "college": "Robert C. Vackar College of Business and Entrepreneurship",
+            "department": "Department of International Business and Entrepreneurship"
+          },
+          {
+            "name": "International Business, Bachelor of Business Administration",
+            "path": "/sitecore/content/Catalogs/University-of-Texas-Rio-Grande-Valley/2025-2026/Undergraduate-Catalog/Undergraduate-Programs-by-College/Robert-C-Vackar-College-of-Business-and-Entrepreneurship/Department-of-International-Business-and-Entrepreneurship/International-Business-Bachelor-of-Business-Administration",
+            "college": "Robert C. Vackar College of Business and Entrepreneurship",
+            "department": "Department of International Business and Entrepreneurship"
+          },
+          {
+            "name": "Entrepreneurship, Minor",
+            "path": "/sitecore/content/Catalogs/University-of-Texas-Rio-Grande-Valley/2025-2026/Undergraduate-Catalog/Undergraduate-Programs-by-College/Robert-C-Vackar-College-of-Business-and-Entrepreneurship/Department-of-International-Business-and-Entrepreneurship/Entrepreneurship-Minor",
+            "college": "Robert C. Vackar College of Business and Entrepreneurship",
+            "department": "Department of International Business and Entrepreneurship"
+          },
+          {
+            "name": "Global Logistics, Minor",
+            "path": "/sitecore/content/Catalogs/University-of-Texas-Rio-Grande-Valley/2025-2026/Undergraduate-Catalog/Undergraduate-Programs-by-College/Robert-C-Vackar-College-of-Business-and-Entrepreneurship/Department-of-International-Business-and-Entrepreneurship/Global-Logistics-Minor",
+            "college": "Robert C. Vackar College of Business and Entrepreneurship",
+            "department": "Department of International Business and Entrepreneurship"
+          },
+          {
+            "name": "International Business, Minor",
+            "path": "/sitecore/content/Catalogs/University-of-Texas-Rio-Grande-Valley/2025-2026/Undergraduate-Catalog/Undergraduate-Programs-by-College/Robert-C-Vackar-College-of-Business-and-Entrepreneurship/Department-of-International-Business-and-Entrepreneurship/International-Business-Minor",
+            "college": "Robert C. Vackar College of Business and Entrepreneurship",
+            "department": "Department of International Business and Entrepreneurship"
+          }
+        ]
+      },
+      {
+        "name": "Department of Management",
+        "path": "/sitecore/content/Catalogs/University-of-Texas-Rio-Grande-Valley/2025-2026/Undergraduate-Catalog/Undergraduate-Programs-by-College/Robert-C-Vackar-College-of-Business-and-Entrepreneurship/Department-of-Management",
+        "programs": [
+          {
+            "name": "Management, Bachelor of Business Administration",
+            "path": "/sitecore/content/Catalogs/University-of-Texas-Rio-Grande-Valley/2025-2026/Undergraduate-Catalog/Undergraduate-Programs-by-College/Robert-C-Vackar-College-of-Business-and-Entrepreneurship/Department-of-Management/Management-Bachelor-of-Business-Administration",
+            "college": "Robert C. Vackar College of Business and Entrepreneurship",
+            "department": "Department of Management"
+          },
+          {
+            "name": "Human Resource Management, Minor",
+            "path": "/sitecore/content/Catalogs/University-of-Texas-Rio-Grande-Valley/2025-2026/Undergraduate-Catalog/Undergraduate-Programs-by-College/Robert-C-Vackar-College-of-Business-and-Entrepreneurship/Department-of-Management/Human-Resource-Management-Minor",
+            "college": "Robert C. Vackar College of Business and Entrepreneurship",
+            "department": "Department of Management"
+          },
+          {
+            "name": "Management, Minor",
+            "path": "/sitecore/content/Catalogs/University-of-Texas-Rio-Grande-Valley/2025-2026/Undergraduate-Catalog/Undergraduate-Programs-by-College/Robert-C-Vackar-College-of-Business-and-Entrepreneurship/Department-of-Management/Management-Minor",
+            "college": "Robert C. Vackar College of Business and Entrepreneurship",
+            "department": "Department of Management"
+          },
+          {
+            "name": "Sustainable Supply Chain Management, Minor",
+            "path": "/sitecore/content/Catalogs/University-of-Texas-Rio-Grande-Valley/2025-2026/Undergraduate-Catalog/Undergraduate-Programs-by-College/Robert-C-Vackar-College-of-Business-and-Entrepreneurship/Department-of-Management/Sustainable-Supply-Chain-Management-Minor",
+            "college": "Robert C. Vackar College of Business and Entrepreneurship",
+            "department": "Department of Management"
+          }
+        ]
+      },
+      {
+        "name": "Department of Marketing",
+        "path": "/sitecore/content/Catalogs/University-of-Texas-Rio-Grande-Valley/2025-2026/Undergraduate-Catalog/Undergraduate-Programs-by-College/Robert-C-Vackar-College-of-Business-and-Entrepreneurship/Department-of-Marketing",
+        "programs": [
+          {
+            "name": "Marketing, Bachelor of Business Administration ",
+            "path": "/sitecore/content/Catalogs/University-of-Texas-Rio-Grande-Valley/2025-2026/Undergraduate-Catalog/Undergraduate-Programs-by-College/Robert-C-Vackar-College-of-Business-and-Entrepreneurship/Department-of-Marketing/Marketing-Bachelor-of-Business-Administration",
+            "college": "Robert C. Vackar College of Business and Entrepreneurship",
+            "department": "Department of Marketing"
+          },
+          {
+            "name": "Marketing, Minor",
+            "path": "/sitecore/content/Catalogs/University-of-Texas-Rio-Grande-Valley/2025-2026/Undergraduate-Catalog/Undergraduate-Programs-by-College/Robert-C-Vackar-College-of-Business-and-Entrepreneurship/Department-of-Marketing/Marketing-Minor",
+            "college": "Robert C. Vackar College of Business and Entrepreneurship",
+            "department": "Department of Marketing"
+          }
+        ]
+      },
+      {
+        "name": "School of Accountancy",
+        "path": "/sitecore/content/Catalogs/University-of-Texas-Rio-Grande-Valley/2025-2026/Undergraduate-Catalog/Undergraduate-Programs-by-College/Robert-C-Vackar-College-of-Business-and-Entrepreneurship/School-of-Accountancy",
+        "programs": [
+          {
+            "name": "Accountancy, Bachelor of Business Administration",
+            "path": "/sitecore/content/Catalogs/University-of-Texas-Rio-Grande-Valley/2025-2026/Undergraduate-Catalog/Undergraduate-Programs-by-College/Robert-C-Vackar-College-of-Business-and-Entrepreneurship/School-of-Accountancy/Accountancy-Bachelor-of-Business-Administration",
+            "college": "Robert C. Vackar College of Business and Entrepreneurship",
+            "department": "School of Accountancy"
+          }
+        ]
+      },
+      {
+        "name": "College of Business Programs (no department)",
+        "path": "/sitecore/content/Catalogs/University-of-Texas-Rio-Grande-Valley/2025-2026/Undergraduate-Catalog/Undergraduate-Programs-by-College/Robert-C-Vackar-College-of-Business-and-Entrepreneurship/College-of-Business-Programs",
+        "programs": [
+          {
+            "name": "Hospitality and Tourism Management (Event and Destination Management), Bachelor of Science",
+            "path": "/sitecore/content/Catalogs/University-of-Texas-Rio-Grande-Valley/2025-2026/Undergraduate-Catalog/Undergraduate-Programs-by-College/Robert-C-Vackar-College-of-Business-and-Entrepreneurship/College-of-Business-Programs/Hospitality-and-Tourism-Management-Event-and-Destination-Management-Bachelor-of-Science",
+            "college": "Robert C. Vackar College of Business and Entrepreneurship",
+            "department": "College of Business Programs (no department)"
+          },
+          {
+            "name": "Hospitality and Tourism Management (Lodging Asset Ownership and Management), Bachelor of Science",
+            "path": "/sitecore/content/Catalogs/University-of-Texas-Rio-Grande-Valley/2025-2026/Undergraduate-Catalog/Undergraduate-Programs-by-College/Robert-C-Vackar-College-of-Business-and-Entrepreneurship/College-of-Business-Programs/Hospitality-and-Tourism-Management-Lodging-Asset-Ownership-and-Management-Bachelor-of-Science",
+            "college": "Robert C. Vackar College of Business and Entrepreneurship",
+            "department": "College of Business Programs (no department)"
+          },
+          {
+            "name": "Hospitality and Tourism Management (Restaurant Entrepreneurship and Management), Bachelor of Science",
+            "path": "/sitecore/content/Catalogs/University-of-Texas-Rio-Grande-Valley/2025-2026/Undergraduate-Catalog/Undergraduate-Programs-by-College/Robert-C-Vackar-College-of-Business-and-Entrepreneurship/College-of-Business-Programs/Hospitality-and-Tourism-Management-Restaurant-Entrepreneurship-and-Management-Bachelor-of-Science",
+            "college": "Robert C. Vackar College of Business and Entrepreneurship",
+            "department": "College of Business Programs (no department)"
+          },
+          {
+            "name": "Business Administration, Minor",
+            "path": "/sitecore/content/Catalogs/University-of-Texas-Rio-Grande-Valley/2025-2026/Undergraduate-Catalog/Undergraduate-Programs-by-College/Robert-C-Vackar-College-of-Business-and-Entrepreneurship/College-of-Business-Programs/Business-Administration-Minor",
+            "college": "Robert C. Vackar College of Business and Entrepreneurship",
+            "department": "College of Business Programs (no department)"
+          },
+          {
+            "name": "Hospitality and Tourism Management, Minor",
+            "path": "/sitecore/content/Catalogs/University-of-Texas-Rio-Grande-Valley/2025-2026/Undergraduate-Catalog/Undergraduate-Programs-by-College/Robert-C-Vackar-College-of-Business-and-Entrepreneurship/College-of-Business-Programs/Hospitality-and-Tourism-Management-Minor",
+            "college": "Robert C. Vackar College of Business and Entrepreneurship",
+            "department": "College of Business Programs (no department)"
+          },
+          {
+            "name": "Pre-MBA, Minor",
+            "path": "/sitecore/content/Catalogs/University-of-Texas-Rio-Grande-Valley/2025-2026/Undergraduate-Catalog/Undergraduate-Programs-by-College/Robert-C-Vackar-College-of-Business-and-Entrepreneurship/College-of-Business-Programs/PreMBA-Minor",
+            "college": "Robert C. Vackar College of Business and Entrepreneurship",
+            "department": "College of Business Programs (no department)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "College of Education and P-16 Integration",
+    "path": "/sitecore/content/Catalogs/University-of-Texas-Rio-Grande-Valley/2025-2026/Undergraduate-Catalog/Undergraduate-Programs-by-College/College-of-Education-and-P-16-Integration",
+    "departments": [
+      {
+        "name": "Department of Bilingual and Literacy Studies",
+        "path": "/sitecore/content/Catalogs/University-of-Texas-Rio-Grande-Valley/2025-2026/Undergraduate-Catalog/Undergraduate-Programs-by-College/College-of-Education-and-P-16-Integration/Department-of-Bilingual-and-Literacy-Studies",
+        "programs": [
+          {
+            "name": "Bilingual Education (EC-6 Certification),  Bachelor of Science",
+            "path": "/sitecore/content/Catalogs/University-of-Texas-Rio-Grande-Valley/2025-2026/Undergraduate-Catalog/Undergraduate-Programs-by-College/College-of-Education-and-P-16-Integration/Department-of-Bilingual-and-Literacy-Studies/Bilingual-Education-EC6-Certification-Bachelor-of-Science",
+            "college": "College of Education and P-16 Integration",
+            "department": "Department of Bilingual and Literacy Studies"
+          },
+          {
+            "name": "Reading, Minor",
+            "path": "/sitecore/content/Catalogs/University-of-Texas-Rio-Grande-Valley/2025-2026/Undergraduate-Catalog/Undergraduate-Programs-by-College/College-of-Education-and-P-16-Integration/Department-of-Bilingual-and-Literacy-Studies/Reading-Minor",
+            "college": "College of Education and P-16 Integration",
+            "department": "Department of Bilingual and Literacy Studies"
+          },
+          {
+            "name": "Secondary Bilingual Education, Minor",
+            "path": "/sitecore/content/Catalogs/University-of-Texas-Rio-Grande-Valley/2025-2026/Undergraduate-Catalog/Undergraduate-Programs-by-College/College-of-Education-and-P-16-Integration/Department-of-Bilingual-and-Literacy-Studies/Secondary-Bilingual-Education-Minor",
+            "college": "College of Education and P-16 Integration",
+            "department": "Department of Bilingual and Literacy Studies"
+          }
+        ]
+      },
+      {
+        "name": "Department of Human Development and School Services",
+        "path": "/sitecore/content/Catalogs/University-of-Texas-Rio-Grande-Valley/2025-2026/Undergraduate-Catalog/Undergraduate-Programs-by-College/College-of-Education-and-P-16-Integration/Department-of-Human-Development-and-School-Services",
+        "programs": [
+          {
+            "name": "Early Care and Early Childhood Studies, Bachelor of Science",
+            "path": "/sitecore/content/Catalogs/University-of-Texas-Rio-Grande-Valley/2025-2026/Undergraduate-Catalog/Undergraduate-Programs-by-College/College-of-Education-and-P-16-Integration/Department-of-Human-Development-and-School-Services/Early-Care-and-Early-Childhood-Studies-Bachelor-of-Science",
+            "college": "College of Education and P-16 Integration",
+            "department": "Department of Human Development and School Services"
+          },
+          {
+            "name": "Early Care and Early Childhood Studies (Teacher Certification), Bachelor of Science",
+            "path": "/sitecore/content/Catalogs/University-of-Texas-Rio-Grande-Valley/2025-2026/Undergraduate-Catalog/Undergraduate-Programs-by-College/College-of-Education-and-P-16-Integration/Department-of-Human-Development-and-School-Services/Early-Care-and-Early-Childhood-Studies-Teacher-Certification-Bachelor-of-Science",
+            "college": "College of Education and P-16 Integration",
+            "department": "Department of Human Development and School Services"
+          },
+          {
+            "name": "Special Education (Specialist and EC-6 Certification), Bachelor of Science",
+            "path": "/sitecore/content/Catalogs/University-of-Texas-Rio-Grande-Valley/2025-2026/Undergraduate-Catalog/Undergraduate-Programs-by-College/College-of-Education-and-P-16-Integration/Department-of-Human-Development-and-School-Services/Special-Education-Specialist-and-EC6-Certification-Bachelor-of-Science",
+            "college": "College of Education and P-16 Integration",
+            "department": "Department of Human Development and School Services"
+          },
+          {
+            "name": "Special Education (Specialist Certification), Bachelor of Science",
+            "path": "/sitecore/content/Catalogs/University-of-Texas-Rio-Grande-Valley/2025-2026/Undergraduate-Catalog/Undergraduate-Programs-by-College/College-of-Education-and-P-16-Integration/Department-of-Human-Development-and-School-Services/Special-Education-Specialist-Certification-Bachelor-of-Science",
+            "college": "College of Education and P-16 Integration",
+            "department": "Department of Human Development and School Services"
+          },
+          {
+            "name": "Early Care and Early Childhood Studies, Minor",
+            "path": "/sitecore/content/Catalogs/University-of-Texas-Rio-Grande-Valley/2025-2026/Undergraduate-Catalog/Undergraduate-Programs-by-College/College-of-Education-and-P-16-Integration/Department-of-Human-Development-and-School-Services/Early-Care-and-Early-Childhood-Studies-Minor",
+            "college": "College of Education and P-16 Integration",
+            "department": "Department of Human Development and School Services"
+          },
+          {
+            "name": "Special Education, Minor",
+            "path": "/sitecore/content/Catalogs/University-of-Texas-Rio-Grande-Valley/2025-2026/Undergraduate-Catalog/Undergraduate-Programs-by-College/College-of-Education-and-P-16-Integration/Department-of-Human-Development-and-School-Services/Special-Education-Minor",
+            "college": "College of Education and P-16 Integration",
+            "department": "Department of Human Development and School Services"
+          }
+        ]
+      },
+      {
+        "name": "Department of Teaching and Learning",
+        "path": "/sitecore/content/Catalogs/University-of-Texas-Rio-Grande-Valley/2025-2026/Undergraduate-Catalog/Undergraduate-Programs-by-College/College-of-Education-and-P-16-Integration/Department-of-Teaching-and-Learning",
+        "programs": [
+          {
+            "name": "Education (English as a Second Language, EC-6 Certification), Bachelor of Science",
+            "path": "/sitecore/content/Catalogs/University-of-Texas-Rio-Grande-Valley/2025-2026/Undergraduate-Catalog/Undergraduate-Programs-by-College/College-of-Education-and-P-16-Integration/Department-of-Teaching-and-Learning/Education-English-as-a-Second-Language-EC6-Certification-Bachelor-of-Science",
+            "college": "College of Education and P-16 Integration",
+            "department": "Department of Teaching and Learning"
+          },
+          {
+            "name": "All-Level/Secondary Education, Minor",
+            "path": "/sitecore/content/Catalogs/University-of-Texas-Rio-Grande-Valley/2025-2026/Undergraduate-Catalog/Undergraduate-Programs-by-College/College-of-Education-and-P-16-Integration/Department-of-Teaching-and-Learning/AllLevelSecondary-Education-Minor",
+            "college": "College of Education and P-16 Integration",
+            "department": "Department of Teaching and Learning"
+          },
+          {
+            "name": "Educational Technology, Minor",
+            "path": "/sitecore/content/Catalogs/University-of-Texas-Rio-Grande-Valley/2025-2026/Undergraduate-Catalog/Undergraduate-Programs-by-College/College-of-Education-and-P-16-Integration/Department-of-Teaching-and-Learning/Educational-Technology-Minor",
+            "college": "College of Education and P-16 Integration",
+            "department": "Department of Teaching and Learning"
+          },
+          {
+            "name": "Leadership Studies, Minor",
+            "path": "/sitecore/content/Catalogs/University-of-Texas-Rio-Grande-Valley/2025-2026/Undergraduate-Catalog/Undergraduate-Programs-by-College/College-of-Education-and-P-16-Integration/Department-of-Teaching-and-Learning/Leadership-Studies-Minor",
+            "college": "College of Education and P-16 Integration",
+            "department": "Department of Teaching and Learning"
+          },
+          {
+            "name": "Alternative Certification Program: Practitioner Reflection-Based Educator Preparation Academy",
+            "path": "/sitecore/content/Catalogs/University-of-Texas-Rio-Grande-Valley/2025-2026/Undergraduate-Catalog/Undergraduate-Programs-by-College/College-of-Education-and-P-16-Integration/Department-of-Teaching-and-Learning/Alternative-Certification-Program-Practitioner-Reflection-Based-Educator-Preparation-Academy",
+            "college": "College of Education and P-16 Integration",
+            "department": "Department of Teaching and Learning"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "College of Engineering And Computer Science",
+    "path": "/sitecore/content/Catalogs/University-of-Texas-Rio-Grande-Valley/2025-2026/Undergraduate-Catalog/Undergraduate-Programs-by-College/College-of-Engineering-And-Computer-Science",
+    "departments": [
+      {
+        "name": "Department of Civil Engineering",
+        "path": "/sitecore/content/Catalogs/University-of-Texas-Rio-Grande-Valley/2025-2026/Undergraduate-Catalog/Undergraduate-Programs-by-College/College-of-Engineering-And-Computer-Science/Department-of-Civil-Engineering",
+        "programs": [
+          {
+            "name": "Civil Engineering, Bachelor of Science",
+            "path": "/sitecore/content/Catalogs/University-of-Texas-Rio-Grande-Valley/2025-2026/Undergraduate-Catalog/Undergraduate-Programs-by-College/College-of-Engineering-And-Computer-Science/Department-of-Civil-Engineering/Civil-Engineering-Bachelor-of-Science",
+            "college": "College of Engineering And Computer Science",
+            "department": "Department of Civil Engineering"
+          }
+        ]
+      },
+      {
+        "name": "Department of Computer Science",
+        "path": "/sitecore/content/Catalogs/University-of-Texas-Rio-Grande-Valley/2025-2026/Undergraduate-Catalog/Undergraduate-Programs-by-College/College-of-Engineering-And-Computer-Science/Department-of-Computer-Science",
+        "programs": [
+          {
+            "name": "Computer Science, Bachelor of Science Computer Science",
+            "path": "/sitecore/content/Catalogs/University-of-Texas-Rio-Grande-Valley/2025-2026/Undergraduate-Catalog/Undergraduate-Programs-by-College/College-of-Engineering-And-Computer-Science/Department-of-Computer-Science/Computer-Science-Bachelor-of-Science-Computer-Science",
+            "college": "College of Engineering And Computer Science",
+            "department": "Department of Computer Science"
+          },
+          {
+            "name": "Computer Science, Minor",
+            "path": "/sitecore/content/Catalogs/University-of-Texas-Rio-Grande-Valley/2025-2026/Undergraduate-Catalog/Undergraduate-Programs-by-College/College-of-Engineering-And-Computer-Science/Department-of-Computer-Science/Computer-Science-Minor",
+            "college": "College of Engineering And Computer Science",
+            "department": "Department of Computer Science"
+          }
+        ]
+      },
+      {
+        "name": "Department of Electrical and Computer Engineering",
+        "path": "/sitecore/content/Catalogs/University-of-Texas-Rio-Grande-Valley/2025-2026/Undergraduate-Catalog/Undergraduate-Programs-by-College/College-of-Engineering-And-Computer-Science/Department-of-Electrical-and-Computer-Engineering",
+        "programs": [
+          {
+            "name": "Computer Engineering, Bachelor of Science Computer Engineering",
+            "path": "/sitecore/content/Catalogs/University-of-Texas-Rio-Grande-Valley/2025-2026/Undergraduate-Catalog/Undergraduate-Programs-by-College/College-of-Engineering-And-Computer-Science/Department-of-Electrical-and-Computer-Engineering/Computer-Engineering-Bachelor-of-Science-Computer-Engineering",
+            "college": "College of Engineering And Computer Science",
+            "department": "Department of Electrical and Computer Engineering"
+          },
+          {
+            "name": "Electrical Engineering, Bachelor of Science Electrical Engineering",
+            "path": "/sitecore/content/Catalogs/University-of-Texas-Rio-Grande-Valley/2025-2026/Undergraduate-Catalog/Undergraduate-Programs-by-College/College-of-Engineering-And-Computer-Science/Department-of-Electrical-and-Computer-Engineering/Electrical-Engineering-Bachelor-of-Science-Electrical-Engineering",
+            "college": "College of Engineering And Computer Science",
+            "department": "Department of Electrical and Computer Engineering"
+          },
+          {
+            "name": "Computer Engineering, Minor",
+            "path": "/sitecore/content/Catalogs/University-of-Texas-Rio-Grande-Valley/2025-2026/Undergraduate-Catalog/Undergraduate-Programs-by-College/College-of-Engineering-And-Computer-Science/Department-of-Electrical-and-Computer-Engineering/Computer-Engineering-Minor",
+            "college": "College of Engineering And Computer Science",
+            "department": "Department of Electrical and Computer Engineering"
+          },
+          {
+            "name": "Electrical Engineering, Minor",
+            "path": "/sitecore/content/Catalogs/University-of-Texas-Rio-Grande-Valley/2025-2026/Undergraduate-Catalog/Undergraduate-Programs-by-College/College-of-Engineering-And-Computer-Science/Department-of-Electrical-and-Computer-Engineering/Electrical-Engineering-Minor",
+            "college": "College of Engineering And Computer Science",
+            "department": "Department of Electrical and Computer Engineering"
+          }
+        ]
+      },
+      {
+        "name": "Department of Informatics and Engineering Systems",
+        "path": "/sitecore/content/Catalogs/University-of-Texas-Rio-Grande-Valley/2025-2026/Undergraduate-Catalog/Undergraduate-Programs-by-College/College-of-Engineering-And-Computer-Science/Department-of-Informatics-and-Engineering-Systems",
+        "programs": [
+          {
+            "name": "Cyber Security, Bachelor of Science",
+            "path": "/sitecore/content/Catalogs/University-of-Texas-Rio-Grande-Valley/2025-2026/Undergraduate-Catalog/Undergraduate-Programs-by-College/College-of-Engineering-And-Computer-Science/Department-of-Informatics-and-Engineering-Systems/Cyber-Security-Bachelor-of-Science",
+            "college": "College of Engineering And Computer Science",
+            "department": "Department of Informatics and Engineering Systems"
+          },
+          {
+            "name": "Engineering Technology, Bachelor of Science",
+            "path": "/sitecore/content/Catalogs/University-of-Texas-Rio-Grande-Valley/2025-2026/Undergraduate-Catalog/Undergraduate-Programs-by-College/College-of-Engineering-And-Computer-Science/Department-of-Informatics-and-Engineering-Systems/Engineering-Technology-Bachelor-of-Science",
+            "college": "College of Engineering And Computer Science",
+            "department": "Department of Informatics and Engineering Systems"
+          },
+          {
+            "name": "Cyber Security (For Non-Majors), Minor",
+            "path": "/sitecore/content/Catalogs/University-of-Texas-Rio-Grande-Valley/2025-2026/Undergraduate-Catalog/Undergraduate-Programs-by-College/College-of-Engineering-And-Computer-Science/Department-of-Informatics-and-Engineering-Systems/Cyber-Security-For-NonMajors-Minor",
+            "college": "College of Engineering And Computer Science",
+            "department": "Department of Informatics and Engineering Systems"
+          },
+          {
+            "name": "Cyber Security Advanced, Certificate",
+            "path": "/sitecore/content/Catalogs/University-of-Texas-Rio-Grande-Valley/2025-2026/Undergraduate-Catalog/Undergraduate-Programs-by-College/College-of-Engineering-And-Computer-Science/Department-of-Informatics-and-Engineering-Systems/Cyber-Security-Advanced-Certificate",
+            "college": "College of Engineering And Computer Science",
+            "department": "Department of Informatics and Engineering Systems"
+          },
+          {
+            "name": "Cyber Security Basics, Certificate",
+            "path": "/sitecore/content/Catalogs/University-of-Texas-Rio-Grande-Valley/2025-2026/Undergraduate-Catalog/Undergraduate-Programs-by-College/College-of-Engineering-And-Computer-Science/Department-of-Informatics-and-Engineering-Systems/Cyber-Security-Basics-Certificate",
+            "college": "College of Engineering And Computer Science",
+            "department": "Department of Informatics and Engineering Systems"
+          },
+          {
+            "name": "Cyber Security Systems, Certificate",
+            "path": "/sitecore/content/Catalogs/University-of-Texas-Rio-Grande-Valley/2025-2026/Undergraduate-Catalog/Undergraduate-Programs-by-College/College-of-Engineering-And-Computer-Science/Department-of-Informatics-and-Engineering-Systems/Cyber-Security-Systems-Certificate",
+            "college": "College of Engineering And Computer Science",
+            "department": "Department of Informatics and Engineering Systems"
+          }
+        ]
+      },
+      {
+        "name": "Department of Manufacturing and Industrial Engineering",
+        "path": "/sitecore/content/Catalogs/University-of-Texas-Rio-Grande-Valley/2025-2026/Undergraduate-Catalog/Undergraduate-Programs-by-College/College-of-Engineering-And-Computer-Science/Department-of-Manufacturing-and-Industrial-Engineering",
+        "programs": [
+          {
+            "name": "Manufacturing Engineering, Bachelor of Science Manufacturing Engineering",
+            "path": "/sitecore/content/Catalogs/University-of-Texas-Rio-Grande-Valley/2025-2026/Undergraduate-Catalog/Undergraduate-Programs-by-College/College-of-Engineering-And-Computer-Science/Department-of-Manufacturing-and-Industrial-Engineering/Manufacturing-Engineering-Bachelor-of-Science-Manufacturing-Engineering",
+            "college": "College of Engineering And Computer Science",
+            "department": "Department of Manufacturing and Industrial Engineering"
+          },
+          {
+            "name": "Defense Manufacturing Engineering and Innovation, Minor",
+            "path": "/sitecore/content/Catalogs/University-of-Texas-Rio-Grande-Valley/2025-2026/Undergraduate-Catalog/Undergraduate-Programs-by-College/College-of-Engineering-And-Computer-Science/Department-of-Manufacturing-and-Industrial-Engineering/Defense-Manufacturing-Engineering-and-Innovation-Minor",
+            "college": "College of Engineering And Computer Science",
+            "department": "Department of Manufacturing and Industrial Engineering"
+          },
+          {
+            "name": "Manufacturing Engineering, Minor",
+            "path": "/sitecore/content/Catalogs/University-of-Texas-Rio-Grande-Valley/2025-2026/Undergraduate-Catalog/Undergraduate-Programs-by-College/College-of-Engineering-And-Computer-Science/Department-of-Manufacturing-and-Industrial-Engineering/Manufacturing-Engineering-Minor",
+            "college": "College of Engineering And Computer Science",
+            "department": "Department of Manufacturing and Industrial Engineering"
+          }
+        ]
+      },
+      {
+        "name": "Department of Mechanical Engineering",
+        "path": "/sitecore/content/Catalogs/University-of-Texas-Rio-Grande-Valley/2025-2026/Undergraduate-Catalog/Undergraduate-Programs-by-College/College-of-Engineering-And-Computer-Science/Department-of-Mechanical-Engineering",
+        "programs": [
+          {
+            "name": "Mechanical Engineering, Bachelor of Science Mechanical Engineering",
+            "path": "/sitecore/content/Catalogs/University-of-Texas-Rio-Grande-Valley/2025-2026/Undergraduate-Catalog/Undergraduate-Programs-by-College/College-of-Engineering-And-Computer-Science/Department-of-Mechanical-Engineering/Mechanical-Engineering-Bachelor-of-Science-Mechanical-Engineering",
+            "college": "College of Engineering And Computer Science",
+            "department": "Department of Mechanical Engineering"
+          },
+          {
+            "name": "Mechanical Engineering, Minor",
+            "path": "/sitecore/content/Catalogs/University-of-Texas-Rio-Grande-Valley/2025-2026/Undergraduate-Catalog/Undergraduate-Programs-by-College/College-of-Engineering-And-Computer-Science/Department-of-Mechanical-Engineering/Mechanical-Engineering-Minor",
+            "college": "College of Engineering And Computer Science",
+            "department": "Department of Mechanical Engineering"
+          },
+          {
+            "name": "Petroleum Engineering, Certificate",
+            "path": "/sitecore/content/Catalogs/University-of-Texas-Rio-Grande-Valley/2025-2026/Undergraduate-Catalog/Undergraduate-Programs-by-College/College-of-Engineering-And-Computer-Science/Department-of-Mechanical-Engineering/Copy-of-Petroleum-Engineering-Certificate",
+            "college": "College of Engineering And Computer Science",
+            "department": "Department of Mechanical Engineering"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "College of Fine Arts",
+    "path": "/sitecore/content/Catalogs/University-of-Texas-Rio-Grande-Valley/2025-2026/Undergraduate-Catalog/Undergraduate-Programs-by-College/College-Of-Fine-Arts",
+    "departments": [
+      {
+        "name": "Department of Creative Writing",
+        "path": "/sitecore/content/Catalogs/University-of-Texas-Rio-Grande-Valley/2025-2026/Undergraduate-Catalog/Undergraduate-Programs-by-College/College-Of-Fine-Arts/Department-of-Creative-Writing",
+        "programs": [
+          {
+            "name": "Creative Writing, Minor",
+            "path": "/sitecore/content/Catalogs/University-of-Texas-Rio-Grande-Valley/2025-2026/Undergraduate-Catalog/Undergraduate-Programs-by-College/College-Of-Fine-Arts/Department-of-Creative-Writing/Creative-Writing-Minor",
+            "college": "College of Fine Arts",
+            "department": "Department of Creative Writing"
+          },
+          {
+            "name": "Creative Writing, Certificate",
+            "path": "/sitecore/content/Catalogs/University-of-Texas-Rio-Grande-Valley/2025-2026/Undergraduate-Catalog/Undergraduate-Programs-by-College/College-Of-Fine-Arts/Department-of-Creative-Writing/Creative-Writing-Certificate",
+            "college": "College of Fine Arts",
+            "department": "Department of Creative Writing"
+          }
+        ]
+      },
+      {
+        "name": "Department of Dance",
+        "path": "/sitecore/content/Catalogs/University-of-Texas-Rio-Grande-Valley/2025-2026/Undergraduate-Catalog/Undergraduate-Programs-by-College/College-Of-Fine-Arts/Department-of-Dance",
+        "programs": [
+          {
+            "name": "Dance, Bachelor of Arts",
+            "path": "/sitecore/content/Catalogs/University-of-Texas-Rio-Grande-Valley/2025-2026/Undergraduate-Catalog/Undergraduate-Programs-by-College/College-Of-Fine-Arts/Department-of-Dance/Dance-Bachelor-of-Arts",
+            "college": "College of Fine Arts",
+            "department": "Department of Dance"
+          },
+          {
+            "name": "Dance, Bachelor of Fine Arts",
+            "path": "/sitecore/content/Catalogs/University-of-Texas-Rio-Grande-Valley/2025-2026/Undergraduate-Catalog/Undergraduate-Programs-by-College/College-Of-Fine-Arts/Department-of-Dance/Dance-Bachelor-of-Fine-Arts",
+            "college": "College of Fine Arts",
+            "department": "Department of Dance"
+          },
+          {
+            "name": "Dance (Mexican Dance), Bachelor of Fine Arts",
+            "path": "/sitecore/content/Catalogs/University-of-Texas-Rio-Grande-Valley/2025-2026/Undergraduate-Catalog/Undergraduate-Programs-by-College/College-Of-Fine-Arts/Department-of-Dance/Dance-Mexican-Dance-Bachelor-of-Fine-Arts",
+            "college": "College of Fine Arts",
+            "department": "Department of Dance"
+          },
+          {
+            "name": "Dance (Teacher Certification), Bachelor of Arts",
+            "path": "/sitecore/content/Catalogs/University-of-Texas-Rio-Grande-Valley/2025-2026/Undergraduate-Catalog/Undergraduate-Programs-by-College/College-Of-Fine-Arts/Department-of-Dance/Dance-Teacher-Certification-Bachelor-of-Arts",
+            "college": "College of Fine Arts",
+            "department": "Department of Dance"
+          },
+          {
+            "name": "Dance, Minor",
+            "path": "/sitecore/content/Catalogs/University-of-Texas-Rio-Grande-Valley/2025-2026/Undergraduate-Catalog/Undergraduate-Programs-by-College/College-Of-Fine-Arts/Department-of-Dance/Dance-Minor",
+            "college": "College of Fine Arts",
+            "department": "Department of Dance"
+          }
+        ]
+      },
+      {
+        "name": "Department of Theatre",
+        "path": "/sitecore/content/Catalogs/University-of-Texas-Rio-Grande-Valley/2025-2026/Undergraduate-Catalog/Undergraduate-Programs-by-College/College-Of-Fine-Arts/Department-of-Theatre",
+        "programs": [
+          {
+            "name": "Theatre (Design Technical), Bachelor of Arts",
+            "path": "/sitecore/content/Catalogs/University-of-Texas-Rio-Grande-Valley/2025-2026/Undergraduate-Catalog/Undergraduate-Programs-by-College/College-Of-Fine-Arts/Department-of-Theatre/Theatre-Deign-Technical-Bachelor-of-Arts",
+            "college": "College of Fine Arts",
+            "department": "Department of Theatre"
+          },
+          {
+            "name": "Theatre (Film Production), Bachelor of Arts",
+            "path": "/sitecore/content/Catalogs/University-of-Texas-Rio-Grande-Valley/2025-2026/Undergraduate-Catalog/Undergraduate-Programs-by-College/College-Of-Fine-Arts/Department-of-Theatre/Theatre-Film-Production-Bachelor-of-Arts",
+            "college": "College of Fine Arts",
+            "department": "Department of Theatre"
+          },
+          {
+            "name": "Theatre (Performance), Bachelor of Arts ",
+            "path": "/sitecore/content/Catalogs/University-of-Texas-Rio-Grande-Valley/2025-2026/Undergraduate-Catalog/Undergraduate-Programs-by-College/College-Of-Fine-Arts/Department-of-Theatre/Theatre-Performance-Bachelor-of-Arts",
+            "college": "College of Fine Arts",
+            "department": "Department of Theatre"
+          },
+          {
+            "name": "Theatre (Teacher Certification), Bachelor of Arts",
+            "path": "/sitecore/content/Catalogs/University-of-Texas-Rio-Grande-Valley/2025-2026/Undergraduate-Catalog/Undergraduate-Programs-by-College/College-Of-Fine-Arts/Department-of-Theatre/Theatre-Teacher-Certification-Bachelor-of-Arts",
+            "college": "College of Fine Arts",
+            "department": "Department of Theatre"
+          },
+          {
+            "name": "Film Production, Minor",
+            "path": "/sitecore/content/Catalogs/University-of-Texas-Rio-Grande-Valley/2025-2026/Undergraduate-Catalog/Undergraduate-Programs-by-College/College-Of-Fine-Arts/Department-of-Theatre/Film-Production-Minor",
+            "college": "College of Fine Arts",
+            "department": "Department of Theatre"
+          },
+          {
+            "name": "Theatre, Minor",
+            "path": "/sitecore/content/Catalogs/University-of-Texas-Rio-Grande-Valley/2025-2026/Undergraduate-Catalog/Undergraduate-Programs-by-College/College-Of-Fine-Arts/Department-of-Theatre/Theatre-Minor",
+            "college": "College of Fine Arts",
+            "department": "Department of Theatre"
+          }
+        ]
+      },
+      {
+        "name": "School of Art and Design",
+        "path": "/sitecore/content/Catalogs/University-of-Texas-Rio-Grande-Valley/2025-2026/Undergraduate-Catalog/Undergraduate-Programs-by-College/College-Of-Fine-Arts/School-of-Art-and-Design",
+        "programs": [
+          {
+            "name": "Art (All-level Secondary Education Minor), Bachelor of Fine Arts",
+            "path": "/sitecore/content/Catalogs/University-of-Texas-Rio-Grande-Valley/2025-2026/Undergraduate-Catalog/Undergraduate-Programs-by-College/College-Of-Fine-Arts/School-of-Art-and-Design/Art-Alllevel-Secondary-Education-Minor-Bachelor-of-Fine-Arts",
+            "college": "College of Fine Arts",
+            "department": "School of Art and Design"
+          },
+          {
+            "name": "Art (Ceramics), Bachelor of Fine Arts",
+            "path": "/sitecore/content/Catalogs/University-of-Texas-Rio-Grande-Valley/2025-2026/Undergraduate-Catalog/Undergraduate-Programs-by-College/College-Of-Fine-Arts/School-of-Art-and-Design/Art-Ceramics-Bachelor-of-Fine-Arts",
+            "college": "College of Fine Arts",
+            "department": "School of Art and Design"
+          },
+          {
+            "name": "Art (Sculpture), Bachelor of Fine Arts",
+            "path": "/sitecore/content/Catalogs/University-of-Texas-Rio-Grande-Valley/2025-2026/Undergraduate-Catalog/Undergraduate-Programs-by-College/College-Of-Fine-Arts/School-of-Art-and-Design/Art-Sculpture-Bachelor-of-Fine-Arts",
+            "college": "College of Fine Arts",
+            "department": "School of Art and Design"
+          },
+          {
+            "name": "Art (Studio Art), Bachelor of Fine Arts",
+            "path": "/sitecore/content/Catalogs/University-of-Texas-Rio-Grande-Valley/2025-2026/Undergraduate-Catalog/Undergraduate-Programs-by-College/College-Of-Fine-Arts/School-of-Art-and-Design/Art-Studio-Art-Bachelor-of-Fine-Arts",
+            "college": "College of Fine Arts",
+            "department": "School of Art and Design"
+          },
+          {
+            "name": "Art (Teacher Certification), Bachelor of Arts",
+            "path": "/sitecore/content/Catalogs/University-of-Texas-Rio-Grande-Valley/2025-2026/Undergraduate-Catalog/Undergraduate-Programs-by-College/College-Of-Fine-Arts/School-of-Art-and-Design/Art-Teacher-Certification-Bachelor-of-Arts",
+            "college": "College of Fine Arts",
+            "department": "School of Art and Design"
+          },
+          {
+            "name": "Visual Communication Design, Bachelor of Fine Arts",
+            "path": "/sitecore/content/Catalogs/University-of-Texas-Rio-Grande-Valley/2025-2026/Undergraduate-Catalog/Undergraduate-Programs-by-College/College-Of-Fine-Arts/School-of-Art-and-Design/Visual-Communication-Design-Bachelor-of-Fine-Arts",
+            "college": "College of Fine Arts",
+            "department": "School of Art and Design"
+          },
+          {
+            "name": "Art, Minor",
+            "path": "/sitecore/content/Catalogs/University-of-Texas-Rio-Grande-Valley/2025-2026/Undergraduate-Catalog/Undergraduate-Programs-by-College/College-Of-Fine-Arts/School-of-Art-and-Design/Art-Minor",
+            "college": "College of Fine Arts",
+            "department": "School of Art and Design"
+          },
+          {
+            "name": "Art History, Minor",
+            "path": "/sitecore/content/Catalogs/University-of-Texas-Rio-Grande-Valley/2025-2026/Undergraduate-Catalog/Undergraduate-Programs-by-College/College-Of-Fine-Arts/School-of-Art-and-Design/Art-History-Minor",
+            "college": "College of Fine Arts",
+            "department": "School of Art and Design"
+          },
+          {
+            "name": "Arts and Entrepreneurship, Minor",
+            "path": "/sitecore/content/Catalogs/University-of-Texas-Rio-Grande-Valley/2025-2026/Undergraduate-Catalog/Undergraduate-Programs-by-College/College-Of-Fine-Arts/School-of-Art-and-Design/Arts-and-Entrepreneurship-Minor",
+            "college": "College of Fine Arts",
+            "department": "School of Art and Design"
+          },
+          {
+            "name": "Visual Communication Design, Minor",
+            "path": "/sitecore/content/Catalogs/University-of-Texas-Rio-Grande-Valley/2025-2026/Undergraduate-Catalog/Undergraduate-Programs-by-College/College-Of-Fine-Arts/School-of-Art-and-Design/Visual-Communication-Design-Minor",
+            "college": "College of Fine Arts",
+            "department": "School of Art and Design"
+          }
+        ]
+      },
+      {
+        "name": "School of Music",
+        "path": "/sitecore/content/Catalogs/University-of-Texas-Rio-Grande-Valley/2025-2026/Undergraduate-Catalog/Undergraduate-Programs-by-College/College-Of-Fine-Arts/School-of-Music",
+        "programs": [
+          {
+            "name": "Music (Guitar, Teacher Certification), Bachelor of Music",
+            "path": "/sitecore/content/Catalogs/University-of-Texas-Rio-Grande-Valley/2025-2026/Undergraduate-Catalog/Undergraduate-Programs-by-College/College-Of-Fine-Arts/School-of-Music/Music-Guitar-Teacher-Certification-Bachelor-of-Music",
+            "college": "College of Fine Arts",
+            "department": "School of Music"
+          },
+          {
+            "name": "Music (Mariachi, Teacher Certification), Bachelor of Music",
+            "path": "/sitecore/content/Catalogs/University-of-Texas-Rio-Grande-Valley/2025-2026/Undergraduate-Catalog/Undergraduate-Programs-by-College/College-Of-Fine-Arts/School-of-Music/Music-Mariachi-Teacher-Certification-Bachelor-of-Music",
+            "college": "College of Fine Arts",
+            "department": "School of Music"
+          },
+          {
+            "name": "Music (Piano, Teacher Certification), Bachelor of Music",
+            "path": "/sitecore/content/Catalogs/University-of-Texas-Rio-Grande-Valley/2025-2026/Undergraduate-Catalog/Undergraduate-Programs-by-College/College-Of-Fine-Arts/School-of-Music/Music-Piano-Teacher-Certification-Bachelor-of-Music",
+            "college": "College of Fine Arts",
+            "department": "School of Music"
+          },
+          {
+            "name": "Music (String, Teacher Certification), Bachelor of Music",
+            "path": "/sitecore/content/Catalogs/University-of-Texas-Rio-Grande-Valley/2025-2026/Undergraduate-Catalog/Undergraduate-Programs-by-College/College-Of-Fine-Arts/School-of-Music/Music-String-Teacher-Certification-Bachelor-of-Music",
+            "college": "College of Fine Arts",
+            "department": "School of Music"
+          },
+          {
+            "name": "Music (Voice, Teacher Certification), Bachelor of Music",
+            "path": "/sitecore/content/Catalogs/University-of-Texas-Rio-Grande-Valley/2025-2026/Undergraduate-Catalog/Undergraduate-Programs-by-College/College-Of-Fine-Arts/School-of-Music/Music-Voice-Teacher-Certification-Bachelor-of-Music",
+            "college": "College of Fine Arts",
+            "department": "School of Music"
+          },
+          {
+            "name": "Music (Woodwinds, Brass, or Percussion, Teacher Certification), Bachelor of Music",
+            "path": "/sitecore/content/Catalogs/University-of-Texas-Rio-Grande-Valley/2025-2026/Undergraduate-Catalog/Undergraduate-Programs-by-College/College-Of-Fine-Arts/School-of-Music/Music-Woodwinds-Brass-or-Percussion-Teacher-Certification-Bachelor-of-Music",
+            "college": "College of Fine Arts",
+            "department": "School of Music"
+          },
+          {
+            "name": "Music Composition, Bachelor of Music",
+            "path": "/sitecore/content/Catalogs/University-of-Texas-Rio-Grande-Valley/2025-2026/Undergraduate-Catalog/Undergraduate-Programs-by-College/College-Of-Fine-Arts/School-of-Music/Music-Composition-Bachelor-of-Music",
+            "college": "College of Fine Arts",
+            "department": "School of Music"
+          },
+          {
+            "name": "Music Technology, Bachelor of Music",
+            "path": "/sitecore/content/Catalogs/University-of-Texas-Rio-Grande-Valley/2025-2026/Undergraduate-Catalog/Undergraduate-Programs-by-College/College-Of-Fine-Arts/School-of-Music/Music-Technology-Bachelor-of-Music",
+            "college": "College of Fine Arts",
+            "department": "School of Music"
+          },
+          {
+            "name": "Performance (Guitar), Bachelor of Music",
+            "path": "/sitecore/content/Catalogs/University-of-Texas-Rio-Grande-Valley/2025-2026/Undergraduate-Catalog/Undergraduate-Programs-by-College/College-Of-Fine-Arts/School-of-Music/Performance-Guitar-Bachelor-of-Music",
+            "college": "College of Fine Arts",
+            "department": "School of Music"
+          },
+          {
+            "name": "Performance (Piano), Bachelor of Music",
+            "path": "/sitecore/content/Catalogs/University-of-Texas-Rio-Grande-Valley/2025-2026/Undergraduate-Catalog/Undergraduate-Programs-by-College/College-Of-Fine-Arts/School-of-Music/Performance-Piano-Bachelor-of-Music",
+            "college": "College of Fine Arts",
+            "department": "School of Music"
+          },
+          {
+            "name": "Performance (String), Bachelor of Music",
+            "path": "/sitecore/content/Catalogs/University-of-Texas-Rio-Grande-Valley/2025-2026/Undergraduate-Catalog/Undergraduate-Programs-by-College/College-Of-Fine-Arts/School-of-Music/Performance-String-Bachelor-of-Music",
+            "college": "College of Fine Arts",
+            "department": "School of Music"
+          },
+          {
+            "name": "Performance (Voice), Bachelor of Music",
+            "path": "/sitecore/content/Catalogs/University-of-Texas-Rio-Grande-Valley/2025-2026/Undergraduate-Catalog/Undergraduate-Programs-by-College/College-Of-Fine-Arts/School-of-Music/Performance-Voice-Bachelor-of-Music",
+            "college": "College of Fine Arts",
+            "department": "School of Music"
+          },
+          {
+            "name": "Performance (Woodwinds, Brass, or Percussion), Bachelor of Music",
+            "path": "/sitecore/content/Catalogs/University-of-Texas-Rio-Grande-Valley/2025-2026/Undergraduate-Catalog/Undergraduate-Programs-by-College/College-Of-Fine-Arts/School-of-Music/Performance-Woodwinds-Brass-or-Percussion-Bachelor-of-Music",
+            "college": "College of Fine Arts",
+            "department": "School of Music"
+          },
+          {
+            "name": "Jazz Studies, Minor ",
+            "path": "/sitecore/content/Catalogs/University-of-Texas-Rio-Grande-Valley/2025-2026/Undergraduate-Catalog/Undergraduate-Programs-by-College/College-Of-Fine-Arts/School-of-Music/Jazz-Studies-Minor",
+            "college": "College of Fine Arts",
+            "department": "School of Music"
+          },
+          {
+            "name": "Mariachi Performance (For Majors), Minor",
+            "path": "/sitecore/content/Catalogs/University-of-Texas-Rio-Grande-Valley/2025-2026/Undergraduate-Catalog/Undergraduate-Programs-by-College/College-Of-Fine-Arts/School-of-Music/Mariachi-Performance-For-Majors-Minor",
+            "college": "College of Fine Arts",
+            "department": "School of Music"
+          },
+          {
+            "name": "Mariachi Performance (For Non-Majors), Minor",
+            "path": "/sitecore/content/Catalogs/University-of-Texas-Rio-Grande-Valley/2025-2026/Undergraduate-Catalog/Undergraduate-Programs-by-College/College-Of-Fine-Arts/School-of-Music/Mariachi-Performance-for-NonMajors-Minor",
+            "college": "College of Fine Arts",
+            "department": "School of Music"
+          },
+          {
+            "name": "Music, Minor",
+            "path": "/sitecore/content/Catalogs/University-of-Texas-Rio-Grande-Valley/2025-2026/Undergraduate-Catalog/Undergraduate-Programs-by-College/College-Of-Fine-Arts/School-of-Music/Music-Minor",
+            "college": "College of Fine Arts",
+            "department": "School of Music"
+          },
+          {
+            "name": "Music Technology (For Majors), Minor",
+            "path": "/sitecore/content/Catalogs/University-of-Texas-Rio-Grande-Valley/2025-2026/Undergraduate-Catalog/Undergraduate-Programs-by-College/College-Of-Fine-Arts/School-of-Music/Music-Technology-For-Majors-Minor",
+            "college": "College of Fine Arts",
+            "department": "School of Music"
+          },
+          {
+            "name": "Music Technology (For Non-Majors), Minor",
+            "path": "/sitecore/content/Catalogs/University-of-Texas-Rio-Grande-Valley/2025-2026/Undergraduate-Catalog/Undergraduate-Programs-by-College/College-Of-Fine-Arts/School-of-Music/Music-Technology-For-NonMajors-Minor",
+            "college": "College of Fine Arts",
+            "department": "School of Music"
+          },
+          {
+            "name": "Popular Music, Minor",
+            "path": "/sitecore/content/Catalogs/University-of-Texas-Rio-Grande-Valley/2025-2026/Undergraduate-Catalog/Undergraduate-Programs-by-College/College-Of-Fine-Arts/School-of-Music/Popular-Music-Minor",
+            "college": "College of Fine Arts",
+            "department": "School of Music"
+          },
+          {
+            "name": "Jazz Studies, Certificate",
+            "path": "/sitecore/content/Catalogs/University-of-Texas-Rio-Grande-Valley/2025-2026/Undergraduate-Catalog/Undergraduate-Programs-by-College/College-Of-Fine-Arts/School-of-Music/Jazz-Studies",
+            "college": "College of Fine Arts",
+            "department": "School of Music"
+          },
+          {
+            "name": "Music Technology, Certificate",
+            "path": "/sitecore/content/Catalogs/University-of-Texas-Rio-Grande-Valley/2025-2026/Undergraduate-Catalog/Undergraduate-Programs-by-College/College-Of-Fine-Arts/School-of-Music/Music-Technology-Certificate",
+            "college": "College of Fine Arts",
+            "department": "School of Music"
+          },
+          {
+            "name": "Performance with Mariachi Concentration, Certificate",
+            "path": "/sitecore/content/Catalogs/University-of-Texas-Rio-Grande-Valley/2025-2026/Undergraduate-Catalog/Undergraduate-Programs-by-College/College-Of-Fine-Arts/School-of-Music/Performance-with-Mariachi-Concentration-Certificate",
+            "college": "College of Fine Arts",
+            "department": "School of Music"
+          },
+          {
+            "name": "Popular Music, Certificate",
+            "path": "/sitecore/content/Catalogs/University-of-Texas-Rio-Grande-Valley/2025-2026/Undergraduate-Catalog/Undergraduate-Programs-by-College/College-Of-Fine-Arts/School-of-Music/Popular-Music-Certificate",
+            "college": "College of Fine Arts",
+            "department": "School of Music"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "College of Health Professions",
+    "path": "/sitecore/content/Catalogs/University-of-Texas-Rio-Grande-Valley/2025-2026/Undergraduate-Catalog/Undergraduate-Programs-by-College/College-of-Health-Professions",
+    "departments": [
+      {
+        "name": "Department of Communication Disorders",
+        "path": "/sitecore/content/Catalogs/University-of-Texas-Rio-Grande-Valley/2025-2026/Undergraduate-Catalog/Undergraduate-Programs-by-College/College-of-Health-Professions/Department-of-Communication-Disorders",
+        "programs": [
+          {
+            "name": "American Sign Language and Interpretation (Communication Studies), Bachelor of Science",
+            "path": "/sitecore/content/Catalogs/University-of-Texas-Rio-Grande-Valley/2025-2026/Undergraduate-Catalog/Undergraduate-Programs-by-College/College-of-Health-Professions/Department-of-Communication-Disorders/American-Sign-Language-and-Interpretation-Communication-Studies-Bachelor-of-Science",
+            "college": "College of Health Professions",
+            "department": "Department of Communication Disorders"
+          },
+          {
+            "name": "American Sign Language and Interpretation (Spanish Translation and Interpreting), Bachelor of Science",
+            "path": "/sitecore/content/Catalogs/University-of-Texas-Rio-Grande-Valley/2025-2026/Undergraduate-Catalog/Undergraduate-Programs-by-College/College-of-Health-Professions/Department-of-Communication-Disorders/American-Sign-Language-and-Interpretation-Spanish-Translation-and-Interpreting-Bachelor-of-Science",
+            "college": "College of Health Professions",
+            "department": "Department of Communication Disorders"
+          },
+          {
+            "name": "Communication Sciences and Disorders (Audiology Concentration) (American Sign Language Minor), Bachelor of Science",
+            "path": "/sitecore/content/Catalogs/University-of-Texas-Rio-Grande-Valley/2025-2026/Undergraduate-Catalog/Undergraduate-Programs-by-College/College-of-Health-Professions/Department-of-Communication-Disorders/Communication-Sciences-and-Disorders-Audiology-Concentration-American-Sign-Language-Minor-Bachelor-of-Science",
+            "college": "College of Health Professions",
+            "department": "Department of Communication Disorders"
+          },
+          {
+            "name": "Communication Sciences and Disorders (Speech-Language Pathology Concentration) (American Sign Language Minor), Bachelor of Science",
+            "path": "/sitecore/content/Catalogs/University-of-Texas-Rio-Grande-Valley/2025-2026/Undergraduate-Catalog/Undergraduate-Programs-by-College/College-of-Health-Professions/Department-of-Communication-Disorders/Communication-Sciences-and-Disorders-SpeechLanguage-Pathology-Concentration-American-Sign-Language-Minor-Bachelor-of-Science",
+            "college": "College of Health Professions",
+            "department": "Department of Communication Disorders"
+          },
+          {
+            "name": "American Sign Language Studies, Minor",
+            "path": "/sitecore/content/Catalogs/University-of-Texas-Rio-Grande-Valley/2025-2026/Undergraduate-Catalog/Undergraduate-Programs-by-College/College-of-Health-Professions/Department-of-Communication-Disorders/American-Sign-Language-Studies-Minor",
+            "college": "College of Health Professions",
+            "department": "Department of Communication Disorders"
+          }
+        ]
+      },
+      {
+        "name": "Department of Health and Biomedical Sciences",
+        "path": "/sitecore/content/Catalogs/University-of-Texas-Rio-Grande-Valley/2025-2026/Undergraduate-Catalog/Undergraduate-Programs-by-College/College-of-Health-Professions/Department-of-Health-and-Biomedical-Sciences",
+        "programs": [
+          {
+            "name": "Biomedical Science, Bachelor of Science",
+            "path": "/sitecore/content/Catalogs/University-of-Texas-Rio-Grande-Valley/2025-2026/Undergraduate-Catalog/Undergraduate-Programs-by-College/College-of-Health-Professions/Department-of-Health-and-Biomedical-Sciences/Biomedical-Science-Bachelor-of-Science",
+            "college": "College of Health Professions",
+            "department": "Department of Health and Biomedical Sciences"
+          },
+          {
+            "name": "Health Services Technology, Bachelor of Applied Technology",
+            "path": "/sitecore/content/Catalogs/University-of-Texas-Rio-Grande-Valley/2025-2026/Undergraduate-Catalog/Undergraduate-Programs-by-College/College-of-Health-Professions/Department-of-Health-and-Biomedical-Sciences/Health-Services-Technology-Bachelor-of-Applied-Technology",
+            "college": "College of Health Professions",
+            "department": "Department of Health and Biomedical Sciences"
+          },
+          {
+            "name": "Health Informatics, Minor",
+            "path": "/sitecore/content/Catalogs/University-of-Texas-Rio-Grande-Valley/2025-2026/Undergraduate-Catalog/Undergraduate-Programs-by-College/College-of-Health-Professions/Department-of-Health-and-Biomedical-Sciences/Health-Informatics-Minor",
+            "college": "College of Health Professions",
+            "department": "Department of Health and Biomedical Sciences"
+          },
+          {
+            "name": "Health Services Technology, Minor",
+            "path": "/sitecore/content/Catalogs/University-of-Texas-Rio-Grande-Valley/2025-2026/Undergraduate-Catalog/Undergraduate-Programs-by-College/College-of-Health-Professions/Department-of-Health-and-Biomedical-Sciences/Health-Services-Technology-Minor",
+            "college": "College of Health Professions",
+            "department": "Department of Health and Biomedical Sciences"
+          }
+        ]
+      },
+      {
+        "name": "Department of Health and Human Performance",
+        "path": "/sitecore/content/Catalogs/University-of-Texas-Rio-Grande-Valley/2025-2026/Undergraduate-Catalog/Undergraduate-Programs-by-College/College-of-Health-Professions/Department-of-Health-and-Human-Performance",
+        "programs": [
+          {
+            "name": "Exercise Science, Bachelor of Science",
+            "path": "/sitecore/content/Catalogs/University-of-Texas-Rio-Grande-Valley/2025-2026/Undergraduate-Catalog/Undergraduate-Programs-by-College/College-of-Health-Professions/Department-of-Health-and-Human-Performance/Exercise-Science-Bachelor-of-Science",
+            "college": "College of Health Professions",
+            "department": "Department of Health and Human Performance"
+          },
+          {
+            "name": "Exercise Science (Occupational Therapy Concentration), Bachelor of Science",
+            "path": "/sitecore/content/Catalogs/University-of-Texas-Rio-Grande-Valley/2025-2026/Undergraduate-Catalog/Undergraduate-Programs-by-College/College-of-Health-Professions/Department-of-Health-and-Human-Performance/Exercise-Science-Occupational-Therapy-Concentration-Bachelor-of-Science",
+            "college": "College of Health Professions",
+            "department": "Department of Health and Human Performance"
+          },
+          {
+            "name": "Exercise Science (Physical Therapy Concentration), Bachelor of Science",
+            "path": "/sitecore/content/Catalogs/University-of-Texas-Rio-Grande-Valley/2025-2026/Undergraduate-Catalog/Undergraduate-Programs-by-College/College-of-Health-Professions/Department-of-Health-and-Human-Performance/Exercise-Science-Physical-Therapy-Concentration-Bachelor-of-Science",
+            "college": "College of Health Professions",
+            "department": "Department of Health and Human Performance"
+          },
+          {
+            "name": "Health, Bachelor of Science",
+            "path": "/sitecore/content/Catalogs/University-of-Texas-Rio-Grande-Valley/2025-2026/Undergraduate-Catalog/Undergraduate-Programs-by-College/College-of-Health-Professions/Department-of-Health-and-Human-Performance/Health-Bachelor-of-Science",
+            "college": "College of Health Professions",
+            "department": "Department of Health and Human Performance"
+          },
+          {
+            "name": "Kinesiology, Bachelor of Science",
+            "path": "/sitecore/content/Catalogs/University-of-Texas-Rio-Grande-Valley/2025-2026/Undergraduate-Catalog/Undergraduate-Programs-by-College/College-of-Health-Professions/Department-of-Health-and-Human-Performance/Kinesiology-Bachelor-of-Science",
+            "college": "College of Health Professions",
+            "department": "Department of Health and Human Performance"
+          },
+          {
+            "name": "Kinesiology (Athletic Training Concentration), Bachelor of Science",
+            "path": "/sitecore/content/Catalogs/University-of-Texas-Rio-Grande-Valley/2025-2026/Undergraduate-Catalog/Undergraduate-Programs-by-College/College-of-Health-Professions/Department-of-Health-and-Human-Performance/Kinesiology-Athletic-Training-Concentration-Bachelor-of-Science",
+            "college": "College of Health Professions",
+            "department": "Department of Health and Human Performance"
+          },
+          {
+            "name": "Kinesiology (Coaching Concentration), Bachelor of Science",
+            "path": "/sitecore/content/Catalogs/University-of-Texas-Rio-Grande-Valley/2025-2026/Undergraduate-Catalog/Undergraduate-Programs-by-College/College-of-Health-Professions/Department-of-Health-and-Human-Performance/Kinesiology-Bachelor-of-Science-Coaching-Concentration",
+            "college": "College of Health Professions",
+            "department": "Department of Health and Human Performance"
+          },
+          {
+            "name": "Kinesiology (Recreational Sports Management Concentration), Bachelor of Science",
+            "path": "/sitecore/content/Catalogs/University-of-Texas-Rio-Grande-Valley/2025-2026/Undergraduate-Catalog/Undergraduate-Programs-by-College/College-of-Health-Professions/Department-of-Health-and-Human-Performance/Kinesiology-Bachelor-of-Science-Recreational-Sports-Management-Concentration",
+            "college": "College of Health Professions",
+            "department": "Department of Health and Human Performance"
+          },
+          {
+            "name": "Kinesiology (Teacher Certification), Bachelor of Science",
+            "path": "/sitecore/content/Catalogs/University-of-Texas-Rio-Grande-Valley/2025-2026/Undergraduate-Catalog/Undergraduate-Programs-by-College/College-of-Health-Professions/Department-of-Health-and-Human-Performance/Kinesiology-Teacher-Certification-Bachelor-of-Science",
+            "college": "College of Health Professions",
+            "department": "Department of Health and Human Performance"
+          },
+          {
+            "name": "Health, Minor",
+            "path": "/sitecore/content/Catalogs/University-of-Texas-Rio-Grande-Valley/2025-2026/Undergraduate-Catalog/Undergraduate-Programs-by-College/College-of-Health-Professions/Department-of-Health-and-Human-Performance/Health-Minor",
+            "college": "College of Health Professions",
+            "department": "Department of Health and Human Performance"
+          },
+          {
+            "name": "Kinesiology, Minor",
+            "path": "/sitecore/content/Catalogs/University-of-Texas-Rio-Grande-Valley/2025-2026/Undergraduate-Catalog/Undergraduate-Programs-by-College/College-of-Health-Professions/Department-of-Health-and-Human-Performance/Kinesiology-Minor",
+            "college": "College of Health Professions",
+            "department": "Department of Health and Human Performance"
+          }
+        ]
+      },
+      {
+        "name": "Department of Health Sciences ",
+        "path": "/sitecore/content/Catalogs/University-of-Texas-Rio-Grande-Valley/2025-2026/Undergraduate-Catalog/Undergraduate-Programs-by-College/College-of-Health-Professions/Department-of-Health-Sciences",
+        "programs": [
+          {
+            "name": "Integrated Health Sciences, Bachelor of Science",
+            "path": "/sitecore/content/Catalogs/University-of-Texas-Rio-Grande-Valley/2025-2026/Undergraduate-Catalog/Undergraduate-Programs-by-College/College-of-Health-Professions/Department-of-Health-Sciences/Integrated-Health-Sciences-Bachelor-of-Science",
+            "college": "College of Health Professions",
+            "department": "Department of Health Sciences "
+          },
+          {
+            "name": "Integrated Health Sciences (Clinical Professions - Communication Sciences and Disorders Pathway), Bachelor of Science",
+            "path": "/sitecore/content/Catalogs/University-of-Texas-Rio-Grande-Valley/2025-2026/Undergraduate-Catalog/Undergraduate-Programs-by-College/College-of-Health-Professions/Department-of-Health-Sciences/Integrated-Health-Sciences-Clinical-Professions-Communication-Sciences-and-Disorders-Pathway-Bachelor-of-Science",
+            "college": "College of Health Professions",
+            "department": "Department of Health Sciences "
+          },
+          {
+            "name": "Integrated Health Sciences (Clinical Professions - Medical Laboratory Science Pathway), Bachelor of Science",
+            "path": "/sitecore/content/Catalogs/University-of-Texas-Rio-Grande-Valley/2025-2026/Undergraduate-Catalog/Undergraduate-Programs-by-College/College-of-Health-Professions/Department-of-Health-Sciences/Integrated-Health-Sciences-Clinical-Professions-Medical-Laboratory-Science-Pathway-Bachelor-of-Science",
+            "college": "College of Health Professions",
+            "department": "Department of Health Sciences "
+          },
+          {
+            "name": "Integrated Health Sciences (Clinical Professions - Nursing Pathway), Bachelor of Science",
+            "path": "/sitecore/content/Catalogs/University-of-Texas-Rio-Grande-Valley/2025-2026/Undergraduate-Catalog/Undergraduate-Programs-by-College/College-of-Health-Professions/Department-of-Health-Sciences/Integrated-Health-Sciences-Clinical-Professions-Nursing-Pathway-Bachelor-of-Science",
+            "college": "College of Health Professions",
+            "department": "Department of Health Sciences "
+          }
+        ]
+      },
+      {
+        "name": "Department of Medical Laboratory Science",
+        "path": "/sitecore/content/Catalogs/University-of-Texas-Rio-Grande-Valley/2025-2026/Undergraduate-Catalog/Undergraduate-Programs-by-College/College-of-Health-Professions/Department-of-Medical-Laboratory-Science",
+        "programs": [
+          {
+            "name": "Medical Laboratory Science, Bachelor of Science",
+            "path": "/sitecore/content/Catalogs/University-of-Texas-Rio-Grande-Valley/2025-2026/Undergraduate-Catalog/Undergraduate-Programs-by-College/College-of-Health-Professions/Department-of-Medical-Laboratory-Science/Medical-Laboratory-Science-Bachelor-of-Science",
+            "college": "College of Health Professions",
+            "department": "Department of Medical Laboratory Science"
+          }
+        ]
+      },
+      {
+        "name": "Department of Nutrition and Dietetics",
+        "path": "/sitecore/content/Catalogs/University-of-Texas-Rio-Grande-Valley/2025-2026/Undergraduate-Catalog/Undergraduate-Programs-by-College/College-of-Health-Professions/Department-of-Nutrition-and-Dietetics",
+        "programs": [
+          {
+            "name": "Nutritional Sciences (Food Technology and Management), Bachelor of Science",
+            "path": "/sitecore/content/Catalogs/University-of-Texas-Rio-Grande-Valley/2025-2026/Undergraduate-Catalog/Undergraduate-Programs-by-College/College-of-Health-Professions/Department-of-Nutrition-and-Dietetics/Nutritional-Sciences-Food-Technology-and-Management-Bachelor-of-Science",
+            "college": "College of Health Professions",
+            "department": "Department of Nutrition and Dietetics"
+          },
+          {
+            "name": "Nutritional Sciences (Nutrition), Bachelor of Science",
+            "path": "/sitecore/content/Catalogs/University-of-Texas-Rio-Grande-Valley/2025-2026/Undergraduate-Catalog/Undergraduate-Programs-by-College/College-of-Health-Professions/Department-of-Nutrition-and-Dietetics/Nutritional-Sciences-Nutrition-Bachelor-of-Science",
+            "college": "College of Health Professions",
+            "department": "Department of Nutrition and Dietetics"
+          },
+          {
+            "name": "Nutritional Sciences (Nutrition and Fitness), Bachelor of Science",
+            "path": "/sitecore/content/Catalogs/University-of-Texas-Rio-Grande-Valley/2025-2026/Undergraduate-Catalog/Undergraduate-Programs-by-College/College-of-Health-Professions/Department-of-Nutrition-and-Dietetics/Nutritional-Sciences-Nutrition-and-Fitness-Bachelor-of-Science",
+            "college": "College of Health Professions",
+            "department": "Department of Nutrition and Dietetics"
+          },
+          {
+            "name": "Nutritional Sciences, Minor",
+            "path": "/sitecore/content/Catalogs/University-of-Texas-Rio-Grande-Valley/2025-2026/Undergraduate-Catalog/Undergraduate-Programs-by-College/College-of-Health-Professions/Department-of-Nutrition-and-Dietetics/Nutritional-Sciences-Minor",
+            "college": "College of Health Professions",
+            "department": "Department of Nutrition and Dietetics"
+          }
+        ]
+      },
+      {
+        "name": "School of Rehabilitation Services and Counseling",
+        "path": "/sitecore/content/Catalogs/University-of-Texas-Rio-Grande-Valley/2025-2026/Undergraduate-Catalog/Undergraduate-Programs-by-College/College-of-Health-Professions/School-of-Rehabilitation-Services-and-Counseling",
+        "programs": [
+          {
+            "name": "Addiction Studies, Bachelor of Science",
+            "path": "/sitecore/content/Catalogs/University-of-Texas-Rio-Grande-Valley/2025-2026/Undergraduate-Catalog/Undergraduate-Programs-by-College/College-of-Health-Professions/School-of-Rehabilitation-Services-and-Counseling/Addiction-Studies-Bachelor-of-Science",
+            "college": "College of Health Professions",
+            "department": "School of Rehabilitation Services and Counseling"
+          },
+          {
+            "name": "Rehabilitation Services, Bachelor of Science",
+            "path": "/sitecore/content/Catalogs/University-of-Texas-Rio-Grande-Valley/2025-2026/Undergraduate-Catalog/Undergraduate-Programs-by-College/College-of-Health-Professions/School-of-Rehabilitation-Services-and-Counseling/Rehabilitation-Services-Bachelor-of-Science",
+            "college": "College of Health Professions",
+            "department": "School of Rehabilitation Services and Counseling"
+          },
+          {
+            "name": "Rehabilitation Services (Deaf and Hard of Hearing), Bachelor of Science ",
+            "path": "/sitecore/content/Catalogs/University-of-Texas-Rio-Grande-Valley/2025-2026/Undergraduate-Catalog/Undergraduate-Programs-by-College/College-of-Health-Professions/School-of-Rehabilitation-Services-and-Counseling/Rehabilitation-Services-Deaf-and-Hard-of-Hearing-Bachelor-of-Science",
+            "college": "College of Health Professions",
+            "department": "School of Rehabilitation Services and Counseling"
+          },
+          {
+            "name": "Addiction Studies, Minor",
+            "path": "/sitecore/content/Catalogs/University-of-Texas-Rio-Grande-Valley/2025-2026/Undergraduate-Catalog/Undergraduate-Programs-by-College/College-of-Health-Professions/School-of-Rehabilitation-Services-and-Counseling/Addiction-Studies-Minor",
+            "college": "College of Health Professions",
+            "department": "School of Rehabilitation Services and Counseling"
+          },
+          {
+            "name": "Expressive Arts, Minor",
+            "path": "/sitecore/content/Catalogs/University-of-Texas-Rio-Grande-Valley/2025-2026/Undergraduate-Catalog/Undergraduate-Programs-by-College/College-of-Health-Professions/School-of-Rehabilitation-Services-and-Counseling/Expressive-Arts-Minor",
+            "college": "College of Health Professions",
+            "department": "School of Rehabilitation Services and Counseling"
+          },
+          {
+            "name": "Rehabilitation, Minor",
+            "path": "/sitecore/content/Catalogs/University-of-Texas-Rio-Grande-Valley/2025-2026/Undergraduate-Catalog/Undergraduate-Programs-by-College/College-of-Health-Professions/School-of-Rehabilitation-Services-and-Counseling/Rehabilitation-Minor",
+            "college": "College of Health Professions",
+            "department": "School of Rehabilitation Services and Counseling"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "College of Liberal Arts",
+    "path": "/sitecore/content/Catalogs/University-of-Texas-Rio-Grande-Valley/2025-2026/Undergraduate-Catalog/Undergraduate-Programs-by-College/College-of-Liberal-Arts",
+    "departments": [
+      {
+        "name": "Department of Anthropology",
+        "path": "/sitecore/content/Catalogs/University-of-Texas-Rio-Grande-Valley/2025-2026/Undergraduate-Catalog/Undergraduate-Programs-by-College/College-of-Liberal-Arts/Department-of-Anthropology",
+        "programs": [
+          {
+            "name": "Anthropology, Bachelor of Arts",
+            "path": "/sitecore/content/Catalogs/University-of-Texas-Rio-Grande-Valley/2025-2026/Undergraduate-Catalog/Undergraduate-Programs-by-College/College-of-Liberal-Arts/Department-of-Anthropology/Anthropology-Bachelor-of-Arts",
+            "college": "College of Liberal Arts",
+            "department": "Department of Anthropology"
+          },
+          {
+            "name": "Anthropology (Archaeology), Bachelor of Arts",
+            "path": "/sitecore/content/Catalogs/University-of-Texas-Rio-Grande-Valley/2025-2026/Undergraduate-Catalog/Undergraduate-Programs-by-College/College-of-Liberal-Arts/Department-of-Anthropology/Anthropology-Archaeology-Bachelor-of-Arts",
+            "college": "College of Liberal Arts",
+            "department": "Department of Anthropology"
+          },
+          {
+            "name": "Anthropology (Global Health and Migration), Bachelor of Arts",
+            "path": "/sitecore/content/Catalogs/University-of-Texas-Rio-Grande-Valley/2025-2026/Undergraduate-Catalog/Undergraduate-Programs-by-College/College-of-Liberal-Arts/Department-of-Anthropology/Anthropology-Global-Health-and-Migration-Bachelor-of-Arts",
+            "college": "College of Liberal Arts",
+            "department": "Department of Anthropology"
+          },
+          {
+            "name": "Anthropology, Minor",
+            "path": "/sitecore/content/Catalogs/University-of-Texas-Rio-Grande-Valley/2025-2026/Undergraduate-Catalog/Undergraduate-Programs-by-College/College-of-Liberal-Arts/Department-of-Anthropology/Anthropology-Minor",
+            "college": "College of Liberal Arts",
+            "department": "Department of Anthropology"
+          },
+          {
+            "name": "Archaeology, Minor",
+            "path": "/sitecore/content/Catalogs/University-of-Texas-Rio-Grande-Valley/2025-2026/Undergraduate-Catalog/Undergraduate-Programs-by-College/College-of-Liberal-Arts/Department-of-Anthropology/Archaeology-Minor",
+            "college": "College of Liberal Arts",
+            "department": "Department of Anthropology"
+          },
+          {
+            "name": "Forensic Anthropology, Minor",
+            "path": "/sitecore/content/Catalogs/University-of-Texas-Rio-Grande-Valley/2025-2026/Undergraduate-Catalog/Undergraduate-Programs-by-College/College-of-Liberal-Arts/Department-of-Anthropology/Forensic-Anthropology-Minor",
+            "college": "College of Liberal Arts",
+            "department": "Department of Anthropology"
+          },
+          {
+            "name": "Global Health and Migration, Minor",
+            "path": "/sitecore/content/Catalogs/University-of-Texas-Rio-Grande-Valley/2025-2026/Undergraduate-Catalog/Undergraduate-Programs-by-College/College-of-Liberal-Arts/Department-of-Anthropology/Global-Health-and-Migration-Minor",
+            "college": "College of Liberal Arts",
+            "department": "Department of Anthropology"
+          }
+        ]
+      },
+      {
+        "name": "Department of Communication",
+        "path": "/sitecore/content/Catalogs/University-of-Texas-Rio-Grande-Valley/2025-2026/Undergraduate-Catalog/Undergraduate-Programs-by-College/College-of-Liberal-Arts/Department-of-Communication",
+        "programs": [
+          {
+            "name": "Communication Studies, Bachelor of Arts",
+            "path": "/sitecore/content/Catalogs/University-of-Texas-Rio-Grande-Valley/2025-2026/Undergraduate-Catalog/Undergraduate-Programs-by-College/College-of-Liberal-Arts/Department-of-Communication/Communication-Studies-Bachelor-of-Arts",
+            "college": "College of Liberal Arts",
+            "department": "Department of Communication"
+          },
+          {
+            "name": "Mass Communication (Advertising and Public Relations), Bachelor of Arts",
+            "path": "/sitecore/content/Catalogs/University-of-Texas-Rio-Grande-Valley/2025-2026/Undergraduate-Catalog/Undergraduate-Programs-by-College/College-of-Liberal-Arts/Department-of-Communication/Mass-Communication-Bachelor-of-Arts-Public",
+            "college": "College of Liberal Arts",
+            "department": "Department of Communication"
+          },
+          {
+            "name": "Mass Communication (Broadcast), Bachelor of Arts",
+            "path": "/sitecore/content/Catalogs/University-of-Texas-Rio-Grande-Valley/2025-2026/Undergraduate-Catalog/Undergraduate-Programs-by-College/College-of-Liberal-Arts/Department-of-Communication/Mass-Communication-Bachelor-of-Arts-Broadcast",
+            "college": "College of Liberal Arts",
+            "department": "Department of Communication"
+          },
+          {
+            "name": "Mass Communication (Print Journalism), Bachelor of Arts",
+            "path": "/sitecore/content/Catalogs/University-of-Texas-Rio-Grande-Valley/2025-2026/Undergraduate-Catalog/Undergraduate-Programs-by-College/College-of-Liberal-Arts/Department-of-Communication/Mass-Communication-Print-Journalism-Bachelor-of-Arts",
+            "college": "College of Liberal Arts",
+            "department": "Department of Communication"
+          },
+          {
+            "name": "Communication, Minor",
+            "path": "/sitecore/content/Catalogs/University-of-Texas-Rio-Grande-Valley/2025-2026/Undergraduate-Catalog/Undergraduate-Programs-by-College/College-of-Liberal-Arts/Department-of-Communication/Communication-Minor",
+            "college": "College of Liberal Arts",
+            "department": "Department of Communication"
+          },
+          {
+            "name": "Communication Studies, Minor",
+            "path": "/sitecore/content/Catalogs/University-of-Texas-Rio-Grande-Valley/2025-2026/Undergraduate-Catalog/Undergraduate-Programs-by-College/College-of-Liberal-Arts/Department-of-Communication/Communication-Studies-Minor",
+            "college": "College of Liberal Arts",
+            "department": "Department of Communication"
+          },
+          {
+            "name": "Mass Communication, Minor",
+            "path": "/sitecore/content/Catalogs/University-of-Texas-Rio-Grande-Valley/2025-2026/Undergraduate-Catalog/Undergraduate-Programs-by-College/College-of-Liberal-Arts/Department-of-Communication/Mass-Communication-Minor",
+            "college": "College of Liberal Arts",
+            "department": "Department of Communication"
+          }
+        ]
+      },
+      {
+        "name": "Department of Criminal Justice",
+        "path": "/sitecore/content/Catalogs/University-of-Texas-Rio-Grande-Valley/2025-2026/Undergraduate-Catalog/Undergraduate-Programs-by-College/College-of-Liberal-Arts/Department-of-Criminal-Justice",
+        "programs": [
+          {
+            "name": "Criminal Justice (Minor Required), Bachelor of Science in Criminal Justice",
+            "path": "/sitecore/content/Catalogs/University-of-Texas-Rio-Grande-Valley/2025-2026/Undergraduate-Catalog/Undergraduate-Programs-by-College/College-of-Liberal-Arts/Department-of-Criminal-Justice/Criminal-Justice-Minor-Required-Bachelor-of-Science-in-Criminal-Justice",
+            "college": "College of Liberal Arts",
+            "department": "Department of Criminal Justice"
+          },
+          {
+            "name": "Criminal Justice, Minor",
+            "path": "/sitecore/content/Catalogs/University-of-Texas-Rio-Grande-Valley/2025-2026/Undergraduate-Catalog/Undergraduate-Programs-by-College/College-of-Liberal-Arts/Department-of-Criminal-Justice/Criminal-Justice-Minor",
+            "college": "College of Liberal Arts",
+            "department": "Department of Criminal Justice"
+          },
+          {
+            "name": "Social Justice, Minor",
+            "path": "/sitecore/content/Catalogs/University-of-Texas-Rio-Grande-Valley/2025-2026/Undergraduate-Catalog/Undergraduate-Programs-by-College/College-of-Liberal-Arts/Department-of-Criminal-Justice/Social-Justice-Minor",
+            "college": "College of Liberal Arts",
+            "department": "Department of Criminal Justice"
+          }
+        ]
+      },
+      {
+        "name": "Department of History",
+        "path": "/sitecore/content/Catalogs/University-of-Texas-Rio-Grande-Valley/2025-2026/Undergraduate-Catalog/Undergraduate-Programs-by-College/College-of-Liberal-Arts/Department-of-History",
+        "programs": [
+          {
+            "name": "History (Minor Required), Bachelor of Arts",
+            "path": "/sitecore/content/Catalogs/University-of-Texas-Rio-Grande-Valley/2025-2026/Undergraduate-Catalog/Undergraduate-Programs-by-College/College-of-Liberal-Arts/Department-of-History/History-Minor-Required-Bachelor-of-Arts",
+            "college": "College of Liberal Arts",
+            "department": "Department of History"
+          },
+          {
+            "name": "History (Teacher Certification), Bachelor of Arts",
+            "path": "/sitecore/content/Catalogs/University-of-Texas-Rio-Grande-Valley/2025-2026/Undergraduate-Catalog/Undergraduate-Programs-by-College/College-of-Liberal-Arts/Department-of-History/History-Teacher-Certification-Bachelor-of-Arts",
+            "college": "College of Liberal Arts",
+            "department": "Department of History"
+          },
+          {
+            "name": "Social Studies, Bachelor of Arts",
+            "path": "/sitecore/content/Catalogs/University-of-Texas-Rio-Grande-Valley/2025-2026/Undergraduate-Catalog/Undergraduate-Programs-by-College/College-of-Liberal-Arts/Department-of-History/Social-Studies-Bachelor-of-Arts",
+            "college": "College of Liberal Arts",
+            "department": "Department of History"
+          },
+          {
+            "name": "Social Studies (Teacher Certification), Bachelor of Arts",
+            "path": "/sitecore/content/Catalogs/University-of-Texas-Rio-Grande-Valley/2025-2026/Undergraduate-Catalog/Undergraduate-Programs-by-College/College-of-Liberal-Arts/Department-of-History/Social-Studies-Teacher-Certification-Bachelor-of-Arts",
+            "college": "College of Liberal Arts",
+            "department": "Department of History"
+          },
+          {
+            "name": "History, Minor",
+            "path": "/sitecore/content/Catalogs/University-of-Texas-Rio-Grande-Valley/2025-2026/Undergraduate-Catalog/Undergraduate-Programs-by-College/College-of-Liberal-Arts/Department-of-History/History-Minor",
+            "college": "College of Liberal Arts",
+            "department": "Department of History"
+          }
+        ]
+      },
+      {
+        "name": "Department of Literatures and Cultural Studies",
+        "path": "/sitecore/content/Catalogs/University-of-Texas-Rio-Grande-Valley/2025-2026/Undergraduate-Catalog/Undergraduate-Programs-by-College/College-of-Liberal-Arts/Department-of-Literatures-and-Cultural-Studies",
+        "programs": [
+          {
+            "name": "English (Creative Writing), Bachelor of Arts",
+            "path": "/sitecore/content/Catalogs/University-of-Texas-Rio-Grande-Valley/2025-2026/Undergraduate-Catalog/Undergraduate-Programs-by-College/College-of-Liberal-Arts/Department-of-Literatures-and-Cultural-Studies/English-Creative-Writing-Bachelor-of-Arts",
+            "college": "College of Liberal Arts",
+            "department": "Department of Literatures and Cultural Studies"
+          },
+          {
+            "name": "English (English Language Arts), Bachelor of Arts",
+            "path": "/sitecore/content/Catalogs/University-of-Texas-Rio-Grande-Valley/2025-2026/Undergraduate-Catalog/Undergraduate-Programs-by-College/College-of-Liberal-Arts/Department-of-Literatures-and-Cultural-Studies/English-English-Language-Arts-Bachelor-of-Arts",
+            "college": "College of Liberal Arts",
+            "department": "Department of Literatures and Cultural Studies"
+          },
+          {
+            "name": "English (Linguistics), Bachelor of Arts",
+            "path": "/sitecore/content/Catalogs/University-of-Texas-Rio-Grande-Valley/2025-2026/Undergraduate-Catalog/Undergraduate-Programs-by-College/College-of-Liberal-Arts/Department-of-Literatures-and-Cultural-Studies/English-Linguistics-Bachelor-of-Arts",
+            "college": "College of Liberal Arts",
+            "department": "Department of Literatures and Cultural Studies"
+          },
+          {
+            "name": "English (Literature), Bachelor of Arts",
+            "path": "/sitecore/content/Catalogs/University-of-Texas-Rio-Grande-Valley/2025-2026/Undergraduate-Catalog/Undergraduate-Programs-by-College/College-of-Liberal-Arts/Department-of-Literatures-and-Cultural-Studies/English-Literature-Bachelor-of-Arts",
+            "college": "College of Liberal Arts",
+            "department": "Department of Literatures and Cultural Studies"
+          },
+          {
+            "name": "English (Rhetoric, Composition and Literacy Studies), Bachelor of Arts",
+            "path": "/sitecore/content/Catalogs/University-of-Texas-Rio-Grande-Valley/2025-2026/Undergraduate-Catalog/Undergraduate-Programs-by-College/College-of-Liberal-Arts/Department-of-Literatures-and-Cultural-Studies/English-Rhetoric-Composition-and-Literacy-Studies-Bachelor-of-Arts",
+            "college": "College of Liberal Arts",
+            "department": "Department of Literatures and Cultural Studies"
+          },
+          {
+            "name": "English (4-8, Teacher Certification), Bachelor of Arts",
+            "path": "/sitecore/content/Catalogs/University-of-Texas-Rio-Grande-Valley/2025-2026/Undergraduate-Catalog/Undergraduate-Programs-by-College/College-of-Liberal-Arts/Department-of-Literatures-and-Cultural-Studies/English-48-Teacher-Certification-Bachelor-of-Arts",
+            "college": "College of Liberal Arts",
+            "department": "Department of Literatures and Cultural Studies"
+          },
+          {
+            "name": "English (7-12, Teacher Certification), Bachelor of Arts",
+            "path": "/sitecore/content/Catalogs/University-of-Texas-Rio-Grande-Valley/2025-2026/Undergraduate-Catalog/Undergraduate-Programs-by-College/College-of-Liberal-Arts/Department-of-Literatures-and-Cultural-Studies/English-712-Teacher-Certification-Bachelor-of-Arts",
+            "college": "College of Liberal Arts",
+            "department": "Department of Literatures and Cultural Studies"
+          },
+          {
+            "name": "Mexican American Studies, Bachelor of Arts",
+            "path": "/sitecore/content/Catalogs/University-of-Texas-Rio-Grande-Valley/2025-2026/Undergraduate-Catalog/Undergraduate-Programs-by-College/College-of-Liberal-Arts/Department-of-Literatures-and-Cultural-Studies/Mexican-American-Studies-Bachelor-of-Arts",
+            "college": "College of Liberal Arts",
+            "department": "Department of Literatures and Cultural Studies"
+          },
+          {
+            "name": "English, Minor",
+            "path": "/sitecore/content/Catalogs/University-of-Texas-Rio-Grande-Valley/2025-2026/Undergraduate-Catalog/Undergraduate-Programs-by-College/College-of-Liberal-Arts/Department-of-Literatures-and-Cultural-Studies/English-Minor",
+            "college": "College of Liberal Arts",
+            "department": "Department of Literatures and Cultural Studies"
+          },
+          {
+            "name": "Film Studies, Minor",
+            "path": "/sitecore/content/Catalogs/University-of-Texas-Rio-Grande-Valley/2025-2026/Undergraduate-Catalog/Undergraduate-Programs-by-College/College-of-Liberal-Arts/Department-of-Literatures-and-Cultural-Studies/Film-Studies-Minor",
+            "college": "College of Liberal Arts",
+            "department": "Department of Literatures and Cultural Studies"
+          },
+          {
+            "name": "Gender and Women's Studies, Minor",
+            "path": "/sitecore/content/Catalogs/University-of-Texas-Rio-Grande-Valley/2025-2026/Undergraduate-Catalog/Undergraduate-Programs-by-College/College-of-Liberal-Arts/Department-of-Literatures-and-Cultural-Studies/Gender-and-Womens-Studies-Minor",
+            "college": "College of Liberal Arts",
+            "department": "Department of Literatures and Cultural Studies"
+          },
+          {
+            "name": "Mexican American Studies, Minor",
+            "path": "/sitecore/content/Catalogs/University-of-Texas-Rio-Grande-Valley/2025-2026/Undergraduate-Catalog/Undergraduate-Programs-by-College/College-of-Liberal-Arts/Department-of-Literatures-and-Cultural-Studies/Mexican-American-Studies-Minor",
+            "college": "College of Liberal Arts",
+            "department": "Department of Literatures and Cultural Studies"
+          },
+          {
+            "name": "Gender and Women's Studies, Certificate",
+            "path": "/sitecore/content/Catalogs/University-of-Texas-Rio-Grande-Valley/2025-2026/Undergraduate-Catalog/Undergraduate-Programs-by-College/College-of-Liberal-Arts/Department-of-Literatures-and-Cultural-Studies/Gender-and-Womens-Studies-Certificate",
+            "college": "College of Liberal Arts",
+            "department": "Department of Literatures and Cultural Studies"
+          }
+        ]
+      },
+      {
+        "name": "Department of Philosophy",
+        "path": "/sitecore/content/Catalogs/University-of-Texas-Rio-Grande-Valley/2025-2026/Undergraduate-Catalog/Undergraduate-Programs-by-College/College-of-Liberal-Arts/Department-of-Philosophy",
+        "programs": [
+          {
+            "name": "Philosophy, Bachelor of Arts",
+            "path": "/sitecore/content/Catalogs/University-of-Texas-Rio-Grande-Valley/2025-2026/Undergraduate-Catalog/Undergraduate-Programs-by-College/College-of-Liberal-Arts/Department-of-Philosophy/Philosophy-Bachelor-of-Arts",
+            "college": "College of Liberal Arts",
+            "department": "Department of Philosophy"
+          },
+          {
+            "name": "Philosophy (Pre-law), Bachelor of Arts",
+            "path": "/sitecore/content/Catalogs/University-of-Texas-Rio-Grande-Valley/2025-2026/Undergraduate-Catalog/Undergraduate-Programs-by-College/College-of-Liberal-Arts/Department-of-Philosophy/Philosophy-Prelaw-Bachelor-of-Arts",
+            "college": "College of Liberal Arts",
+            "department": "Department of Philosophy"
+          },
+          {
+            "name": "Philosophy, Minor",
+            "path": "/sitecore/content/Catalogs/University-of-Texas-Rio-Grande-Valley/2025-2026/Undergraduate-Catalog/Undergraduate-Programs-by-College/College-of-Liberal-Arts/Department-of-Philosophy/Philosophy-Minor",
+            "college": "College of Liberal Arts",
+            "department": "Department of Philosophy"
+          },
+          {
+            "name": "Religious Studies, Minor",
+            "path": "/sitecore/content/Catalogs/University-of-Texas-Rio-Grande-Valley/2025-2026/Undergraduate-Catalog/Undergraduate-Programs-by-College/College-of-Liberal-Arts/Department-of-Philosophy/Religious-Studies-Minor",
+            "college": "College of Liberal Arts",
+            "department": "Department of Philosophy"
+          }
+        ]
+      },
+      {
+        "name": "Department of Psychological Science",
+        "path": "/sitecore/content/Catalogs/University-of-Texas-Rio-Grande-Valley/2025-2026/Undergraduate-Catalog/Undergraduate-Programs-by-College/College-of-Liberal-Arts/Department-of-Psychological-Science",
+        "programs": [
+          {
+            "name": "Psychology, Bachelor of Science",
+            "path": "/sitecore/content/Catalogs/University-of-Texas-Rio-Grande-Valley/2025-2026/Undergraduate-Catalog/Undergraduate-Programs-by-College/College-of-Liberal-Arts/Department-of-Psychological-Science/Psychology-Bachelor-of-Science",
+            "college": "College of Liberal Arts",
+            "department": "Department of Psychological Science"
+          },
+          {
+            "name": "Psychology, Minor",
+            "path": "/sitecore/content/Catalogs/University-of-Texas-Rio-Grande-Valley/2025-2026/Undergraduate-Catalog/Undergraduate-Programs-by-College/College-of-Liberal-Arts/Department-of-Psychological-Science/Psychology-Minor",
+            "college": "College of Liberal Arts",
+            "department": "Department of Psychological Science"
+          }
+        ]
+      },
+      {
+        "name": "Department of Sociology",
+        "path": "/sitecore/content/Catalogs/University-of-Texas-Rio-Grande-Valley/2025-2026/Undergraduate-Catalog/Undergraduate-Programs-by-College/College-of-Liberal-Arts/Department-of-Sociology",
+        "programs": [
+          {
+            "name": "Sociology, Bachelor of Arts",
+            "path": "/sitecore/content/Catalogs/University-of-Texas-Rio-Grande-Valley/2025-2026/Undergraduate-Catalog/Undergraduate-Programs-by-College/College-of-Liberal-Arts/Department-of-Sociology/Sociology-Bachelor-of-Arts",
+            "college": "College of Liberal Arts",
+            "department": "Department of Sociology"
+          },
+          {
+            "name": "Sociology, Minor",
+            "path": "/sitecore/content/Catalogs/University-of-Texas-Rio-Grande-Valley/2025-2026/Undergraduate-Catalog/Undergraduate-Programs-by-College/College-of-Liberal-Arts/Department-of-Sociology/Sociology-Minor",
+            "college": "College of Liberal Arts",
+            "department": "Department of Sociology"
+          }
+        ]
+      },
+      {
+        "name": "Department of Spanish",
+        "path": "/sitecore/content/Catalogs/University-of-Texas-Rio-Grande-Valley/2025-2026/Undergraduate-Catalog/Undergraduate-Programs-by-College/College-of-Liberal-Arts/Department-of-Spanish",
+        "programs": [
+          {
+            "name": "Spanish, Bachelor of Arts",
+            "path": "/sitecore/content/Catalogs/University-of-Texas-Rio-Grande-Valley/2025-2026/Undergraduate-Catalog/Undergraduate-Programs-by-College/College-of-Liberal-Arts/Department-of-Spanish/Spanish-Bachelor-of-Arts",
+            "college": "College of Liberal Arts",
+            "department": "Department of Spanish"
+          },
+          {
+            "name": "Spanish (Teacher Certification), Bachelor of Arts",
+            "path": "/sitecore/content/Catalogs/University-of-Texas-Rio-Grande-Valley/2025-2026/Undergraduate-Catalog/Undergraduate-Programs-by-College/College-of-Liberal-Arts/Department-of-Spanish/Spanish-Teacher-Certification-Bachelor-of-Arts",
+            "college": "College of Liberal Arts",
+            "department": "Department of Spanish"
+          },
+          {
+            "name": "Spanish, Minor",
+            "path": "/sitecore/content/Catalogs/University-of-Texas-Rio-Grande-Valley/2025-2026/Undergraduate-Catalog/Undergraduate-Programs-by-College/College-of-Liberal-Arts/Department-of-Spanish/Spanish-Minor",
+            "college": "College of Liberal Arts",
+            "department": "Department of Spanish"
+          },
+          {
+            "name": "Spanish for Healthcare, Minor",
+            "path": "/sitecore/content/Catalogs/University-of-Texas-Rio-Grande-Valley/2025-2026/Undergraduate-Catalog/Undergraduate-Programs-by-College/College-of-Liberal-Arts/Department-of-Spanish/Spanish-for-Healthcare-Minor",
+            "college": "College of Liberal Arts",
+            "department": "Department of Spanish"
+          },
+          {
+            "name": "Dual Language, Certificate",
+            "path": "/sitecore/content/Catalogs/University-of-Texas-Rio-Grande-Valley/2025-2026/Undergraduate-Catalog/Undergraduate-Programs-by-College/College-of-Liberal-Arts/Department-of-Spanish/Dual-Language-Certificate",
+            "college": "College of Liberal Arts",
+            "department": "Department of Spanish"
+          }
+        ]
+      },
+      {
+        "name": "Department of Writing and Language Studies",
+        "path": "/sitecore/content/Catalogs/University-of-Texas-Rio-Grande-Valley/2025-2026/Undergraduate-Catalog/Undergraduate-Programs-by-College/College-of-Liberal-Arts/Department-of-Writing-and-Language-Studies",
+        "programs": [
+          {
+            "name": "Spanish Translation and Interpreting, Bachelor of Arts",
+            "path": "/sitecore/content/Catalogs/University-of-Texas-Rio-Grande-Valley/2025-2026/Undergraduate-Catalog/Undergraduate-Programs-by-College/College-of-Liberal-Arts/Department-of-Writing-and-Language-Studies/Spanish-Translation-and-Interpreting-Bachelor-of-Arts",
+            "college": "College of Liberal Arts",
+            "department": "Department of Writing and Language Studies"
+          },
+          {
+            "name": "Asian Studies, Minor",
+            "path": "/sitecore/content/Catalogs/University-of-Texas-Rio-Grande-Valley/2025-2026/Undergraduate-Catalog/Undergraduate-Programs-by-College/College-of-Liberal-Arts/Department-of-Writing-and-Language-Studies/Asian-Studies-Minor",
+            "college": "College of Liberal Arts",
+            "department": "Department of Writing and Language Studies"
+          },
+          {
+            "name": "English As A Second Language Instruction (7-12), Minor",
+            "path": "/sitecore/content/Catalogs/University-of-Texas-Rio-Grande-Valley/2025-2026/Undergraduate-Catalog/Undergraduate-Programs-by-College/College-of-Liberal-Arts/Department-of-Writing-and-Language-Studies/English-As-A-Second-Language-Instruction-712-Minor",
+            "college": "College of Liberal Arts",
+            "department": "Department of Writing and Language Studies"
+          },
+          {
+            "name": "French Language, Literature, And Culture, Minor",
+            "path": "/sitecore/content/Catalogs/University-of-Texas-Rio-Grande-Valley/2025-2026/Undergraduate-Catalog/Undergraduate-Programs-by-College/College-of-Liberal-Arts/Department-of-Writing-and-Language-Studies/French-Language-Literature-And-Culture-Minor",
+            "college": "College of Liberal Arts",
+            "department": "Department of Writing and Language Studies"
+          },
+          {
+            "name": "French Teaching, Translation, And Culture, Minor",
+            "path": "/sitecore/content/Catalogs/University-of-Texas-Rio-Grande-Valley/2025-2026/Undergraduate-Catalog/Undergraduate-Programs-by-College/College-of-Liberal-Arts/Department-of-Writing-and-Language-Studies/French-Teaching-Translation-And-Culture-Minor",
+            "college": "College of Liberal Arts",
+            "department": "Department of Writing and Language Studies"
+          },
+          {
+            "name": "Professional Writing, Minor",
+            "path": "/sitecore/content/Catalogs/University-of-Texas-Rio-Grande-Valley/2025-2026/Undergraduate-Catalog/Undergraduate-Programs-by-College/College-of-Liberal-Arts/Department-of-Writing-and-Language-Studies/Professional-Writing-Minor",
+            "college": "College of Liberal Arts",
+            "department": "Department of Writing and Language Studies"
+          },
+          {
+            "name": "Spanish Translation, Minor",
+            "path": "/sitecore/content/Catalogs/University-of-Texas-Rio-Grande-Valley/2025-2026/Undergraduate-Catalog/Undergraduate-Programs-by-College/College-of-Liberal-Arts/Department-of-Writing-and-Language-Studies/Spanish-Translation-Minor",
+            "college": "College of Liberal Arts",
+            "department": "Department of Writing and Language Studies"
+          },
+          {
+            "name": "Healthcare Interpreting, Certificate",
+            "path": "/sitecore/content/Catalogs/University-of-Texas-Rio-Grande-Valley/2025-2026/Undergraduate-Catalog/Undergraduate-Programs-by-College/College-of-Liberal-Arts/Department-of-Writing-and-Language-Studies/Healthcare-Interpreting-Certificate",
+            "college": "College of Liberal Arts",
+            "department": "Department of Writing and Language Studies"
+          }
+        ]
+      },
+      {
+        "name": "School of Interdisciplinary Programs and Community Engagement",
+        "path": "/sitecore/content/Catalogs/University-of-Texas-Rio-Grande-Valley/2025-2026/Undergraduate-Catalog/Undergraduate-Programs-by-College/College-of-Liberal-Arts/School-of-Interdisciplinary-Programs-and-Community-Engagement",
+        "programs": [
+          {
+            "name": "Human Dimensions of Organizations, Bachelor of Arts",
+            "path": "/sitecore/content/Catalogs/University-of-Texas-Rio-Grande-Valley/2025-2026/Undergraduate-Catalog/Undergraduate-Programs-by-College/College-of-Liberal-Arts/School-of-Interdisciplinary-Programs-and-Community-Engagement/Human-Dimensions-of-Organizations-Bachelor-of-Arts",
+            "college": "College of Liberal Arts",
+            "department": "School of Interdisciplinary Programs and Community Engagement"
+          },
+          {
+            "name": "Medical and Health Humanities, Bachelor of Arts",
+            "path": "/sitecore/content/Catalogs/University-of-Texas-Rio-Grande-Valley/2025-2026/Undergraduate-Catalog/Undergraduate-Programs-by-College/College-of-Liberal-Arts/School-of-Interdisciplinary-Programs-and-Community-Engagement/Medical-and-Health-Humanities-Bachelor-of-Arts",
+            "college": "College of Liberal Arts",
+            "department": "School of Interdisciplinary Programs and Community Engagement"
+          },
+          {
+            "name": "Multidisciplinary Studies, Bachelor of Multidisciplinary Studies",
+            "path": "/sitecore/content/Catalogs/University-of-Texas-Rio-Grande-Valley/2025-2026/Undergraduate-Catalog/Undergraduate-Programs-by-College/College-of-Liberal-Arts/School-of-Interdisciplinary-Programs-and-Community-Engagement/Multidisciplinary-Studies-Bachelor-of-Multidisciplinary-Studies",
+            "college": "College of Liberal Arts",
+            "department": "School of Interdisciplinary Programs and Community Engagement"
+          },
+          {
+            "name": "Public Heritage and Community Engagement (Bilingual, Bicultural, Border Heritage Concentration), Bachelor of Arts in Interdisciplinary Studies",
+            "path": "/sitecore/content/Catalogs/University-of-Texas-Rio-Grande-Valley/2025-2026/Undergraduate-Catalog/Undergraduate-Programs-by-College/College-of-Liberal-Arts/School-of-Interdisciplinary-Programs-and-Community-Engagement/Public-Heritage-and-Community-Engagement-Bilingual-Bicultural-Border-Heritage-Concentration-Bachelor-of-Arts-in-Interdisciplinary-Studies",
+            "college": "College of Liberal Arts",
+            "department": "School of Interdisciplinary Programs and Community Engagement"
+          },
+          {
+            "name": "Public Heritage and Community Engagement (Cultural and Natural Landscapes Concentration), Bachelor of Arts in Interdisciplinary Studies",
+            "path": "/sitecore/content/Catalogs/University-of-Texas-Rio-Grande-Valley/2025-2026/Undergraduate-Catalog/Undergraduate-Programs-by-College/College-of-Liberal-Arts/School-of-Interdisciplinary-Programs-and-Community-Engagement/Public-Heritage-and-Community-Engagement-Cultural-and-Natural-Landscapes-Concentration-Bachelor-of-Arts-in-Interdisciplinary-Studies",
+            "college": "College of Liberal Arts",
+            "department": "School of Interdisciplinary Programs and Community Engagement"
+          },
+          {
+            "name": "Environmental Studies, Minor",
+            "path": "/sitecore/content/Catalogs/University-of-Texas-Rio-Grande-Valley/2025-2026/Undergraduate-Catalog/Undergraduate-Programs-by-College/College-of-Liberal-Arts/School-of-Interdisciplinary-Programs-and-Community-Engagement/Environmental-Studies-Minor",
+            "college": "College of Liberal Arts",
+            "department": "School of Interdisciplinary Programs and Community Engagement"
+          },
+          {
+            "name": "Food Studies, Minor",
+            "path": "/sitecore/content/Catalogs/University-of-Texas-Rio-Grande-Valley/2025-2026/Undergraduate-Catalog/Undergraduate-Programs-by-College/College-of-Liberal-Arts/School-of-Interdisciplinary-Programs-and-Community-Engagement/Food-Studies-Minor",
+            "college": "College of Liberal Arts",
+            "department": "School of Interdisciplinary Programs and Community Engagement"
+          },
+          {
+            "name": "Medical Humanities, Minor",
+            "path": "/sitecore/content/Catalogs/University-of-Texas-Rio-Grande-Valley/2025-2026/Undergraduate-Catalog/Undergraduate-Programs-by-College/College-of-Liberal-Arts/School-of-Interdisciplinary-Programs-and-Community-Engagement/Medical-Humanities-Minor",
+            "college": "College of Liberal Arts",
+            "department": "School of Interdisciplinary Programs and Community Engagement"
+          },
+          {
+            "name": "Military Science, Minor",
+            "path": "/sitecore/content/Catalogs/University-of-Texas-Rio-Grande-Valley/2025-2026/Undergraduate-Catalog/Undergraduate-Programs-by-College/College-of-Liberal-Arts/School-of-Interdisciplinary-Programs-and-Community-Engagement/Military-Science-Minor",
+            "college": "College of Liberal Arts",
+            "department": "School of Interdisciplinary Programs and Community Engagement"
+          }
+        ]
+      },
+      {
+        "name": "School of Political Science, Public Affairs, Legal and Security Studies",
+        "path": "/sitecore/content/Catalogs/University-of-Texas-Rio-Grande-Valley/2025-2026/Undergraduate-Catalog/Undergraduate-Programs-by-College/College-of-Liberal-Arts/School-of-Political-Science-Public-Affairs-Legal-and-Security-Studies",
+        "programs": [
+          {
+            "name": "Political Science (Minor Required), Bachelor of Arts",
+            "path": "/sitecore/content/Catalogs/University-of-Texas-Rio-Grande-Valley/2025-2026/Undergraduate-Catalog/Undergraduate-Programs-by-College/College-of-Liberal-Arts/School-of-Political-Science-Public-Affairs-Legal-and-Security-Studies/Political-Science-Minor-Required-Bachelor-of-Arts",
+            "college": "College of Liberal Arts",
+            "department": "School of Political Science, Public Affairs, Legal and Security Studies"
+          },
+          {
+            "name": "Globalization Studies, Minor",
+            "path": "/sitecore/content/Catalogs/University-of-Texas-Rio-Grande-Valley/2025-2026/Undergraduate-Catalog/Undergraduate-Programs-by-College/College-of-Liberal-Arts/School-of-Political-Science-Public-Affairs-Legal-and-Security-Studies/Globalization-Studies-Minor",
+            "college": "College of Liberal Arts",
+            "department": "School of Political Science, Public Affairs, Legal and Security Studies"
+          },
+          {
+            "name": "Global Security Studies, Minor",
+            "path": "/sitecore/content/Catalogs/University-of-Texas-Rio-Grande-Valley/2025-2026/Undergraduate-Catalog/Undergraduate-Programs-by-College/College-of-Liberal-Arts/School-of-Political-Science-Public-Affairs-Legal-and-Security-Studies/Global-Security-Studies-Minor",
+            "college": "College of Liberal Arts",
+            "department": "School of Political Science, Public Affairs, Legal and Security Studies"
+          },
+          {
+            "name": "Legal Studies, Minor",
+            "path": "/sitecore/content/Catalogs/University-of-Texas-Rio-Grande-Valley/2025-2026/Undergraduate-Catalog/Undergraduate-Programs-by-College/College-of-Liberal-Arts/School-of-Political-Science-Public-Affairs-Legal-and-Security-Studies/Legal-Studies-Minor",
+            "college": "College of Liberal Arts",
+            "department": "School of Political Science, Public Affairs, Legal and Security Studies"
+          },
+          {
+            "name": "Political Science, Minor",
+            "path": "/sitecore/content/Catalogs/University-of-Texas-Rio-Grande-Valley/2025-2026/Undergraduate-Catalog/Undergraduate-Programs-by-College/College-of-Liberal-Arts/School-of-Political-Science-Public-Affairs-Legal-and-Security-Studies/Political-Science-Minor",
+            "college": "College of Liberal Arts",
+            "department": "School of Political Science, Public Affairs, Legal and Security Studies"
+          },
+          {
+            "name": "Public Administration, Minor",
+            "path": "/sitecore/content/Catalogs/University-of-Texas-Rio-Grande-Valley/2025-2026/Undergraduate-Catalog/Undergraduate-Programs-by-College/College-of-Liberal-Arts/School-of-Political-Science-Public-Affairs-Legal-and-Security-Studies/Public-Administration-Minor",
+            "college": "College of Liberal Arts",
+            "department": "School of Political Science, Public Affairs, Legal and Security Studies"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "College of Sciences",
+    "path": "/sitecore/content/Catalogs/University-of-Texas-Rio-Grande-Valley/2025-2026/Undergraduate-Catalog/Undergraduate-Programs-by-College/College-of-Sciences",
+    "departments": [
+      {
+        "name": "Department of Physics and Astronomy",
+        "path": "/sitecore/content/Catalogs/University-of-Texas-Rio-Grande-Valley/2025-2026/Undergraduate-Catalog/Undergraduate-Programs-by-College/College-of-Sciences/Department-of-Physics-and-Astronomy",
+        "programs": [
+          {
+            "name": "Physics (Biophysics), Bachelor of Science",
+            "path": "/sitecore/content/Catalogs/University-of-Texas-Rio-Grande-Valley/2025-2026/Undergraduate-Catalog/Undergraduate-Programs-by-College/College-of-Sciences/Department-of-Physics-and-Astronomy/Physics-Biophysics-Bachelor-of-Science",
+            "college": "College of Sciences",
+            "department": "Department of Physics and Astronomy"
+          },
+          {
+            "name": "Physics (Minor Required), Bachelor of Science",
+            "path": "/sitecore/content/Catalogs/University-of-Texas-Rio-Grande-Valley/2025-2026/Undergraduate-Catalog/Undergraduate-Programs-by-College/College-of-Sciences/Department-of-Physics-and-Astronomy/Physics-Minor-Required-Bachelor-of-Science",
+            "college": "College of Sciences",
+            "department": "Department of Physics and Astronomy"
+          },
+          {
+            "name": "Physics (Pure and Applied Physics), Bachelor of Science",
+            "path": "/sitecore/content/Catalogs/University-of-Texas-Rio-Grande-Valley/2025-2026/Undergraduate-Catalog/Undergraduate-Programs-by-College/College-of-Sciences/Department-of-Physics-and-Astronomy/Physics-Pure-and-Applied-Physics-Bachelor-of-Science",
+            "college": "College of Sciences",
+            "department": "Department of Physics and Astronomy"
+          },
+          {
+            "name": "Physics (Teacher Certification), Bachelor of Science",
+            "path": "/sitecore/content/Catalogs/University-of-Texas-Rio-Grande-Valley/2025-2026/Undergraduate-Catalog/Undergraduate-Programs-by-College/College-of-Sciences/Department-of-Physics-and-Astronomy/Physics-Teacher-Certification-Bachelor-of-Science",
+            "college": "College of Sciences",
+            "department": "Department of Physics and Astronomy"
+          },
+          {
+            "name": "Astronomy, Minor",
+            "path": "/sitecore/content/Catalogs/University-of-Texas-Rio-Grande-Valley/2025-2026/Undergraduate-Catalog/Undergraduate-Programs-by-College/College-of-Sciences/Department-of-Physics-and-Astronomy/Astronomy-Minor",
+            "college": "College of Sciences",
+            "department": "Department of Physics and Astronomy"
+          },
+          {
+            "name": "Physical Science, Minor",
+            "path": "/sitecore/content/Catalogs/University-of-Texas-Rio-Grande-Valley/2025-2026/Undergraduate-Catalog/Undergraduate-Programs-by-College/College-of-Sciences/Department-of-Physics-and-Astronomy/Physical-Science-Minor",
+            "college": "College of Sciences",
+            "department": "Department of Physics and Astronomy"
+          },
+          {
+            "name": "Physics, Minor",
+            "path": "/sitecore/content/Catalogs/University-of-Texas-Rio-Grande-Valley/2025-2026/Undergraduate-Catalog/Undergraduate-Programs-by-College/College-of-Sciences/Department-of-Physics-and-Astronomy/Physics-Minor",
+            "college": "College of Sciences",
+            "department": "Department of Physics and Astronomy"
+          }
+        ]
+      },
+      {
+        "name": "School of Earth, Environmental, and Marine Sciences",
+        "path": "/sitecore/content/Catalogs/University-of-Texas-Rio-Grande-Valley/2025-2026/Undergraduate-Catalog/Undergraduate-Programs-by-College/College-of-Sciences/School-of-Earth-Environmental-and-Marine-Sciences",
+        "programs": [
+          {
+            "name": "Environmental Science (Earth and Ocean Sciences), Bachelor of Science",
+            "path": "/sitecore/content/Catalogs/University-of-Texas-Rio-Grande-Valley/2025-2026/Undergraduate-Catalog/Undergraduate-Programs-by-College/College-of-Sciences/School-of-Earth-Environmental-and-Marine-Sciences/Environmental-Science-Earth-and-Ocean-Sciences-Bachelor-of-Science",
+            "college": "College of Sciences",
+            "department": "School of Earth, Environmental, and Marine Sciences"
+          },
+          {
+            "name": "Environmental Science (Environment and Society), Bachelor of Science",
+            "path": "/sitecore/content/Catalogs/University-of-Texas-Rio-Grande-Valley/2025-2026/Undergraduate-Catalog/Undergraduate-Programs-by-College/College-of-Sciences/School-of-Earth-Environmental-and-Marine-Sciences/Environmental-Science-Environment-and-Society-Bachelor-of-Science",
+            "college": "College of Sciences",
+            "department": "School of Earth, Environmental, and Marine Sciences"
+          },
+          {
+            "name": "Environmental Science (Environmental Biology), Bachelor of Science",
+            "path": "/sitecore/content/Catalogs/University-of-Texas-Rio-Grande-Valley/2025-2026/Undergraduate-Catalog/Undergraduate-Programs-by-College/College-of-Sciences/School-of-Earth-Environmental-and-Marine-Sciences/Environmental-Science-Environmental-Biology-Bachelor-of-Science",
+            "college": "College of Sciences",
+            "department": "School of Earth, Environmental, and Marine Sciences"
+          },
+          {
+            "name": "Environmental Science (Environmental Chemistry), Bachelor of Science",
+            "path": "/sitecore/content/Catalogs/University-of-Texas-Rio-Grande-Valley/2025-2026/Undergraduate-Catalog/Undergraduate-Programs-by-College/College-of-Sciences/School-of-Earth-Environmental-and-Marine-Sciences/Environmental-Science-Environmental-Chemistry-Bachelor-of-Science",
+            "college": "College of Sciences",
+            "department": "School of Earth, Environmental, and Marine Sciences"
+          },
+          {
+            "name": "Environmental Science (Interdisciplinary Environmental Science), Bachelor of Science",
+            "path": "/sitecore/content/Catalogs/University-of-Texas-Rio-Grande-Valley/2025-2026/Undergraduate-Catalog/Undergraduate-Programs-by-College/College-of-Sciences/School-of-Earth-Environmental-and-Marine-Sciences/Environmental-Science-Interdisciplinary-Environmental-Science-Bachelor-of-Science",
+            "college": "College of Sciences",
+            "department": "School of Earth, Environmental, and Marine Sciences"
+          },
+          {
+            "name": "Marine Biology, Bachelor of Science",
+            "path": "/sitecore/content/Catalogs/University-of-Texas-Rio-Grande-Valley/2025-2026/Undergraduate-Catalog/Undergraduate-Programs-by-College/College-of-Sciences/School-of-Earth-Environmental-and-Marine-Sciences/Marine-Biology-Bachelor-of-Science",
+            "college": "College of Sciences",
+            "department": "School of Earth, Environmental, and Marine Sciences"
+          },
+          {
+            "name": "Sustainable Agriculture and Food Systems, Bachelor of Science",
+            "path": "/sitecore/content/Catalogs/University-of-Texas-Rio-Grande-Valley/2025-2026/Undergraduate-Catalog/Undergraduate-Programs-by-College/College-of-Sciences/School-of-Earth-Environmental-and-Marine-Sciences/Sustainable-Agriculture-and-Food-Systems-Bachelor-of-Science",
+            "college": "College of Sciences",
+            "department": "School of Earth, Environmental, and Marine Sciences"
+          },
+          {
+            "name": "Environmental Sciences, Minor",
+            "path": "/sitecore/content/Catalogs/University-of-Texas-Rio-Grande-Valley/2025-2026/Undergraduate-Catalog/Undergraduate-Programs-by-College/College-of-Sciences/School-of-Earth-Environmental-and-Marine-Sciences/Environmental-Sciences-Minor",
+            "college": "College of Sciences",
+            "department": "School of Earth, Environmental, and Marine Sciences"
+          },
+          {
+            "name": "Geographic Information Systems, Minor",
+            "path": "/sitecore/content/Catalogs/University-of-Texas-Rio-Grande-Valley/2025-2026/Undergraduate-Catalog/Undergraduate-Programs-by-College/College-of-Sciences/School-of-Earth-Environmental-and-Marine-Sciences/Geographic-Information-Systems-Minor",
+            "college": "College of Sciences",
+            "department": "School of Earth, Environmental, and Marine Sciences"
+          },
+          {
+            "name": "Geology and Earth Science, Minor",
+            "path": "/sitecore/content/Catalogs/University-of-Texas-Rio-Grande-Valley/2025-2026/Undergraduate-Catalog/Undergraduate-Programs-by-College/College-of-Sciences/School-of-Earth-Environmental-and-Marine-Sciences/Geology-and-Earth-Science-Minor",
+            "college": "College of Sciences",
+            "department": "School of Earth, Environmental, and Marine Sciences"
+          },
+          {
+            "name": "Soil Science, Certificate",
+            "path": "/sitecore/content/Catalogs/University-of-Texas-Rio-Grande-Valley/2025-2026/Undergraduate-Catalog/Undergraduate-Programs-by-College/College-of-Sciences/School-of-Earth-Environmental-and-Marine-Sciences/Soil-Science-Certificate",
+            "college": "College of Sciences",
+            "department": "School of Earth, Environmental, and Marine Sciences"
+          }
+        ]
+      },
+      {
+        "name": "School of Integrative Biological and Chemical Sciences",
+        "path": "/sitecore/content/Catalogs/University-of-Texas-Rio-Grande-Valley/2025-2026/Undergraduate-Catalog/Undergraduate-Programs-by-College/College-of-Sciences/School-of-Integrative-Biological-and-Chemical-Sciences",
+        "programs": [
+          {
+            "name": "Biology, Bachelor of Science",
+            "path": "/sitecore/content/Catalogs/University-of-Texas-Rio-Grande-Valley/2025-2026/Undergraduate-Catalog/Undergraduate-Programs-by-College/College-of-Sciences/School-of-Integrative-Biological-and-Chemical-Sciences/Biology-Bachelor-of-Science",
+            "college": "College of Sciences",
+            "department": "School of Integrative Biological and Chemical Sciences"
+          },
+          {
+            "name": "Biology (7-12, Teacher Certification), Bachelor of Science",
+            "path": "/sitecore/content/Catalogs/University-of-Texas-Rio-Grande-Valley/2025-2026/Undergraduate-Catalog/Undergraduate-Programs-by-College/College-of-Sciences/School-of-Integrative-Biological-and-Chemical-Sciences/Biology-712-Teacher-Certification-Bachelor-of-Science",
+            "college": "College of Sciences",
+            "department": "School of Integrative Biological and Chemical Sciences"
+          },
+          {
+            "name": "Chemistry, Bachelor of Science",
+            "path": "/sitecore/content/Catalogs/University-of-Texas-Rio-Grande-Valley/2025-2026/Undergraduate-Catalog/Undergraduate-Programs-by-College/College-of-Sciences/School-of-Integrative-Biological-and-Chemical-Sciences/Chemistry-Bachelor-of-Science",
+            "college": "College of Sciences",
+            "department": "School of Integrative Biological and Chemical Sciences"
+          },
+          {
+            "name": "Chemistry (7-12, Teacher Certification), Bachelor of Science",
+            "path": "/sitecore/content/Catalogs/University-of-Texas-Rio-Grande-Valley/2025-2026/Undergraduate-Catalog/Undergraduate-Programs-by-College/College-of-Sciences/School-of-Integrative-Biological-and-Chemical-Sciences/Chemistry-712-Teacher-Certification-Bachelor-of-Science",
+            "college": "College of Sciences",
+            "department": "School of Integrative Biological and Chemical Sciences"
+          },
+          {
+            "name": "Interdisciplinary Studies (Science,  4-8, Teacher Certification), Bachelor of Interdisciplinary Studies",
+            "path": "/sitecore/content/Catalogs/University-of-Texas-Rio-Grande-Valley/2025-2026/Undergraduate-Catalog/Undergraduate-Programs-by-College/College-of-Sciences/School-of-Integrative-Biological-and-Chemical-Sciences/Interdisciplinary-Studies-Science-48-Teacher-Certification-Bachelor-of-Interdisciplinary-Studies",
+            "college": "College of Sciences",
+            "department": "School of Integrative Biological and Chemical Sciences"
+          },
+          {
+            "name": "Biochemistry, Minor",
+            "path": "/sitecore/content/Catalogs/University-of-Texas-Rio-Grande-Valley/2025-2026/Undergraduate-Catalog/Undergraduate-Programs-by-College/College-of-Sciences/School-of-Integrative-Biological-and-Chemical-Sciences/Biochemistry-Minor",
+            "college": "College of Sciences",
+            "department": "School of Integrative Biological and Chemical Sciences"
+          },
+          {
+            "name": "Biology, Minor",
+            "path": "/sitecore/content/Catalogs/University-of-Texas-Rio-Grande-Valley/2025-2026/Undergraduate-Catalog/Undergraduate-Programs-by-College/College-of-Sciences/School-of-Integrative-Biological-and-Chemical-Sciences/Biology-Minor",
+            "college": "College of Sciences",
+            "department": "School of Integrative Biological and Chemical Sciences"
+          },
+          {
+            "name": "Chemistry, Minor",
+            "path": "/sitecore/content/Catalogs/University-of-Texas-Rio-Grande-Valley/2025-2026/Undergraduate-Catalog/Undergraduate-Programs-by-College/College-of-Sciences/School-of-Integrative-Biological-and-Chemical-Sciences/Chemistry-Minor",
+            "college": "College of Sciences",
+            "department": "School of Integrative Biological and Chemical Sciences"
+          }
+        ]
+      },
+      {
+        "name": "School of Mathematical and Statistical Sciences",
+        "path": "/sitecore/content/Catalogs/University-of-Texas-Rio-Grande-Valley/2025-2026/Undergraduate-Catalog/Undergraduate-Programs-by-College/College-of-Sciences/School-of-Mathematical-and-Statistical-Sciences",
+        "programs": [
+          {
+            "name": "Applied Statistics and Data Science, Bachelor of Science",
+            "path": "/sitecore/content/Catalogs/University-of-Texas-Rio-Grande-Valley/2025-2026/Undergraduate-Catalog/Undergraduate-Programs-by-College/College-of-Sciences/School-of-Mathematical-and-Statistical-Sciences/Applied-Statistics-and-Data-Science-Bachelor-of-Science",
+            "college": "College of Sciences",
+            "department": "School of Mathematical and Statistical Sciences"
+          },
+          {
+            "name": "Interdisciplinary Studies (Middle School Mathematics, 4-8, Teacher Certification), Bachelor of Interdisciplinary Studies",
+            "path": "/sitecore/content/Catalogs/University-of-Texas-Rio-Grande-Valley/2025-2026/Undergraduate-Catalog/Undergraduate-Programs-by-College/College-of-Sciences/School-of-Mathematical-and-Statistical-Sciences/Interdisciplinary-Studies-Middle-School-Mathematics-4-8-Teacher-Certification-Bachelor-of-Interdisciplinary-Studies",
+            "college": "College of Sciences",
+            "department": "School of Mathematical and Statistical Sciences"
+          },
+          {
+            "name": "Mathematics (Applied Math), Bachelor of Science",
+            "path": "/sitecore/content/Catalogs/University-of-Texas-Rio-Grande-Valley/2025-2026/Undergraduate-Catalog/Undergraduate-Programs-by-College/College-of-Sciences/School-of-Mathematical-and-Statistical-Sciences/Mathematics-Applied-Math-Bachelor-of-Science",
+            "college": "College of Sciences",
+            "department": "School of Mathematical and Statistical Sciences"
+          },
+          {
+            "name": "Mathematics (Economics), Bachelor of Science",
+            "path": "/sitecore/content/Catalogs/University-of-Texas-Rio-Grande-Valley/2025-2026/Undergraduate-Catalog/Undergraduate-Programs-by-College/College-of-Sciences/School-of-Mathematical-and-Statistical-Sciences/Mathematics-Bachelor-of-Science-Economics",
+            "college": "College of Sciences",
+            "department": "School of Mathematical and Statistical Sciences"
+          },
+          {
+            "name": "Mathematics (Pure Math), Bachelor of Science",
+            "path": "/sitecore/content/Catalogs/University-of-Texas-Rio-Grande-Valley/2025-2026/Undergraduate-Catalog/Undergraduate-Programs-by-College/College-of-Sciences/School-of-Mathematical-and-Statistical-Sciences/Mathematics-Pure-Math-Bachelor-of-Science",
+            "college": "College of Sciences",
+            "department": "School of Mathematical and Statistical Sciences"
+          },
+          {
+            "name": "Mathematics (Science and Engineering), Bachelor of Science",
+            "path": "/sitecore/content/Catalogs/University-of-Texas-Rio-Grande-Valley/2025-2026/Undergraduate-Catalog/Undergraduate-Programs-by-College/College-of-Sciences/School-of-Mathematical-and-Statistical-Sciences/Mathematics-Science-and-Engineering-Bachelor-of-Science",
+            "college": "College of Sciences",
+            "department": "School of Mathematical and Statistical Sciences"
+          },
+          {
+            "name": "Mathematics (Statistics), Bachelor of Science",
+            "path": "/sitecore/content/Catalogs/University-of-Texas-Rio-Grande-Valley/2025-2026/Undergraduate-Catalog/Undergraduate-Programs-by-College/College-of-Sciences/School-of-Mathematical-and-Statistical-Sciences/Mathematics-Statistics-Bachelor-of-Science",
+            "college": "College of Sciences",
+            "department": "School of Mathematical and Statistical Sciences"
+          },
+          {
+            "name": "Mathematics (4-8, Teacher Certification), Bachelor of Science",
+            "path": "/sitecore/content/Catalogs/University-of-Texas-Rio-Grande-Valley/2025-2026/Undergraduate-Catalog/Undergraduate-Programs-by-College/College-of-Sciences/School-of-Mathematical-and-Statistical-Sciences/Mathematics-4-8-Teacher-Certification-Bachelor-of-Science",
+            "college": "College of Sciences",
+            "department": "School of Mathematical and Statistical Sciences"
+          },
+          {
+            "name": "Mathematics (7-12, Teacher Certification), Bachelor of Science",
+            "path": "/sitecore/content/Catalogs/University-of-Texas-Rio-Grande-Valley/2025-2026/Undergraduate-Catalog/Undergraduate-Programs-by-College/College-of-Sciences/School-of-Mathematical-and-Statistical-Sciences/Mathematics-7-12-Teacher-Certification-Bachelor-of-Science",
+            "college": "College of Sciences",
+            "department": "School of Mathematical and Statistical Sciences"
+          },
+          {
+            "name": "Applied Mathematics, Minor",
+            "path": "/sitecore/content/Catalogs/University-of-Texas-Rio-Grande-Valley/2025-2026/Undergraduate-Catalog/Undergraduate-Programs-by-College/College-of-Sciences/School-of-Mathematical-and-Statistical-Sciences/Applied-Mathematics-Minor",
+            "college": "College of Sciences",
+            "department": "School of Mathematical and Statistical Sciences"
+          },
+          {
+            "name": "Applied Statistics and Data Science, Minor",
+            "path": "/sitecore/content/Catalogs/University-of-Texas-Rio-Grande-Valley/2025-2026/Undergraduate-Catalog/Undergraduate-Programs-by-College/College-of-Sciences/School-of-Mathematical-and-Statistical-Sciences/Applied-Statistics-and-Data-Science-Minor",
+            "college": "College of Sciences",
+            "department": "School of Mathematical and Statistical Sciences"
+          },
+          {
+            "name": "Middle School Mathematics, Minor",
+            "path": "/sitecore/content/Catalogs/University-of-Texas-Rio-Grande-Valley/2025-2026/Undergraduate-Catalog/Undergraduate-Programs-by-College/College-of-Sciences/School-of-Mathematical-and-Statistical-Sciences/Middle-School-Mathematics-Minor",
+            "college": "College of Sciences",
+            "department": "School of Mathematical and Statistical Sciences"
+          },
+          {
+            "name": "Pure Mathematics, Minor",
+            "path": "/sitecore/content/Catalogs/University-of-Texas-Rio-Grande-Valley/2025-2026/Undergraduate-Catalog/Undergraduate-Programs-by-College/College-of-Sciences/School-of-Mathematical-and-Statistical-Sciences/Pure-Mathematics-Minor",
+            "college": "College of Sciences",
+            "department": "School of Mathematical and Statistical Sciences"
+          },
+          {
+            "name": "Secondary School Mathematics, Minor",
+            "path": "/sitecore/content/Catalogs/University-of-Texas-Rio-Grande-Valley/2025-2026/Undergraduate-Catalog/Undergraduate-Programs-by-College/College-of-Sciences/School-of-Mathematical-and-Statistical-Sciences/Secondary-School-Mathematics-Minor",
+            "college": "College of Sciences",
+            "department": "School of Mathematical and Statistical Sciences"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "School of Nursing",
+    "path": "/sitecore/content/Catalogs/University-of-Texas-Rio-Grande-Valley/2025-2026/Undergraduate-Catalog/Undergraduate-Programs-by-College/School-of-Nursing",
+    "departments": [
+      {
+        "name": "Nursing, Bachelor of Science In Nursing",
+        "path": "/sitecore/content/Catalogs/University-of-Texas-Rio-Grande-Valley/2025-2026/Undergraduate-Catalog/Undergraduate-Programs-by-College/School-of-Nursing/Nursing-Bachelor-of-Science-In-Nursing",
+        "programs": []
+      },
+      {
+        "name": "Nursing (RN to BSN), Bachelor of Science in Nursing",
+        "path": "/sitecore/content/Catalogs/University-of-Texas-Rio-Grande-Valley/2025-2026/Undergraduate-Catalog/Undergraduate-Programs-by-College/School-of-Nursing/Nursing-RN-to-BSN-Bachelor-of-Science-in-Nursing",
+        "programs": []
+      },
+      {
+        "name": "Nursing, Bachelor of Science In Nursing (Second Degree)",
+        "path": "/sitecore/content/Catalogs/University-of-Texas-Rio-Grande-Valley/2025-2026/Undergraduate-Catalog/Undergraduate-Programs-by-College/School-of-Nursing/Nursing-Bachelor-of-Science-In-Nursing-Second-Degree",
+        "programs": []
+      }
+    ]
+  },
+  {
+    "name": "School of Social Work",
+    "path": "/sitecore/content/Catalogs/University-of-Texas-Rio-Grande-Valley/2025-2026/Undergraduate-Catalog/Undergraduate-Programs-by-College/School-of-Social-Work",
+    "departments": [
+      {
+        "name": "Social Work, Bachelor of Social Work",
+        "path": "/sitecore/content/Catalogs/University-of-Texas-Rio-Grande-Valley/2025-2026/Undergraduate-Catalog/Undergraduate-Programs-by-College/School-of-Social-Work/Social-Work-Bachelor-of-Social-Work",
+        "programs": []
+      }
+    ]
+  },
+  {
+    "name": "Honors College",
+    "path": "/sitecore/content/Catalogs/University-of-Texas-Rio-Grande-Valley/2025-2026/Undergraduate-Catalog/Undergraduate-Programs-by-College/Honors-College",
+    "departments": []
+  }
+]
