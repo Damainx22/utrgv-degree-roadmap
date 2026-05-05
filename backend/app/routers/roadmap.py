@@ -1,11 +1,15 @@
 from fastapi import APIRouter, HTTPException, Header
 from app.database import supabase
 from app.auth import decode_access_token
-from typing import Optional
+from pydantic import BaseModel
 
 # Create a router with /roadmap prefix
 # All endpoints in this file will start with /roadmap
 router = APIRouter(prefix="/roadmap", tags=["roadmap"])
+
+
+class CompletedCourseCreate(BaseModel):
+    course_code: str
 
 
 def get_current_user(authorization: str) -> dict:
@@ -44,6 +48,20 @@ def get_current_user(authorization: str) -> dict:
     # Return the full user record as a dictionary
     return result.data[0]
 
+
+def get_course_by_code(course_code: str) -> dict:
+    """Look up a course by code and return its record."""
+    normalized = course_code.strip().upper()
+    result = (
+        supabase.table("courses")
+        .select("id, code, name, credits")
+        .eq("code", normalized)
+        .execute()
+    )
+    if not result.data:
+        raise HTTPException(status_code=404, detail=f"Course not found: {normalized}")
+    return result.data[0]
+
 @router.get("/programs")
 def get_programs():
     """
@@ -74,6 +92,11 @@ def set_major(
     # Get the current logged in user from the JWT token
     user = get_current_user(authorization)
 
+    # Validate selected program exists
+    program = supabase.table("programs").select("id").eq("id", program_id).execute()
+    if not program.data:
+        raise HTTPException(status_code=404, detail=f"Program not found: {program_id}")
+
     # Update the user's program_id in the database
     result = supabase.table("users")\
         .update({"program_id": program_id})\
@@ -84,6 +107,89 @@ def set_major(
         raise HTTPException(status_code=500, detail="Could not update major")
 
     return {"message": "Major updated successfully", "program_id": program_id}
+
+
+@router.get("/student/completed")
+def get_completed_courses(authorization: str = Header(None)):
+    """Return completed courses for the current user."""
+    user = get_current_user(authorization)
+
+    result = (
+        supabase.table("completed_courses")
+        .select("course_id, courses(code, name, credits)")
+        .eq("user_id", user["id"])
+        .execute()
+    )
+
+    completed = []
+    for row in result.data or []:
+        course = row.get("courses")
+        if not course:
+            continue
+        completed.append(
+            {
+                "course_id": row["course_id"],
+                "code": course["code"],
+                "name": course["name"],
+                "credits": course["credits"],
+            }
+        )
+
+    completed.sort(key=lambda c: c["code"])
+    return {"count": len(completed), "courses": completed}
+
+
+@router.post("/student/completed")
+def add_completed_course(payload: CompletedCourseCreate, authorization: str = Header(None)):
+    """Mark a course as completed for the current user."""
+    user = get_current_user(authorization)
+    course = get_course_by_code(payload.course_code)
+
+    existing = (
+        supabase.table("completed_courses")
+        .select("id")
+        .eq("user_id", user["id"])
+        .eq("course_id", course["id"])
+        .execute()
+    )
+    if existing.data:
+        return {
+            "message": "Course already marked completed",
+            "course": course,
+        }
+
+    inserted = (
+        supabase.table("completed_courses")
+        .insert({"user_id": user["id"], "course_id": course["id"]})
+        .execute()
+    )
+    if not inserted.data:
+        raise HTTPException(status_code=500, detail="Could not add completed course")
+
+    return {"message": "Course marked completed", "course": course}
+
+
+@router.delete("/student/completed/{course_code}")
+def remove_completed_course(course_code: str, authorization: str = Header(None)):
+    """Remove a completed course for the current user."""
+    user = get_current_user(authorization)
+    course = get_course_by_code(course_code)
+
+    deleted = (
+        supabase.table("completed_courses")
+        .delete()
+        .eq("user_id", user["id"])
+        .eq("course_id", course["id"])
+        .execute()
+    )
+
+    if not deleted.data:
+        raise HTTPException(
+            status_code=404,
+            detail=f"Course not marked completed: {course['code']}",
+        )
+
+    return {"message": "Completed course removed", "course": course}
 
 
 @router.get("/student/roadmap")
@@ -151,6 +257,7 @@ def get_roadmap(authorization: str = Header(None)):
     return {
         "program_id": user["program_id"],
         "completed_count": len(completed_codes),
+        "remaining_count": max(0, len(roadmap) - len(completed_codes)),
         "courses": roadmap,
     }
 
