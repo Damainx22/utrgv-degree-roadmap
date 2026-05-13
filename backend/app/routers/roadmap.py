@@ -119,13 +119,19 @@ def set_major(
     program_id: int,
     authorization: str = Header(None)
 ):
-    """Save the student's selected major to their user record."""
     user = get_current_user(authorization)
 
     program = supabase.table("programs").select("id").eq("id", program_id).execute()
     if not program.data:
         raise HTTPException(status_code=404, detail=f"Program not found: {program_id}")
 
+    # Clear completed courses when changing majors — clean slate
+    supabase.table("completed_courses")\
+        .delete()\
+        .eq("user_id", user["id"])\
+        .execute()
+
+    # Update the user's program
     result = supabase.table("users")\
         .update({"program_id": program_id})\
         .eq("id", user["id"])\
