@@ -209,15 +209,16 @@ def enrich_courses(courses: dict) -> dict:
 
             # Get plain text from the HTML
             text = content.get_text(separator=" ", strip=True)
+            # Replace non-breaking spaces and normalize whitespace
+            text = text.replace("\xa0", " ")
+            text = re.sub(r"\s+", " ", text).strip()
 
-            # Extract course details
+            # Extract course details from full text
             course["credits"]     = extract_credits(text)
-            # Keep full description text. Truncation breaks downstream parsing/debugging.
-            course["description"] = text
             course["prereq_raw"]  = extract_prereq_string(text)
             course["prereqs"]     = parse_prereq_string(course["prereq_raw"])
             course["coreq_raw"]   = extract_coreq_string(text)
-
+            course["description"] = text[:500]  # store first 500 chars for display
             enriched += 1
 
             # Progress update every 50 courses
@@ -252,7 +253,7 @@ def extract_prereq_string(text: str) -> str | None:
     if not text:
         return None
     m = re.search(
-        r"\b[Pp]re-?requisites?(?:\s*\([sS]\))?\s*:?\s*(.+?)(?:\.|[Cc]o-?[Rr]eq(?:uisites?)?|[Cc]redits?|[Nn]ote|[Ss]chedule [Tt]ype|$)",
+        r"[Pp]re-?requisites?\s*:\s*(.+?)(?:\.|[Cc]o-?[Rr]eq|[Cc]redit|[Nn]ote|$)",
         text, re.IGNORECASE | re.DOTALL
     )
     return m.group(1).strip() if m else None
@@ -263,7 +264,7 @@ def extract_coreq_string(text: str) -> str | None:
     if not text:
         return None
     m = re.search(
-        r"\b[Cc]o-?[Rr]equisites?(?:\s*\([sS]\))?\s*:?\s*(.+?)(?:\.|[Pp]re-?[Rr]eq(?:uisites?)?|[Cc]redits?|[Nn]ote|[Ss]chedule [Tt]ype|$)",
+        r"[Cc]o-?[Rr]equisites?\s*:\s*(.+?)(?:\.|[Pp]re|[Cc]redit|[Nn]ote|$)",
         text, re.IGNORECASE | re.DOTALL
     )
     return m.group(1).strip() if m else None
@@ -291,11 +292,7 @@ def parse_prereq_string(text: str) -> dict | None:
     # Clean up grade requirement noise
     s = re.sub(r"\s+", " ", text).strip()
     s = re.sub(
-        r"with\s+a?\s*(minimum\s+)?grade\s+of\s+\"?[A-C][+-]?\"?\s*(or\s+better)?",
-        "", s, flags=re.IGNORECASE
-    )
-    s = re.sub(
-        r"with\s+a?\s*\"?[A-C][+-]?\"?\s*or\s+better",
+        r"with\s+a?\s*(minimum\s+)?grade\s+of\s+[A-C][+-]?\s*(or\s+better)?",
         "", s, flags=re.IGNORECASE
     )
     s = s.strip().rstrip(".,")
@@ -315,14 +312,10 @@ def parse_expr(text: str) -> dict:
     # Check for OR
     or_parts = split_on(text, "or")
     if len(or_parts) > 1:
-        codes = []
-        for p in or_parts:
-            codes.extend(re.findall(r"[A-Z]{2,4}\s\d{4}", p.strip()))
+        codes = [re.match(r"[A-Z]{2,4}\s\d{4}", p.strip()) for p in or_parts]
+        codes = [m.group(0) for m in codes if m]
         if codes:
-            unique_codes = list(dict.fromkeys(codes))
-            if len(unique_codes) == 1:
-                return {"type": "course", "code": unique_codes[0]}
-            return {"type": "or", "courses": unique_codes}
+            return {"type": "or", "courses": codes}
 
     # Single course
     m = re.match(r"^([A-Z]{2,4}\s\d{4})", text)

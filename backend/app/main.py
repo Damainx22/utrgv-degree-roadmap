@@ -1,6 +1,6 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
-from app.routers import auth
+from app.routers import auth, roadmap
 
 # Create the FastAPI app instance with a title
 # The title appears in the auto-generated API docs at /docs
@@ -18,6 +18,7 @@ app.add_middleware(
 
 # Register the auth router which adds /auth/register and /auth/login endpoints
 app.include_router(auth.router)
+app.include_router(roadmap.router)
 
 # Root endpoint to verify the API is running
 @app.get("/")
