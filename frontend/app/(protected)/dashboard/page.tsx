@@ -1,154 +1,210 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
-import Link from "next/link";
-import { isLoggedIn, removeToken } from "@/lib/auth";
+import { getToken } from "@/lib/auth";
 
-// --- UI Sub-components ---
-type SidebarLinkProps = {
-  label: string;
-  active?: boolean;
+const API_URL = process.env.NEXT_PUBLIC_API_URL || "http://localhost:8000";
+
+type Program = { id: number; name: string; colleges: { name: string } };
+
+type RoadmapStats = {
+  completed_count: number;
+  remaining_count: number;
+  available_count: number;
 };
-
-type StatCardProps = {
-  label: string;
-  value: string;
-  trend: string;
-};
-
-const SidebarLink = ({ label, active = false }: SidebarLinkProps) => (
-  <div className={`flex items-center px-4 py-3 rounded-xl cursor-pointer transition-all duration-200 ${
-    active 
-      ? 'bg-[#DFF1ED] text-[#007A67] shadow-sm' 
-      : 'text-slate-500 hover:bg-[#EEF6F4] hover:text-slate-900'
-  }`}>
-    <span className="text-sm font-semibold">{label}</span>
-  </div>
-);
-
-const StatCard = ({ label, value, trend }: StatCardProps) => (
-  <div className="bg-white p-6 rounded-2xl border border-[#CFE4DF] shadow-sm">
-    <p className="text-xs font-bold text-slate-400 uppercase tracking-wider">{label}</p>
-    <h4 className="text-2xl font-bold text-slate-800 mt-1">{value}</h4>
-    <p className="text-xs text-[#007A67] font-medium mt-2">{trend}</p>
-  </div>
-);
 
 export default function DashboardPage() {
   const router = useRouter();
-  const [checkingAuth] = useState(() => !isLoggedIn());
+  const [stats, setStats] = useState<RoadmapStats | null>(null);
+  const [loading, setLoading] = useState(true);
+  const [showMajorModal, setShowMajorModal] = useState(false);
+  const [programs, setPrograms] = useState<Program[]>([]);
+  const [search, setSearch] = useState("");
+  const [selectedProgram, setSelectedProgram] = useState<number | null>(null);
+  const [saving, setSaving] = useState(false);
+
+  const fetchPrograms = useCallback(async () => {
+    const res = await fetch(`${API_URL}/roadmap/programs`);
+    if (!res.ok) return [] as Program[];
+    const data: Program[] = await res.json();
+    setPrograms(data);
+    return data;
+  }, []);
+
+  const fetchStats = useCallback(async () => {
+    const token = getToken();
+    if (!token) {
+      router.replace("/");
+      return;
+    }
+
+    const res = await fetch(`${API_URL}/roadmap/student/roadmap`, {
+      headers: { Authorization: `Bearer ${token}` },
+    });
+
+    if (res.status === 401) {
+      router.replace("/");
+      return;
+    }
+
+    if (res.status === 400) {
+      // No major selected yet: load majors and force selection modal.
+      await fetchPrograms();
+      setShowMajorModal(true);
+      setLoading(false);
+      return;
+    }
+
+    if (res.ok) {
+      const data = await res.json();
+      setStats({
+        completed_count: data.completed_count,
+        remaining_count: data.remaining_count,
+        available_count: data.courses.filter((c: { status: string }) => c.status === "unlocked").length,
+      });
+    }
+
+    setLoading(false);
+  }, [fetchPrograms, router]);
 
   useEffect(() => {
-    if (checkingAuth) router.replace("/");
-  }, [checkingAuth, router]);
+    // The initial page load intentionally hydrates client data after mount.
+    void fetchStats();
+  }, [fetchStats]);
 
-  const handleLogout = () => {
-    removeToken();
-    router.replace("/");
-  };
 
-  if (checkingAuth) return (
-    <div className="min-h-screen bg-[#B5D1CC] flex items-center justify-center">
-      <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-[#00937C]"></div>
-    </div>
+  async function openMajorModal() {
+    if (!programs.length) {
+      await fetchPrograms();
+    }
+    setShowMajorModal(true);
+  }
+
+  async function saveMajor() {
+    if (!selectedProgram) return;
+    setSaving(true);
+    const token = getToken();
+
+    try {
+      const res = await fetch(`${API_URL}/roadmap/student/major?program_id=${selectedProgram}`, {
+        method: "POST",
+        headers: { Authorization: `Bearer ${token}` },
+      });
+      if (res.ok) {
+        setShowMajorModal(false);
+        await fetchStats();
+      }
+    } finally {
+      setSaving(false);
+    }
+  }
+
+  const filtered = programs.filter((p) =>
+    p.name.toLowerCase().includes(search.toLowerCase())
   );
 
+  if (loading) {
+    return (
+      <div className="flex-1 flex items-center justify-center">
+        <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-[#00937C]" />
+      </div>
+    );
+  }
+
   return (
-    <div className="flex min-h-screen bg-[#B5D1CC] text-slate-900 font-sans">
-      
-      {/* Main Content */}
-      <main className="flex-1 p-8 lg:p-14 overflow-y-auto">
-        <header className="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-start md:items-center mb-10 gap-6">
+    <div className="flex-1 p-8 lg:p-12 overflow-y-auto">
+      {showMajorModal && (
+        <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50 p-4">
+          <div className="bg-white rounded-2xl w-full max-w-lg p-6 shadow-xl">
+            <h2 className="text-xl font-bold text-slate-800 mb-1">Select your major</h2>
+            <p className="text-slate-500 text-sm mb-4">Choose the degree program you are working toward.</p>
+            <input
+              type="text"
+              placeholder="Search programs..."
+              value={search}
+              onChange={(e) => setSearch(e.target.value)}
+              className="w-full border border-gray-300 rounded-lg px-4 py-2.5 text-sm mb-3 focus:outline-none focus:border-[#00937C] text-slate-800"
+            />
+            <div className="max-h-64 overflow-y-auto space-y-1 mb-4 border border-gray-100 rounded-lg p-2">
+              {filtered.map((p) => (
+                <button
+                  key={p.id}
+                  onClick={() => setSelectedProgram(p.id)}
+                  className={`w-full text-left px-4 py-2.5 rounded-lg text-sm transition-all ${
+                    selectedProgram === p.id
+                      ? "bg-[#DFF1ED] text-[#007A67] font-semibold"
+                      : "hover:bg-slate-50 text-slate-700"
+                  }`}
+                >
+                  <div className="font-medium">{p.name}</div>
+                  <div className="text-xs text-slate-400">{p.colleges?.name}</div>
+                </button>
+              ))}
+            </div>
+            <button
+              onClick={saveMajor}
+              disabled={!selectedProgram || saving}
+              className="w-full bg-[#00937C] hover:bg-[#007A67] text-white rounded-lg py-2.5 text-sm font-semibold disabled:opacity-50 transition"
+            >
+              {saving ? "Saving..." : "Confirm major"}
+            </button>
+          </div>
+        </div>
+      )}
+
+      <div className="max-w-5xl mx-auto">
+        <div className="flex justify-between items-center mb-10">
           <div>
-            <h2 className="text-3xl font-extrabold text-slate-900 tracking-tight">Student Dashboard</h2>
-            <p className="text-slate-500 mt-1 font-medium">Welcome back! You&apos;re on track to graduate by Spring 2027.</p>
+            <h1 className="text-3xl font-extrabold text-slate-900">Student Dashboard</h1>
+            <p className="text-slate-500 mt-1">Track your progress toward graduation.</p>
           </div>
-          <div className="flex items-center gap-4">
-             <button className="bg-white border border-[#BFD7D2] text-slate-700 px-5 py-2.5 rounded-xl font-semibold shadow-sm hover:bg-[#EEF6F4] transition-all">
-              Change Major
-            </button>
-            <button className="bg-[#00937C] text-white px-5 py-2.5 rounded-xl font-semibold shadow-md shadow-[#A9D7D0] hover:bg-[#007A67] transition-all">
-              Build Schedule
-            </button>
+          <button
+            onClick={() => void openMajorModal()}
+            className="bg-white border border-[#BFD7D2] text-slate-700 px-5 py-2.5 rounded-xl font-semibold shadow-sm hover:bg-[#EEF6F4] transition-all text-sm"
+          >
+            Change Major
+          </button>
+        </div>
+
+        <div className="grid grid-cols-3 gap-6 mb-10">
+          <div className="bg-white rounded-2xl border border-[#CFE4DF] p-6 shadow-sm">
+            <p className="text-xs font-bold text-slate-400 uppercase tracking-wider mb-1">Completed</p>
+            <p className="text-3xl font-bold text-green-600">{stats?.completed_count ?? "—"}</p>
+            <p className="text-xs text-slate-400 mt-1">courses finished</p>
           </div>
-        </header>
-
-        <section className="max-w-6xl mx-auto">
-          {/* Quick Stats */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10">
-            <StatCard label="Credits Earned" value="72 / 120" trend="+12 this semester" />
-            <StatCard label="Current GPA" value="3.82" trend="Top 10% of Major" />
-            <StatCard label="Saved Profs" value="14 Reviews" trend="3 new updates" />
+          <div className="bg-white rounded-2xl border border-[#CFE4DF] p-6 shadow-sm">
+            <p className="text-xs font-bold text-slate-400 uppercase tracking-wider mb-1">Available Now</p>
+            <p className="text-3xl font-bold text-blue-600">{stats?.available_count ?? "—"}</p>
+            <p className="text-xs text-slate-400 mt-1">courses you can take</p>
           </div>
-
-          <div className="grid grid-cols-12 gap-8">
-            {/* Schedule Section */}
-            <div className="col-span-12 lg:col-span-7 bg-white rounded-3xl border border-[#CFE4DF] shadow-sm p-8">
-              <div className="flex justify-between items-center mb-8">
-                <h3 className="text-lg font-bold text-slate-800">Top Rated Classes for You</h3>
-                <span className="text-xs font-bold text-[#007A67] bg-[#DFF1ED] px-3 py-1 rounded-full uppercase">Based on Reviews</span>
-              </div>
-              
-              <div className="space-y-6">
-                {[
-                  { name: "Advanced UI Design", prof: "Sarah Jenkins", score: "4.9" },
-                  { name: "Systems Architecture", prof: "Marcus Aris", score: "4.7" },
-                  { name: "Ethics in Tech", prof: "Julian Vane", score: "4.5" }
-                ].map((item, i) => (
-                  <div key={i} className="group flex items-center justify-between p-2 rounded-2xl hover:bg-[#EEF6F4] transition-colors cursor-pointer">
-                    <div className="flex items-center gap-4">
-                      <div className="w-12 h-12 bg-slate-100 rounded-xl flex items-center justify-center text-slate-500 font-bold group-hover:bg-[#DFF1ED] group-hover:text-[#007A67] transition-colors">
-                        {item.name[0]}
-                      </div>
-                      <div>
-                        <p className="font-bold text-slate-800">{item.name}</p>
-                        <p className="text-sm text-slate-500">{item.prof}</p>
-                      </div>
-                    </div>
-                    <div className="text-right">
-                      <p className="text-sm font-bold text-slate-800">{item.score} ★</p>
-                      <p className="text-[10px] text-slate-400 font-bold uppercase">Difficulty: Low</p>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-
-            {/* Sidebar Cards */}
-            <div className="col-span-12 lg:col-span-5 space-y-8">
-              <div className="bg-[#0E6A5C] rounded-3xl p-8 text-white shadow-xl shadow-[#A9D7D0] relative overflow-hidden">
-                <div className="relative z-10">
-                  <h4 className="text-xl font-bold mb-2">Major Insight</h4>
-                  <p className="text-[#C9EAE3] text-sm leading-relaxed">
-                    Students in <strong>Computer Science</strong> who took Systems Architecture in their Junior year had a 20% higher hire rate.
-                  </p>
-                  <button className="mt-6 text-sm font-bold border-b border-[#8DD0C4] pb-1 hover:text-[#D9F5EF] transition-colors">Read Full Report →</button>
-                </div>
-                <div className="absolute -right-8 -bottom-8 w-32 h-32 bg-[#0A574B] rounded-full blur-3xl opacity-50"></div>
-              </div>
-
-              <div className="bg-white rounded-3xl border border-[#CFE4DF] shadow-sm p-8">
-                <h4 className="text-sm font-bold text-slate-800 mb-6 uppercase tracking-widest">Live Professor Chat</h4>
-                <div className="space-y-4">
-                  <div className="flex gap-3">
-                    <div className="w-8 h-8 bg-orange-100 rounded-full shrink-0" />
-                    <div className="bg-slate-50 p-3 rounded-2xl rounded-tl-none text-xs text-slate-600">
-                      <strong>Mark:</strong> Has anyone taken Dr. Smith for Calc 2? Is he really that bad?
-                    </div>
-                  </div>
-                  <div className="flex gap-3 flex-row-reverse">
-                    <div className="w-8 h-8 bg-blue-100 rounded-full shrink-0" />
-                    <div className="bg-[#00937C] p-3 rounded-2xl rounded-tr-none text-xs text-white">
-                      <strong>You:</strong> He&apos;s okay, just a lot of homework!
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+          <div className="bg-white rounded-2xl border border-[#CFE4DF] p-6 shadow-sm">
+            <p className="text-xs font-bold text-slate-400 uppercase tracking-wider mb-1">Remaining</p>
+            <p className="text-3xl font-bold text-slate-600">{stats?.remaining_count ?? "—"}</p>
+            <p className="text-xs text-slate-400 mt-1">courses to graduate</p>
           </div>
-        </section>
-      </main>
+        </div>
+
+        <div className="grid grid-cols-2 gap-6">
+          <button
+            onClick={() => router.push("/roadmap")}
+            className="bg-white rounded-2xl border border-[#CFE4DF] p-8 text-left hover:shadow-md transition-all"
+          >
+            <div className="text-2xl mb-3">🗺️</div>
+            <h3 className="text-lg font-bold text-slate-800 mb-1">Degree Roadmap</h3>
+            <p className="text-slate-500 text-sm">View your semester-by-semester degree plan with locked and unlocked courses.</p>
+          </button>
+
+          <button
+            onClick={() => router.push("/schedule")}
+            className="bg-[#0E6A5C] rounded-2xl p-8 text-left hover:opacity-90 transition-all"
+          >
+            <div className="text-2xl mb-3">📅</div>
+            <h3 className="text-lg font-bold text-white mb-1">Schedule Builder</h3>
+            <p className="text-[#C9EAE3] text-sm">Build a conflict-free schedule for next semester based on your available courses.</p>
+          </button>
+        </div>
+      </div>
     </div>
   );
 }
