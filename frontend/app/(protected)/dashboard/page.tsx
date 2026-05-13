@@ -1,16 +1,17 @@
 "use client";
 
-import { useEffect, useState, useCallback } from "react";
+import { useCallback, useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
-import { getToken, removeToken } from "@/lib/auth";
+import { getToken } from "@/lib/auth";
 
 const API_URL = process.env.NEXT_PUBLIC_API_URL || "http://localhost:8000";
+
+type Program = { id: number; name: string; colleges: { name: string } };
 
 type RoadmapStats = {
   completed_count: number;
   remaining_count: number;
   available_count: number;
-  program_name?: string;
 };
 
 export default function DashboardPage() {
@@ -18,25 +19,38 @@ export default function DashboardPage() {
   const [stats, setStats] = useState<RoadmapStats | null>(null);
   const [loading, setLoading] = useState(true);
   const [showMajorModal, setShowMajorModal] = useState(false);
-  const [programs, setPrograms] = useState<{ id: number; name: string; colleges: { name: string } }[]>([]);
+  const [programs, setPrograms] = useState<Program[]>([]);
   const [search, setSearch] = useState("");
   const [selectedProgram, setSelectedProgram] = useState<number | null>(null);
   const [saving, setSaving] = useState(false);
 
+  const fetchPrograms = useCallback(async () => {
+    const res = await fetch(`${API_URL}/roadmap/programs`);
+    if (!res.ok) return [] as Program[];
+    const data: Program[] = await res.json();
+    setPrograms(data);
+    return data;
+  }, []);
+
   const fetchStats = useCallback(async () => {
     const token = getToken();
-    if (!token) { router.replace("/"); return; }
+    if (!token) {
+      router.replace("/");
+      return;
+    }
 
     const res = await fetch(`${API_URL}/roadmap/student/roadmap`, {
       headers: { Authorization: `Bearer ${token}` },
     });
 
-    if (res.status === 401) { router.replace("/"); return; }
+    if (res.status === 401) {
+      router.replace("/");
+      return;
+    }
 
     if (res.status === 400) {
-      // No major selected
-      const programsRes = await fetch(`${API_URL}/roadmap/programs`);
-      if (programsRes.ok) setPrograms(await programsRes.json());
+      // No major selected yet: load majors and force selection modal.
+      await fetchPrograms();
       setShowMajorModal(true);
       setLoading(false);
       return;
@@ -50,38 +64,56 @@ export default function DashboardPage() {
         available_count: data.courses.filter((c: { status: string }) => c.status === "unlocked").length,
       });
     }
-    setLoading(false);
-  }, [router]);
 
-  useEffect(() => { fetchStats(); }, [fetchStats]);
+    setLoading(false);
+  }, [fetchPrograms, router]);
+
+  useEffect(() => {
+    // The initial page load intentionally hydrates client data after mount.
+    void fetchStats();
+  }, [fetchStats]);
+
+
+  async function openMajorModal() {
+    if (!programs.length) {
+      await fetchPrograms();
+    }
+    setShowMajorModal(true);
+  }
 
   async function saveMajor() {
     if (!selectedProgram) return;
     setSaving(true);
     const token = getToken();
-    const res = await fetch(`${API_URL}/roadmap/student/major?program_id=${selectedProgram}`, {
-      method: "POST",
-      headers: { Authorization: `Bearer ${token}` },
-    });
-    if (res.ok) {
-      setShowMajorModal(false);
-      fetchStats();
+
+    try {
+      const res = await fetch(`${API_URL}/roadmap/student/major?program_id=${selectedProgram}`, {
+        method: "POST",
+        headers: { Authorization: `Bearer ${token}` },
+      });
+      if (res.ok) {
+        setShowMajorModal(false);
+        await fetchStats();
+      }
+    } finally {
+      setSaving(false);
     }
-    setSaving(false);
   }
 
-  const filtered = programs.filter(p => p.name.toLowerCase().includes(search.toLowerCase()));
-
-  if (loading) return (
-    <div className="flex-1 flex items-center justify-center">
-      <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-[#00937C]" />
-    </div>
+  const filtered = programs.filter((p) =>
+    p.name.toLowerCase().includes(search.toLowerCase())
   );
+
+  if (loading) {
+    return (
+      <div className="flex-1 flex items-center justify-center">
+        <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-[#00937C]" />
+      </div>
+    );
+  }
 
   return (
     <div className="flex-1 p-8 lg:p-12 overflow-y-auto">
-
-      {/* Major selection modal */}
       {showMajorModal && (
         <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50 p-4">
           <div className="bg-white rounded-2xl w-full max-w-lg p-6 shadow-xl">
@@ -91,11 +123,11 @@ export default function DashboardPage() {
               type="text"
               placeholder="Search programs..."
               value={search}
-              onChange={e => setSearch(e.target.value)}
+              onChange={(e) => setSearch(e.target.value)}
               className="w-full border border-gray-300 rounded-lg px-4 py-2.5 text-sm mb-3 focus:outline-none focus:border-[#00937C] text-slate-800"
             />
             <div className="max-h-64 overflow-y-auto space-y-1 mb-4 border border-gray-100 rounded-lg p-2">
-              {filtered.map(p => (
+              {filtered.map((p) => (
                 <button
                   key={p.id}
                   onClick={() => setSelectedProgram(p.id)}
@@ -121,7 +153,6 @@ export default function DashboardPage() {
         </div>
       )}
 
-      {/* Header */}
       <div className="max-w-5xl mx-auto">
         <div className="flex justify-between items-center mb-10">
           <div>
@@ -129,14 +160,13 @@ export default function DashboardPage() {
             <p className="text-slate-500 mt-1">Track your progress toward graduation.</p>
           </div>
           <button
-            onClick={() => setShowMajorModal(true)}
+            onClick={() => void openMajorModal()}
             className="bg-white border border-[#BFD7D2] text-slate-700 px-5 py-2.5 rounded-xl font-semibold shadow-sm hover:bg-[#EEF6F4] transition-all text-sm"
           >
             Change Major
           </button>
         </div>
 
-        {/* Stats */}
         <div className="grid grid-cols-3 gap-6 mb-10">
           <div className="bg-white rounded-2xl border border-[#CFE4DF] p-6 shadow-sm">
             <p className="text-xs font-bold text-slate-400 uppercase tracking-wider mb-1">Completed</p>
@@ -155,7 +185,6 @@ export default function DashboardPage() {
           </div>
         </div>
 
-        {/* Quick actions */}
         <div className="grid grid-cols-2 gap-6">
           <button
             onClick={() => router.push("/roadmap")}

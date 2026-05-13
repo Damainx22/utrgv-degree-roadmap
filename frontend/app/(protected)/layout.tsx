@@ -1,10 +1,9 @@
 "use client";
 
+import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
 import { isLoggedIn, removeToken } from "@/lib/auth";
-import { useEffect, useState } from "react";
-
 
 export default function ProtectedLayout({
   children,
@@ -12,21 +11,23 @@ export default function ProtectedLayout({
   children: React.ReactNode;
 }) {
   const router = useRouter();
-const [mounted, setMounted] = useState(false);
+  const [mounted, setMounted] = useState(false);
 
-useEffect(() => {
-  setMounted(true);
-  if (!isLoggedIn()) {
+  useEffect(() => {
+    // Delay auth checks until client mount to avoid hydration mismatches.
+    // eslint-disable-next-line react-hooks/set-state-in-effect
+    setMounted(true);
+    if (!isLoggedIn()) {
+      router.replace("/");
+    }
+  }, [router]);
+
+  if (!mounted || !isLoggedIn()) return null;
+
+  const handleLogout = () => {
+    removeToken();
     router.replace("/");
-  }
-}, [router]);
-
-if (!mounted) return null;
-
-const handleLogout = () => {
-  removeToken();
-  router.replace("/");
-};
+  };
 
   return (
     <div className="flex min-h-screen bg-[#B5D1CC] text-slate-900">
@@ -35,9 +36,7 @@ const handleLogout = () => {
           <div className="w-8 h-8 bg-[#00937C] rounded-lg flex items-center justify-center text-white font-bold">
             D
           </div>
-          <h1 className="text-xl font-bold tracking-tight text-slate-800">
-            DegreePath
-          </h1>
+          <h1 className="text-xl font-bold tracking-tight text-slate-800">DegreePath</h1>
         </div>
 
         <nav className="space-y-2 flex-1">
@@ -56,6 +55,9 @@ const handleLogout = () => {
           <Link href="/messages" className="flex items-center px-4 py-3 rounded-xl transition-all duration-200 text-slate-500 hover:bg-[#EEF6F4] hover:text-slate-900">
             <span className="text-sm font-semibold">Messages</span>
           </Link>
+          <Link href="/profile" className="flex items-center px-4 py-3 rounded-xl transition-all duration-200 text-slate-500 hover:bg-[#EEF6F4] hover:text-slate-900">
+            <span className="text-sm font-semibold">Profile</span>
+          </Link>
         </nav>
 
         <div className="mt-auto pt-6 border-t border-[#BFD7D2]">
@@ -68,9 +70,7 @@ const handleLogout = () => {
         </div>
       </aside>
 
-      <main className="flex-1 p-8">
-        {children}
-      </main>
+      <main className="flex-1 p-8">{children}</main>
     </div>
   );
 }

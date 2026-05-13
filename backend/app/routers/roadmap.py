@@ -2,6 +2,8 @@ from fastapi import APIRouter, HTTPException, Header
 from app.database import supabase
 from app.auth import decode_access_token
 from pydantic import BaseModel
+import json
+import re
 
 # Create a router with /roadmap prefix
 # All endpoints in this file will start with /roadmap
@@ -62,6 +64,36 @@ def get_course_by_code(course_code: str) -> dict:
     if not result.data:
         raise HTTPException(status_code=404, detail=f"Course not found: {normalized}")
     return result.data[0]
+
+
+def compute_course_status(course: dict, completed_codes: set[str]) -> str:
+    """Compute roadmap status for a single course record."""
+    code = course["code"]
+    prereqs = course.get("prereqs")
+    if isinstance(prereqs, str):
+        try:
+            prereqs = json.loads(prereqs)
+        except Exception:
+            prereqs = None
+
+    if code in completed_codes:
+        return "completed"
+    if code in ALWAYS_UNLOCKED:
+        return "unlocked"
+    if prereqs is None or prereqs.get("type") == "raw":
+        return "unlocked"
+    if prereqs_satisfied(prereqs, completed_codes):
+        return "unlocked"
+    return "locked"
+
+
+def level_from_code(code: str) -> int:
+    """Map course code to level group (1000/2000/3000/4000)."""
+    match = re.search(r"\b([1-6])\d{3}\b", code or "")
+    if not match:
+        return 1000
+    first_digit = int(match.group(1))
+    return max(1, min(first_digit, 4)) * 1000
 
 
 @router.get("/programs")
@@ -222,27 +254,7 @@ def get_roadmap(authorization: str = Header(None)):
             continue
 
         code = course["code"]
-        prereqs = course.get("prereqs")
-        # Supabase sometimes returns JSONB as a string — parse it if needed
-        if isinstance(prereqs, str):
-            import json
-            try:
-                prereqs = json.loads(prereqs)
-            except Exception:
-                prereqs = None
-                
-        if code in completed_codes:
-            status = "completed"
-        elif code in ALWAYS_UNLOCKED:
-            # Placement/transfer courses — always available
-            status = "unlocked"
-        elif prereqs is None or prereqs.get("type") == "raw":
-            # No parseable prereqs — treat as unlocked
-            status = "unlocked"
-        elif prereqs_satisfied(prereqs, completed_codes):
-            status = "unlocked"
-        else:
-            status = "locked"
+        status = compute_course_status(course, completed_codes)
 
         roadmap.append({
             "code": code,
@@ -258,6 +270,139 @@ def get_roadmap(authorization: str = Header(None)):
         "completed_count": len(completed_codes),
         "remaining_count": max(0, len(roadmap) - len(completed_codes)),
         "courses": roadmap,
+    }
+
+
+@router.get("/student/degree-plan")
+def get_degree_plan(authorization: str = Header(None)):
+    """
+    Return student's semester-by-semester degree plan for their selected major.
+    Falls back to 1000/2000/3000/4000 level grouping when no semester plan exists.
+    """
+    user = get_current_user(authorization)
+
+    if not user.get("program_id"):
+        raise HTTPException(status_code=400, detail="No major selected")
+
+    program = (
+        supabase.table("programs")
+        .select("id, name")
+        .eq("id", user["program_id"])
+        .limit(1)
+        .execute()
+    )
+    if not program.data:
+        raise HTTPException(status_code=404, detail="Program not found")
+    program_name = program.data[0]["name"]
+
+    completed = (
+        supabase.table("completed_courses")
+        .select("course_id, courses(code)")
+        .eq("user_id", user["id"])
+        .execute()
+    )
+    completed_codes = {
+        c["courses"]["code"]
+        for c in (completed.data or [])
+        if c.get("courses")
+    }
+
+    degree_rows = (
+        supabase.table("degree_plans")
+        .select("year, semester, display_order, notes, courses(code, name, credits, prereqs)")
+        .eq("program_id", user["program_id"])
+        .order("year")
+        .order("display_order")
+        .execute()
+    )
+
+    if degree_rows.data:
+        grouped: dict[tuple[int, str], dict] = {}
+        for row in degree_rows.data:
+            course = row.get("courses")
+            if not course:
+                continue
+            key = (row["year"], row["semester"])
+            if key not in grouped:
+                grouped[key] = {
+                    "year": row["year"],
+                    "semester": row["semester"],
+                    "courses": [],
+                    "total_credits": 0,
+                }
+
+            status = compute_course_status(course, completed_codes)
+            course_row = {
+                "code": course["code"],
+                "name": course["name"],
+                "credits": course["credits"],
+                "status": status,
+                "display_order": row.get("display_order", 0),
+            }
+            if row.get("notes"):
+                course_row["notes"] = row["notes"]
+
+            grouped[key]["courses"].append(course_row)
+            grouped[key]["total_credits"] += course["credits"] or 0
+
+        semesters = list(grouped.values())
+        semesters.sort(
+            key=lambda s: (
+                s["year"],
+                {"Fall": 1, "Spring": 2, "Summer": 3}.get(s["semester"], 99),
+            )
+        )
+
+        return {
+            "program_id": user["program_id"],
+            "program_name": program_name,
+            "has_plan": True,
+            "semesters": semesters,
+        }
+
+    requirements = (
+        supabase.table("program_requirements")
+        .select("courses(code, name, credits, prereqs)")
+        .eq("program_id", user["program_id"])
+        .execute()
+    )
+
+    by_level: dict[int, list[dict]] = {1000: [], 2000: [], 3000: [], 4000: []}
+    for req in requirements.data or []:
+        course = req.get("courses")
+        if not course:
+            continue
+        level = level_from_code(course["code"])
+        status = compute_course_status(course, completed_codes)
+        by_level[level].append(
+            {
+                "code": course["code"],
+                "name": course["name"],
+                "credits": course["credits"],
+                "status": status,
+                "display_order": 0,
+            }
+        )
+
+    semesters = []
+    for idx, level in enumerate([1000, 2000, 3000, 4000], start=1):
+        courses = sorted(by_level[level], key=lambda c: c["code"])
+        if not courses:
+            continue
+        semesters.append(
+            {
+                "year": idx,
+                "semester": f"{level}-Level",
+                "courses": courses,
+                "total_credits": sum(c["credits"] or 0 for c in courses),
+            }
+        )
+
+    return {
+        "program_id": user["program_id"],
+        "program_name": program_name,
+        "has_plan": False,
+        "semesters": semesters,
     }
 
 
@@ -295,3 +440,20 @@ def prereqs_satisfied(prereqs: dict, completed_codes: set) -> bool:
 
     # Raw or unknown type — assume satisfied
     return True
+
+@router.delete("/student/account")
+def delete_account(authorization: str = Header(None)):
+    """Delete the current user's account and all their data."""
+    user = get_current_user(authorization)
+    user_id = user["id"]
+
+    # Delete completed courses first
+    supabase.table("completed_courses").delete().eq("user_id", user_id).execute()
+
+    # Delete saved schedules
+    supabase.table("saved_schedules").delete().eq("user_id", user_id).execute()
+
+    # Delete the user
+    supabase.table("users").delete().eq("id", user_id).execute()
+
+    return {"message": "Account deleted successfully"}
