@@ -14,6 +14,11 @@ type RoadmapStats = {
   available_count: number;
 };
 
+function isMajorProgram(name: string): boolean {
+  const n = name.toLowerCase();
+  return !n.includes("minor") && !n.includes("certificate") && !n.includes("concentration");
+}
+
 export default function DashboardPage() {
   const router = useRouter();
   const [stats, setStats] = useState<RoadmapStats | null>(null);
@@ -58,10 +63,24 @@ export default function DashboardPage() {
 
     if (res.ok) {
       const data = await res.json();
+      const byCode = new Map<string, string>();
+      for (const c of data.courses as { code: string; status: string }[]) {
+        // Keep strongest status priority: completed > unlocked > locked
+        const prev = byCode.get(c.code);
+        if (!prev) {
+          byCode.set(c.code, c.status);
+          continue;
+        }
+        if (prev === "completed") continue;
+        if (prev === "unlocked" && c.status === "locked") continue;
+        byCode.set(c.code, c.status);
+      }
+
+      const statuses = Array.from(byCode.values());
       setStats({
-        completed_count: data.completed_count,
-        remaining_count: data.remaining_count,
-        available_count: data.courses.filter((c: { status: string }) => c.status === "unlocked").length,
+        completed_count: statuses.filter((s) => s === "completed").length,
+        available_count: statuses.filter((s) => s === "unlocked").length,
+        remaining_count: statuses.filter((s) => s !== "completed").length,
       });
     }
 
@@ -100,8 +119,8 @@ export default function DashboardPage() {
     }
   }
 
-  const filtered = programs.filter((p) =>
-    p.name.toLowerCase().includes(search.toLowerCase())
+  const filtered = programs.filter(
+    (p) => isMajorProgram(p.name) && p.name.toLowerCase().includes(search.toLowerCase())
   );
 
   if (loading) {
@@ -185,7 +204,7 @@ export default function DashboardPage() {
           </div>
         </div>
 
-        <div className="grid grid-cols-2 gap-6">
+        <div className="grid grid-cols-1 gap-6">
           <button
             onClick={() => router.push("/roadmap")}
             className="bg-white rounded-2xl border border-[#CFE4DF] p-8 text-left hover:shadow-md transition-all"
@@ -193,15 +212,6 @@ export default function DashboardPage() {
             <div className="text-2xl mb-3">🗺️</div>
             <h3 className="text-lg font-bold text-slate-800 mb-1">Degree Roadmap</h3>
             <p className="text-slate-500 text-sm">View your semester-by-semester degree plan with locked and unlocked courses.</p>
-          </button>
-
-          <button
-            onClick={() => router.push("/schedule")}
-            className="bg-[#0E6A5C] rounded-2xl p-8 text-left hover:opacity-90 transition-all"
-          >
-            <div className="text-2xl mb-3">📅</div>
-            <h3 className="text-lg font-bold text-white mb-1">Schedule Builder</h3>
-            <p className="text-[#C9EAE3] text-sm">Build a conflict-free schedule for next semester based on your available courses.</p>
           </button>
         </div>
       </div>
