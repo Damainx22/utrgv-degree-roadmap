@@ -20,6 +20,11 @@ type Course = {
   section: string;
 };
 
+function isMajorProgram(name: string): boolean {
+  const n = name.toLowerCase();
+  return !n.includes("minor") && !n.includes("certificate") && !n.includes("concentration");
+}
+
 export default function OnboardingPage() {
   const router = useRouter();
   const [step, setStep] = useState(1);
@@ -134,8 +139,8 @@ export default function OnboardingPage() {
     return groups;
   }
 
-  const filteredPrograms = programs.filter((p) =>
-    p.name.toLowerCase().includes(search.toLowerCase())
+  const filteredPrograms = programs.filter(
+    (p) => isMajorProgram(p.name) && p.name.toLowerCase().includes(search.toLowerCase())
   );
 
   if (step === 1) {

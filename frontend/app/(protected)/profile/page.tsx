@@ -20,11 +20,18 @@ type ProfileData = {
   remaining_count: number;
 };
 
+function isMajorProgram(name: string): boolean {
+  const n = name.toLowerCase();
+  return !n.includes("minor") && !n.includes("certificate") && !n.includes("concentration");
+}
+
 export default function ProfilePage() {
   const router = useRouter();
   const [profile, setProfile] = useState<ProfileData | null>(null);
   const [loading, setLoading] = useState(true);
   const [showDeleteConfirm, setShowDeleteConfirm] = useState(false);
+  const [showResetConfirm, setShowResetConfirm] = useState(false);
+  const [resetting, setResetting] = useState(false);
   const [deleting, setDeleting] = useState(false);
   const [showMajorModal, setShowMajorModal] = useState(false);
   const [programs, setPrograms] = useState<Program[]>([]);
@@ -107,6 +114,10 @@ export default function ProfilePage() {
 
   async function saveMajor() {
     if (!selectedProgram) return;
+    const confirmed = window.confirm(
+      "Changing your major will reset your completed-course progress for the new roadmap. Continue?"
+    );
+    if (!confirmed) return;
     setSaving(true);
     const token = getToken();
 
@@ -137,8 +148,23 @@ export default function ProfilePage() {
     router.replace("/");
   }
 
-  const filtered = programs.filter((p) =>
-    p.name.toLowerCase().includes(search.toLowerCase())
+  async function resetProgress() {
+    setResetting(true);
+    const token = getToken();
+    try {
+      await fetch(`${API_URL}/roadmap/student/completed`, {
+        method: "DELETE",
+        headers: { Authorization: `Bearer ${token}` },
+      });
+      setShowResetConfirm(false);
+      await fetchProfile();
+    } finally {
+      setResetting(false);
+    }
+  }
+
+  const filtered = programs.filter(
+    (p) => isMajorProgram(p.name) && p.name.toLowerCase().includes(search.toLowerCase())
   );
 
   if (loading) {
@@ -224,6 +250,32 @@ export default function ProfilePage() {
         </div>
       )}
 
+      {showResetConfirm && (
+        <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50 p-4">
+          <div className="bg-white rounded-2xl w-full max-w-sm p-6 shadow-xl">
+            <h2 className="text-xl font-bold text-slate-800 mb-2">Reset progress?</h2>
+            <p className="text-slate-500 text-sm mb-6">
+              This will clear all completed courses for your current major. Your account and reviews stay intact.
+            </p>
+            <div className="flex gap-3">
+              <button
+                onClick={() => setShowResetConfirm(false)}
+                className="flex-1 border border-gray-300 text-slate-700 rounded-lg py-2.5 text-sm font-semibold"
+              >
+                Cancel
+              </button>
+              <button
+                onClick={resetProgress}
+                disabled={resetting}
+                className="flex-1 bg-amber-500 hover:bg-amber-600 text-white rounded-lg py-2.5 text-sm font-semibold disabled:opacity-50 transition"
+              >
+                {resetting ? "Resetting..." : "Reset"}
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
+
       <div className="max-w-2xl mx-auto">
         <h1 className="text-3xl font-extrabold text-slate-900 mb-8">Profile</h1>
 
@@ -271,7 +323,19 @@ export default function ProfilePage() {
 
         <div className="bg-white rounded-2xl border border-red-100 shadow-sm p-6">
           <h2 className="text-sm font-bold text-red-400 uppercase tracking-wider mb-4">Danger zone</h2>
-          <div className="flex justify-between items-center">
+          <div className="flex justify-between items-center mb-4">
+            <div>
+              <p className="text-slate-800 font-medium">Reset progress</p>
+              <p className="text-slate-400 text-sm">Clear completed courses and start your roadmap over.</p>
+            </div>
+            <button
+              onClick={() => setShowResetConfirm(true)}
+              className="bg-amber-50 hover:bg-amber-100 text-amber-700 border border-amber-200 px-4 py-2 rounded-lg text-sm font-semibold transition"
+            >
+              Reset
+            </button>
+          </div>
+          <div className="flex justify-between items-center pt-4 border-t border-red-100">
             <div>
               <p className="text-slate-800 font-medium">Delete account</p>
               <p className="text-slate-400 text-sm">Permanently remove your account and all data.</p>

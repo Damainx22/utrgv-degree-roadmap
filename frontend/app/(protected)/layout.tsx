@@ -46,14 +46,8 @@ export default function ProtectedLayout({
           <Link href="/roadmap" className="flex items-center px-4 py-3 rounded-xl transition-all duration-200 text-slate-500 hover:bg-[#EEF6F4] hover:text-slate-900">
             <span className="text-sm font-semibold">Degree Roadmap</span>
           </Link>
-          <Link href="/schedule" className="flex items-center px-4 py-3 rounded-xl transition-all duration-200 text-slate-500 hover:bg-[#EEF6F4] hover:text-slate-900">
-            <span className="text-sm font-semibold">Schedule Builder</span>
-          </Link>
           <Link href="/reviews" className="flex items-center px-4 py-3 rounded-xl transition-all duration-200 text-slate-500 hover:bg-[#EEF6F4] hover:text-slate-900">
             <span className="text-sm font-semibold">Professor Reviews</span>
-          </Link>
-          <Link href="/messages" className="flex items-center px-4 py-3 rounded-xl transition-all duration-200 text-slate-500 hover:bg-[#EEF6F4] hover:text-slate-900">
-            <span className="text-sm font-semibold">Messages</span>
           </Link>
           <Link href="/profile" className="flex items-center px-4 py-3 rounded-xl transition-all duration-200 text-slate-500 hover:bg-[#EEF6F4] hover:text-slate-900">
             <span className="text-sm font-semibold">Profile</span>
