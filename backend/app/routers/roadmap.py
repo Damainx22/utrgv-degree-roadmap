@@ -486,3 +486,4 @@ def delete_account(authorization: str = Header(None)):
     supabase.table("users").delete().eq("id", user_id).execute()
 
     return {"message": "Account deleted successfully"}
+
