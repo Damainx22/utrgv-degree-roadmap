@@ -12,6 +12,9 @@ type Course = {
   credits: number;
   status: "completed" | "unlocked" | "locked";
   display_order?: number;
+  notes?: string;
+  section?: string | null;
+  requirement_type?: string | null;
 };
 
 type Semester = {
@@ -39,8 +42,6 @@ export default function RoadmapPage() {
   const [semesters, setSemesters] = useState<Semester[]>([]);
   const [programName, setProgramName] = useState("");
   const [hasPlan, setHasPlan] = useState(true);
-  const [completedCount, setCompletedCount] = useState(0);
-  const [remainingCount, setRemainingCount] = useState(0);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
 
@@ -51,6 +52,7 @@ export default function RoadmapPage() {
       return;
     }
 
+    // Fetch status map and semester plan together to reduce initial load time.
     const [roadmapRes, planRes] = await Promise.all([
       fetch(`${API_URL}/roadmap/student/roadmap`, {
         headers: { Authorization: `Bearer ${token}` },
@@ -75,11 +77,19 @@ export default function RoadmapPage() {
     const roadmapData = await roadmapRes.json();
     const planData = await planRes.json();
 
+    // Build quick lookup by course code so semester cards can merge live status.
     const map: Record<string, Course> = {};
-    for (const c of roadmapData.courses) map[c.code] = c;
+    for (const c of roadmapData.courses) {
+      map[c.code] = {
+        code: c.code,
+        name: c.name,
+        credits: c.credits,
+        status: c.status,
+        section: c.section ?? null,
+        requirement_type: c.requirement_type ?? null,
+      };
+    }
     setCourses(map);
-    setCompletedCount(roadmapData.completed_count ?? 0);
-    setRemainingCount(roadmapData.remaining_count ?? 0);
 
     setProgramName(planData.program_name ?? "");
     setHasPlan(planData.has_plan ?? false);
@@ -97,7 +107,12 @@ export default function RoadmapPage() {
   async function toggleCourse(code: string, status: string) {
     if (status === "locked") return;
     const token = getToken();
+    if (!token) {
+      router.replace("/");
+      return;
+    }
 
+    // Toggle API call based on current status.
     if (status === "completed") {
       await fetch(`${API_URL}/roadmap/student/completed/${code}`, {
         method: "DELETE",
@@ -114,7 +129,16 @@ export default function RoadmapPage() {
     await fetchRoadmap();
   }
 
-  const available = Object.values(courses).filter((c) => c.status === "unlocked").length;
+  // Compute stats from the currently displayed plan courses (unique by code),
+  // so top counters reflect exactly what students see on this page.
+  const displayedCodes = new Set<string>();
+  for (const sem of semesters) {
+    for (const c of sem.courses) displayedCodes.add(c.code);
+  }
+  const displayedStatuses = Array.from(displayedCodes).map((code) => courses[code]?.status).filter(Boolean) as Array<"completed" | "unlocked" | "locked">;
+  const completed = displayedStatuses.filter((s) => s === "completed").length;
+  const available = displayedStatuses.filter((s) => s === "unlocked").length;
+  const remaining = displayedStatuses.filter((s) => s !== "completed").length;
 
   if (loading) {
     return (
@@ -148,13 +172,31 @@ export default function RoadmapPage() {
   }
 
   const years = Array.from(new Set(semesters.map((s) => s.year))).sort((a, b) => a - b);
+  function exportAsPdf() {
+    // Uses browser print dialog so users can Save as PDF in one click.
+    window.print();
+  }
 
   return (
     <div className="flex-1 p-6 lg:p-10 overflow-y-auto">
-      <div className="max-w-6xl mx-auto">
+      <div className="max-w-6xl mx-auto roadmap-print-root">
         <div className="mb-6">
-          <h1 className="text-3xl font-extrabold text-slate-900">Degree Roadmap</h1>
-          <p className="text-slate-500 mt-1 text-sm">{programName || "Degree Program"} · Click a course to mark it completed.</p>
+          <div className="flex flex-wrap items-center justify-between gap-3 no-print">
+            <div>
+              <h1 className="text-3xl font-extrabold text-slate-900">Degree Roadmap</h1>
+              <p className="text-slate-500 mt-1 text-sm">{programName || "Degree Program"} · Click a course to mark it completed.</p>
+            </div>
+            <button
+              onClick={exportAsPdf}
+              className="bg-white border border-[#BFD7D2] text-slate-700 px-4 py-2 rounded-xl text-sm font-semibold shadow-sm hover:bg-[#EEF6F4] transition-all"
+            >
+              Export PDF
+            </button>
+          </div>
+          <div className="hidden print:block">
+            <h1 className="text-3xl font-extrabold text-slate-900">Degree Roadmap</h1>
+            <p className="text-slate-500 mt-1 text-sm">{programName || "Degree Program"}</p>
+          </div>
           {!hasPlan && (
             <p className="mt-2 text-xs font-medium text-amber-700 bg-amber-50 border border-amber-200 rounded-lg inline-block px-3 py-1">
               Semester plan not available for this major yet — showing by course level
@@ -162,9 +204,9 @@ export default function RoadmapPage() {
           )}
         </div>
 
-        <div className="grid grid-cols-3 gap-4 mb-8">
+        <div className="grid grid-cols-3 gap-4 mb-8 no-print">
           <div className="bg-white rounded-xl border border-[#CFE4DF] p-4 text-center">
-            <div className="text-2xl font-bold text-[#00937C]">{completedCount}</div>
+            <div className="text-2xl font-bold text-[#00937C]">{completed}</div>
             <div className="text-xs text-slate-400 mt-1">Completed</div>
           </div>
           <div className="bg-white rounded-xl border border-[#CFE4DF] p-4 text-center">
@@ -172,7 +214,7 @@ export default function RoadmapPage() {
             <div className="text-xs text-slate-400 mt-1">Available now</div>
           </div>
           <div className="bg-white rounded-xl border border-[#CFE4DF] p-4 text-center">
-            <div className="text-2xl font-bold text-slate-500">{remainingCount}</div>
+            <div className="text-2xl font-bold text-slate-500">{remaining}</div>
             <div className="text-xs text-slate-400 mt-1">Remaining</div>
           </div>
         </div>
@@ -192,13 +234,13 @@ export default function RoadmapPage() {
                 <div className={`grid grid-cols-1 ${hasPlan ? "md:grid-cols-2" : "md:grid-cols-1"} gap-4`}>
                   {yearSemesters.map((sem) => {
                     const semCourses = sem.courses
-                      .map((course) => courses[course.code] ?? course)
+                      .map((course) => ({ ...course, ...(courses[course.code] ?? {}) }))
                       .filter(Boolean)
                       .sort((a, b) => (a.display_order ?? 0) - (b.display_order ?? 0));
                     const semCredits = semCourses.reduce((sum, c) => sum + (c.credits || 0), 0);
 
                     return (
-                      <div key={sem.semester} className="bg-white rounded-2xl border border-[#CFE4DF] shadow-sm overflow-hidden">
+                      <div key={`${sem.year}-${sem.semester}`} className="bg-white rounded-2xl border border-[#CFE4DF] shadow-sm overflow-hidden roadmap-semester">
                         <div className="bg-[#0E6A5C] px-5 py-3 flex justify-between items-center">
                           <span className="text-white font-semibold">{hasPlan ? `${sem.semester} Semester` : sem.semester}</span>
                           <span className="text-[#8DD0C4] text-xs">{semCredits} credit hrs</span>
@@ -210,7 +252,7 @@ export default function RoadmapPage() {
                               key={course.code}
                               onClick={() => toggleCourse(course.code, course.status)}
                               disabled={course.status === "locked"}
-                              className={`w-full text-left px-4 py-3 rounded-xl border text-sm transition-all ${STYLE[course.status]}`}
+                              className={`w-full text-left px-4 py-3 rounded-xl border text-sm transition-all roadmap-course ${STYLE[course.status]}`}
                             >
                               <div className="flex justify-between items-center">
                                 <span className="font-bold">{course.code}</span>
@@ -233,7 +275,7 @@ export default function RoadmapPage() {
           })}
         </div>
 
-        <div className="flex gap-6 mt-8 justify-center">
+        <div className="flex gap-6 mt-8 justify-center no-print">
           <div className="flex items-center gap-2 text-sm text-slate-600">
             <div className="w-4 h-4 rounded bg-[#DFF1ED] border border-[#00937C]" />
             Completed
@@ -248,6 +290,40 @@ export default function RoadmapPage() {
           </div>
         </div>
       </div>
+
+      <style jsx global>{`
+        @media print {
+          aside,
+          .no-print {
+            display: none !important;
+          }
+
+          body {
+            background: #ffffff !important;
+          }
+
+          main {
+            padding: 0 !important;
+          }
+
+          .roadmap-print-root {
+            max-width: 100% !important;
+            margin: 0 !important;
+          }
+
+          .roadmap-semester {
+            break-inside: avoid;
+            page-break-inside: avoid;
+            margin-bottom: 12px;
+          }
+
+          .roadmap-course {
+            background: #ffffff !important;
+            border-color: #d1d5db !important;
+            color: #111827 !important;
+          }
+        }
+      `}</style>
     </div>
   );
 }
